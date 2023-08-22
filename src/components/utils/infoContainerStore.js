@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 // 초기 값
 const initialState = {
-  iteminfo: "",
+  iteminfo: [],
   // artistid: {},
 };
 

@@ -1,12 +1,9 @@
 import React, { useEffect, useState } from "react";
 
 import { useDispatch } from "react-redux";
-
 import { saveItemInfo } from "../utils/InfoContainerStore";
 
 import Screenshot from "./../../assets/img/screenshot_01.jpg";
-
-import Data from "../utils/data.json";
 
 const WorklistComponents = () => {
   const [workInfo, setWorkInfo] = useState([]);
@@ -33,7 +30,7 @@ const WorklistComponents = () => {
             className="worklist_item"
             key={key}
             onClick={() => {
-              dispatch(saveItemInfo("good"));
+              dispatch(saveItemInfo(item));
               console.log("good 전송");
             }}
           >
