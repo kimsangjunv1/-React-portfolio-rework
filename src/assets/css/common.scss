@@ -50,6 +50,13 @@ main {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+  transition: 0.25s;
+  &.show {
+    opacity: 1;
+  }
+  &.hide {
+    opacity: 0;
+  }
   .alert_description {
   }
   .close_btn {

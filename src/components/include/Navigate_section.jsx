@@ -5,7 +5,7 @@ import Information from "../common/Information";
 const Navigate_section = () => {
   return (
     <div className="nav_section">
-      <Information />
+      <Information title={"퍼블리셔"} />
     </div>
   );
 };

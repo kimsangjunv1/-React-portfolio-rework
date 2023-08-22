@@ -7,6 +7,7 @@ Vite
 React
 SCSS
 Swiper
+Lenis
 
 ```
 

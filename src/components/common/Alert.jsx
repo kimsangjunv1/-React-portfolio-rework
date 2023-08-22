@@ -2,15 +2,18 @@ import React from "react";
 
 import { useState } from "react";
 
-const Alert = () => {
-  const [timer, setTimer] = useState(3);
+const Alert = (props) => {
+  console.log("알림창 온 : ", props);
+  const [show, setShow] = useState(false);
 
   const test = () => {
-    alert("클릭되었습니다");
+    setTimeout(() => {
+      setShow(false);
+    }, props.timer * 1000);
   };
   return (
-    <div className="alert">
-      <span className="alert_description">이동되었습니다</span>
+    <div className={`alert ${show ? `show` : `hide`}`}>
+      <span className="alert_description">{props.message}</span>
       <button
         className="close_btn"
         onClick={() => {
