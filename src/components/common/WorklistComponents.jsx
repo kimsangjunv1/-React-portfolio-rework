@@ -2,7 +2,7 @@ import React from "react";
 
 import { useDispatch } from "react-redux";
 
-import { saveArtistID } from "./../utils/counterSlice";
+import { saveItemInfo } from "../utils/InfoContainerStore";
 
 import Screenshot from "./../../assets/img/screenshot_01.jpg";
 
@@ -13,7 +13,7 @@ const WorklistComponents = () => {
       <div
         className="worklist_item"
         onClick={() => {
-          dispatch(saveArtistID("good"));
+          dispatch(saveItemInfo("good"));
           console.log("good 전송");
         }}
       >
@@ -37,7 +37,7 @@ const WorklistComponents = () => {
       <div
         className="worklist_item"
         onClick={() => {
-          dispatch(saveArtistID("bad boy"));
+          dispatch(saveItemInfo("bad boy"));
           console.log("good 전송");
         }}
       >
