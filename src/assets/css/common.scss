@@ -10,6 +10,7 @@ main {
   }
 }
 
+// 위로 이동
 .up_btn {
   position: fixed;
   bottom: 20px;
@@ -31,5 +32,36 @@ main {
 
   &.show {
     opacity: 1;
+  }
+}
+
+// 알람
+.alert {
+  background: #282d43;
+  position: fixed;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(0, -50%);
+  color: white;
+  border-radius: 100px;
+  padding: 10px 20px;
+  box-shadow: 0 10px 20px -10px #282d43;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  .alert_description {
+  }
+  .close_btn {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    border-radius: 100px;
+    padding: 2px 5px;
+    &:hover {
+      border: 1px solid #5c43ff;
+      background: #5c43ff;
+    }
   }
 }

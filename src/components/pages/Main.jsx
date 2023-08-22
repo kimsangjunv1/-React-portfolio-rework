@@ -3,7 +3,7 @@ import Contents from "../layout/Contents";
 import Footer from "./../layout/Footer";
 import Scroll_up from "../common/Scroll_up";
 
-import Section_01 from "../include/Section_01";
+import Alert from "../common/Alert";
 
 import Navigate_section from "./../include/Navigate_section";
 import Desc_section from "./../include/Desc_section";
@@ -14,6 +14,7 @@ const Main = () => {
   return (
     <>
       <Header />
+      <Alert />
       <Contents>
         <Navigate_section />
         <Desc_section />
