@@ -1,6 +1,9 @@
 import Screenshot_Container from "../common/Screenshot_Container";
+import { useSelector } from "react-redux";
 
 const Desc_section = () => {
+  const artistId = useSelector((state) => state.counter.artistid);
+  // console.log("artistid : ", artistid);
   return (
     <div className="desc_section">
       <Screenshot_Container />
@@ -35,6 +38,7 @@ const Desc_section = () => {
         </div>
       </div>
       <div className="activity_container">
+        {artistId ? artistId : ""}
         <a href="#">깃허브</a>
         <a href="#">보기</a>
       </div>
