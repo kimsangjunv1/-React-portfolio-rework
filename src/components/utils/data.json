@@ -24,31 +24,22 @@
   "webstandards": [
     {
       "title": "꾸다",
-      "subTitle": "꾸다",
-      "skill": {
-        "skill_01": "React",
-        "skill_02": "Redux Toolki"
-      },
+      "category": "React",
+      "skill": [{ "name": "React" }, { "name": "Redux Toolkit" }],
       "image": "이미지",
       "date": "2023.08.18"
     },
     {
       "title": "꾸다",
-      "subTitle": "꾸다",
-      "skill": {
-        "skill_01": "React",
-        "skill_02": "Redux Toolki"
-      },
+      "category": "React",
+      "skill": [{ "name": "React" }, { "name": "Redux Toolkit" }],
       "image": "이미지",
       "date": "2023.08.18"
     },
     {
       "title": "꾸다",
-      "subTitle": "꾸다",
-      "skill": {
-        "skill_01": "React",
-        "skill_02": "Redux Toolki"
-      },
+      "category": "React",
+      "skill": [{ "name": "React" }, { "name": "Redux Toolkit" }],
       "image": "이미지",
       "date": "2023.08.18"
     }
