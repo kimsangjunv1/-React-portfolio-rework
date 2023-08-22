@@ -39,6 +39,10 @@ const Desc_section = () => {
           </p>
         </div>
       </div>
+      <div className="activity_container">
+        <a href="#">깃허브</a>
+        <a href="#">보기</a>
+      </div>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import Header from "./../layout/Header";
 import Contents from "../layout/Contents";
 import Footer from "./../layout/Footer";
+import Scroll_up from "../common/Scroll_up";
 
 import Section_01 from "../include/Section_01";
 
@@ -20,6 +21,7 @@ const Main = () => {
 
         {/* <Loading /> */}
       </Contents>
+      <Scroll_up />
       <Footer />
     </>
   );

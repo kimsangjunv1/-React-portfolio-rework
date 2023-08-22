@@ -7,6 +7,7 @@
 }
 .nav_section {
   max-width: 1000px;
+  height: 500vh;
 }
 .desc_section {
   max-width: 660px;
@@ -63,6 +64,29 @@
           color: white;
           border: 1px solid #5c43ff;
         }
+      }
+    }
+  }
+
+  .activity_container {
+    border-top: 1px solid #636d9e22;
+    a {
+      height: 60px;
+      width: 49.9%;
+      color: #636d9e;
+      font-size: 24px;
+      font-weight: 900;
+      text-align: center;
+      display: inline-block;
+      line-height: 2.5;
+      text-decoration: none;
+      transition: 0.25s;
+      &:first-child {
+        border-right: 1px solid rgba(99, 109, 158, 0.1333333333);
+      }
+      &:hover {
+        background: #5c43ff;
+        color: white;
       }
     }
   }

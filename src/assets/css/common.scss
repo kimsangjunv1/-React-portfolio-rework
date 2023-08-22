@@ -9,3 +9,22 @@ main {
     gap: 20px;
   }
 }
+
+.up_btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  background: #5c43ff;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.25s;
+  &:hover {
+    filter: brightness(0.7);
+  }
+}
