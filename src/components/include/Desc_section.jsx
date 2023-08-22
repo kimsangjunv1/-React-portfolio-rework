@@ -1,15 +1,10 @@
-import React from "react";
-
-import screenshot_01 from "./../../assets/img/screenshot_01.jpg";
+import Screenshot_Container from "../common/Screenshot_Container";
 
 const Desc_section = () => {
   return (
     <div className="desc_section">
-      <div className="screenshot_container">
-        <img className="screenshot" src={screenshot_01} alt="썸네일" />
-        <img className="screenshot" src={screenshot_01} alt="썸네일" />
-        <img className="screenshot" src={screenshot_01} alt="썸네일" />
-      </div>
+      <Screenshot_Container />
+
       <div className="title_container clearfixed">
         <span>넷마블 리워크</span>
         <span>2022.09.09</span>

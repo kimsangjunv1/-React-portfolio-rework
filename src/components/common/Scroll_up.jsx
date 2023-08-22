@@ -15,12 +15,6 @@ const Scroll_up = () => {
       left: 100,
       behavior: "smooth",
     });
-    // if (window.scrollY != 0) {
-    //   setTimeout(function () {
-    //     window.scrollTo(0, window.scrollY - 50);
-    //     scrollWindow();
-    //   }, 10);
-    // }
   };
   return (
     <div
