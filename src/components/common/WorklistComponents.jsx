@@ -46,11 +46,9 @@ const WorklistComponents = () => {
               <p className="worklist_date">{item.date}</p>
             </div>
             <div className="used_skill_container">
-              {/* {item.skill.map((item, key) => {
+              {item.skill.map((item, key) => {
                 return <p key={key}>{item.name}</p>;
-              })} */}
-              <p></p>
-              <p>Redux Toolkit</p>
+              })}
             </div>
             <div className="item_desc_container">
               <p>{item.category ? item.category : "설정 값 없음"}</p>
