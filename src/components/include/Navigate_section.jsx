@@ -12,7 +12,7 @@ import WorklistComponents from "../common/WorklistComponents";
 const Navigate_section = () => {
   return (
     <div className="nav_section">
-      <Information title={"퍼블리셔"} />
+      <Information title={"테스트"} />
       <DividerComponents />
       <TitleComponents title={"skill"} subTitle={"사용가능 기술"} />
       <SkillContainer />
