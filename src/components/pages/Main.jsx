@@ -4,6 +4,9 @@ import Footer from "./../layout/Footer";
 
 import Section_01 from "../include/Section_01";
 
+import Navigate_section from "./../include/Navigate_section";
+import Desc_section from "./../include/Desc_section";
+
 // import loading from ''
 
 const Main = () => {
@@ -11,11 +14,10 @@ const Main = () => {
     <>
       <Header />
       <Contents>
-        <Section_01 />
-        <Section_01 />
-        <Section_01 />
-        <Section_01 />
-        <Section_01 />
+        <Navigate_section />
+        <Desc_section />
+        {/* <Section_01 /> */}
+
         {/* <Loading /> */}
       </Contents>
       <Footer />
