@@ -61,6 +61,31 @@
       }
     }
   }
+
+  .skill_container {
+    .skill_section {
+      margin-bottom: 10px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .skill_category {
+        color: #636d9e;
+        font-weight: bold;
+      }
+      .skill_icon_container {
+        display: flex;
+        gap: 10px;
+        .skill_item {
+          border-radius: 10px;
+          transition: 0.25s;
+          padding: 5px;
+          &:hover {
+            background: #4c44ee;
+          }
+        }
+      }
+    }
+  }
 }
 .desc_section {
   max-width: 660px;
