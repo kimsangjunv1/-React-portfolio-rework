@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { useDispatch } from "react-redux";
 
@@ -6,7 +6,20 @@ import { saveItemInfo } from "../utils/InfoContainerStore";
 
 import Screenshot from "./../../assets/img/screenshot_01.jpg";
 
+import Data from "../utils/data.json";
+
 const WorklistComponents = () => {
+  useEffect(() => {
+    fetch("../utils/data.json")
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("rrrressss: ", res);
+      });
+
+    // return () => {
+    //   second;
+    // };
+  }, []);
   const dispatch = useDispatch();
   return (
     <div className="worklist_container">
