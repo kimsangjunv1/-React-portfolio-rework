@@ -1,4 +1,4 @@
-# THEME 관리
+# 포트폴리오
 
 ### 사용한것
 
@@ -6,6 +6,7 @@
 Vite
 React
 SCSS
+Swiper
 
 ```
 

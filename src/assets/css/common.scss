@@ -1,19 +1,11 @@
 main {
   .main_inner {
-    padding-top: 90px;
+    padding-top: 120px;
     width: 100%;
     max-width: 1680px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     gap: 20px;
-
-    &.clearfixed {
-      &::after {
-        content: "";
-        display: block;
-        clear: both;
-      }
-    }
   }
 }
