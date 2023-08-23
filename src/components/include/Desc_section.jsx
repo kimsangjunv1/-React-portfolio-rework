@@ -1,4 +1,4 @@
-import Screenshot_Container from "../common/Screenshot_Container";
+import ScreenshotComponents from "../common/ScreenshotComponents";
 import { useSelector } from "react-redux";
 
 const Desc_section = () => {
@@ -9,7 +9,7 @@ const Desc_section = () => {
     <div className="desc_section">
       {Object.keys(itemInfo).length !== 0 ? (
         <div className="desc_item">
-          <Screenshot_Container />
+          <ScreenshotComponents />
 
           <div className="title_container clearfixed">
             <span>{itemInfo.title}</span>
@@ -45,7 +45,7 @@ const Desc_section = () => {
         </div>
       ) : (
         <div className="desc_item">
-          <Screenshot_Container />
+          <ScreenshotComponents />
 
           <div className="title_container clearfixed">
             <span>정보가 없습니다.</span>

@@ -7,7 +7,7 @@ import TitleComponents from "../common/TitleComponents";
 
 // 섹션별
 import Information from "../common/Information";
-import SkillContainer from "../common/SkillContainer";
+import SkillComponents from "../common/SkillComponents";
 import WorklistComponents from "../common/WorklistComponents";
 
 const Navigate_section = () => {
@@ -30,7 +30,7 @@ const Navigate_section = () => {
       <Information title={"테스트"} />
       <DividerComponents />
       <TitleComponents title={"skill"} subTitle={"사용가능 기술"} />
-      <SkillContainer />
+      <SkillComponents />
       <DividerComponents />
       <TitleComponents title={"web standards"} subTitle={"웹표준공부"} />
       <WorklistComponents />

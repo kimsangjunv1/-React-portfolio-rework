@@ -2,7 +2,7 @@ import React from "react";
 
 import Icon_Gitlab from "./../../assets/img/skill_gitlab.png";
 
-const SkillContainer = () => {
+const SkillComponents = () => {
   return (
     <div className="skill_container">
       <div className="skill_section">
@@ -46,4 +46,4 @@ const SkillContainer = () => {
   );
 };
 
-export default SkillContainer;
+export default SkillComponents;

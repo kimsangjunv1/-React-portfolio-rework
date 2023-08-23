@@ -9,7 +9,7 @@ import "swiper/css/navigation";
 
 import screenshot_01 from "./../../assets/img/screenshot_01.jpg";
 
-const Screenshot_Container = () => {
+const ScreenshotComponents = () => {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
   const onAutoplayTimeLeft = (s, time, progress) => {
@@ -50,4 +50,4 @@ const Screenshot_Container = () => {
   );
 };
 
-export default Screenshot_Container;
+export default ScreenshotComponents;

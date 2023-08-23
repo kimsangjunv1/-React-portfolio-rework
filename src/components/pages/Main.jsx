@@ -14,10 +14,7 @@ const Main = () => {
       <Header />
       <Contents>
         <Navigate_section />
-
         <Desc_section />
-        {/* <Section_01 /> */}
-
         {/* <Loading /> */}
       </Contents>
       <Scroll_up />
