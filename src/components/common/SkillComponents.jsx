@@ -8,6 +8,9 @@ const SkillComponents = ({ information }) => {
       {skillInfo.map((item, key) => {
         return (
           <div className="skill_section" key={key}>
+            {item.list.map((item, key) => {
+              return <p key={key}>{item.name}</p>;
+            })}
             {/* <p className="skill_category">라이브러리</p>
         <div className="skill_icon_container">
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
