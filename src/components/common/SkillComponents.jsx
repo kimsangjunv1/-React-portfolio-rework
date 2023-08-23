@@ -2,7 +2,8 @@ import React from "react";
 
 import Icon_Gitlab from "./../../assets/img/skill_gitlab.png";
 
-const SkillComponents = () => {
+const SkillComponents = ({ information }) => {
+  console.log("스킬 : ", information);
   return (
     <div className="skill_container">
       <div className="skill_section">

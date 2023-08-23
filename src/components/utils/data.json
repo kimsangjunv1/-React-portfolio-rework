@@ -1,26 +1,43 @@
 {
-  "usedskill": {
-    "library": {
-      "swiper": "스와이퍼",
-      "gsap": "GSAP",
-      "lenis": "lenis"
+  "usedskill": [
+    {
+      "library": [
+        { "name": "스와이퍼", "desc": "사용한 이유는..." },
+        { "name": "SCSS", "desc": "사용한 이유는..." },
+        { "name": "lenis", "desc": "사용한 이유는..." }
+      ]
     },
-    "frontend": {
-      "swiper": "스와이퍼",
-      "gsap": "GSAP",
-      "lenis": "lenis"
+    {
+      "frontend": [
+        { "name": "리액트", "desc": "사용한 이유는..." },
+        { "name": "뷰", "desc": "사용한 이유는..." },
+        { "name": "스벨트", "desc": "사용한 이유는..." }
+      ]
     },
-    "backend": {
-      "swiper": "스와이퍼",
-      "gsap": "GSAP",
-      "lenis": "lenis"
+    {
+      "backend": [
+        { "name": "PHP", "desc": "사용한 이유는..." },
+        { "name": "MySQL", "desc": "사용한 이유는..." }
+      ]
     },
-    "etc": {
-      "swiper": "스와이퍼",
-      "gsap": "GSAP",
-      "lenis": "lenis"
+    {
+      "stateManager": [
+        { "name": "Redux Toolkit", "desc": "사용한 이유는..." },
+        { "name": "Styled-components", "desc": "사용한 이유는..." },
+        { "name": "Zustand", "desc": "사용한 이유는..." }
+      ]
+    },
+    {
+      "etc": [
+        { "name": "Zeplin", "desc": "사용한 이유는..." },
+        { "name": "Figma", "desc": "사용한 이유는..." },
+        { "name": "Jira", "desc": "사용한 이유는..." },
+        { "name": "Slack", "desc": "사용한 이유는..." },
+        { "name": "Gitlab", "desc": "사용한 이유는..." },
+        { "name": "Github", "desc": "사용한 이유는..." }
+      ]
     }
-  },
+  ],
   "webstandards": [
     {
       "title": "꾸다",

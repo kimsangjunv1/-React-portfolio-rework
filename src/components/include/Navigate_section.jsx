@@ -11,7 +11,8 @@ import SkillComponents from "../common/SkillComponents";
 import WorklistComponents from "../common/WorklistComponents";
 
 const Navigate_section = () => {
-  const [workInfo, setWorkInfo] = useState([]);
+  const [webstandardsInfo, setWebstandardsInfo] = useState([]);
+  const [skillInfo, setSkillInfo] = useState([]);
   useEffect(() => {
     fetch(
       "https://raw.githubusercontent.com/kimsangjunv1/-React-portfolio-rework/main/src/components/utils/data.json",
@@ -21,7 +22,8 @@ const Navigate_section = () => {
     )
       .then((res) => res.json())
       .then((res) => {
-        setWorkInfo(res.webstandards);
+        setWebstandardsInfo(res.webstandards);
+        setSkillInfo(res.usedskill);
       });
     // .catch((error) => console.log("error", error));
   }, []);
@@ -30,13 +32,13 @@ const Navigate_section = () => {
       <Information title={"테스트"} />
       <DividerComponents />
       <TitleComponents title={"skill"} subTitle={"사용가능 기술"} />
-      <SkillComponents />
+      <SkillComponents information={skillInfo} />
       <DividerComponents />
       <TitleComponents title={"web standards"} subTitle={"웹표준공부"} />
       <WorklistComponents />
       <DividerComponents />
       <TitleComponents title={"Toy Project"} subTitle={"토이프로젝트"} />
-      <WorklistComponents information={workInfo} />
+      <WorklistComponents information={webstandardsInfo} />
     </div>
   );
 };
