@@ -8,7 +8,6 @@ import DateIcon from "./../../assets/img/icon_date.svg";
 import EmailIcon from "./../../assets/img/icon_email.svg";
 
 const Information = ({ title }) => {
-  console.log("[rop[s", title);
   return (
     <div className="information_container">
       <div className="information_desc">

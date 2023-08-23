@@ -35,12 +35,40 @@ const Desc_section = () => {
             </div>
           </div>
           <div className="activity_container">
+            <a href={itemInfo.github} target="_blank" rel="noreferrer">
+              깃허브
+            </a>
+            <a href={itemInfo.view} target="_blank" rel="noreferrer">
+              보기
+            </a>
+          </div>
+        </div>
+      ) : (
+        <div className="desc_item">
+          <Screenshot_Container />
+
+          <div className="title_container clearfixed">
+            <span>정보가 없습니다.</span>
+            <span>0000.00.00</span>
+          </div>
+          <div className="desc_container">
+            <div className="stack_section">
+              <p className="sub_title">사용스택</p>
+              <div className="stack_container">
+                <span className="item">정보가 없습니다.</span>
+              </div>
+            </div>
+            <hr />
+            <div className="description_section">
+              <p className="sub_title">설명</p>
+              <p>정보가 없습니다.</p>
+            </div>
+          </div>
+          <div className="activity_container">
             <a href="#">깃허브</a>
             <a href="#">보기</a>
           </div>
         </div>
-      ) : (
-        ""
       )}
     </div>
   );

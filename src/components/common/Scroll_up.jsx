@@ -1,7 +1,6 @@
 const Scroll_up = () => {
   const scrollBtnDisplay = function () {
     const scrollBtn = document.querySelector(".up_btn");
-    console.log("dd");
     window.scrollY > window.innerHeight
       ? scrollBtn.classList.add("show")
       : scrollBtn.classList.remove("show");

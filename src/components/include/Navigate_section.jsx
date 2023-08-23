@@ -1,4 +1,5 @@
 import React from "react";
+import { useState, useEffect } from "react";
 
 // 재사용 컴포넌트
 import DividerComponents from "../common/DividerComponents";
@@ -10,6 +11,20 @@ import SkillContainer from "../common/SkillContainer";
 import WorklistComponents from "../common/WorklistComponents";
 
 const Navigate_section = () => {
+  const [workInfo, setWorkInfo] = useState([]);
+  useEffect(() => {
+    fetch(
+      "https://raw.githubusercontent.com/kimsangjunv1/-React-portfolio-rework/main/src/components/utils/data.json",
+      {
+        method: "GET",
+      }
+    )
+      .then((res) => res.json())
+      .then((res) => {
+        setWorkInfo(res.webstandards);
+      });
+    // .catch((error) => console.log("error", error));
+  }, []);
   return (
     <div className="nav_section">
       <Information title={"테스트"} />
@@ -21,7 +36,7 @@ const Navigate_section = () => {
       <WorklistComponents />
       <DividerComponents />
       <TitleComponents title={"Toy Project"} subTitle={"토이프로젝트"} />
-      <WorklistComponents />
+      <WorklistComponents information={workInfo} />
     </div>
   );
 };

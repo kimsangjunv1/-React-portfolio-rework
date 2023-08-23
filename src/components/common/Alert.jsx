@@ -3,7 +3,6 @@ import React from "react";
 import { useState } from "react";
 
 const Alert = (props) => {
-  console.log("알림창 온 : ", props);
   const [show, setShow] = useState(false);
 
   const test = () => {

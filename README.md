@@ -5,6 +5,7 @@
 ```
 Vite
 React
+Redux Toolkit
 SCSS
 Swiper
 Lenis
