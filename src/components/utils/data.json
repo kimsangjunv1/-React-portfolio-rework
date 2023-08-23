@@ -1,34 +1,34 @@
 {
   "usedskill": [
     {
-      "library": [
+      "list": [
         { "name": "스와이퍼", "desc": "사용한 이유는..." },
         { "name": "SCSS", "desc": "사용한 이유는..." },
         { "name": "lenis", "desc": "사용한 이유는..." }
       ]
     },
     {
-      "frontend": [
+      "list": [
         { "name": "리액트", "desc": "사용한 이유는..." },
         { "name": "뷰", "desc": "사용한 이유는..." },
         { "name": "스벨트", "desc": "사용한 이유는..." }
       ]
     },
     {
-      "backend": [
+      "list": [
         { "name": "PHP", "desc": "사용한 이유는..." },
         { "name": "MySQL", "desc": "사용한 이유는..." }
       ]
     },
     {
-      "stateManager": [
+      "list": [
         { "name": "Redux Toolkit", "desc": "사용한 이유는..." },
         { "name": "Styled-components", "desc": "사용한 이유는..." },
         { "name": "Zustand", "desc": "사용한 이유는..." }
       ]
     },
     {
-      "etc": [
+      "list": [
         { "name": "Zeplin", "desc": "사용한 이유는..." },
         { "name": "Figma", "desc": "사용한 이유는..." },
         { "name": "Jira", "desc": "사용한 이유는..." },

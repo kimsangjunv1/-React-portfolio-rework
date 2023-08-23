@@ -1,22 +1,25 @@
 import React from "react";
 
-import Icon_Gitlab from "./../../assets/img/skill_gitlab.png";
-
 const SkillComponents = ({ information }) => {
   console.log("스킬 : ", information);
+  const skillInfo = information;
   return (
     <div className="skill_container">
-      <div className="skill_section">
-        <p className="skill_category">라이브러리</p>
+      {skillInfo.map((item, key) => {
+        return (
+          <div className="skill_section" key={key}>
+            {/* <p className="skill_category">라이브러리</p>
         <div className="skill_icon_container">
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-        </div>
-      </div>
+        </div> */}
+          </div>
+        );
+      })}
 
-      <div className="skill_section">
+      {/* <div className="skill_section">
         <p className="skill_category">프론트엔드</p>
         <div className="skill_icon_container">
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
@@ -42,7 +45,7 @@ const SkillComponents = ({ information }) => {
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
