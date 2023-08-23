@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { useDispatch } from "react-redux";
-import { saveItemInfo } from "../utils/InfoContainerStore";
+import { saveItemInfo } from "../utils/infoContainerStore";
 
 import Screenshot from "./../../assets/img/screenshot_01.jpg";
 

@@ -75,9 +75,15 @@
         display: flex;
         gap: 10px;
         .skill_item {
-          border-radius: 10px;
+          border-radius: 100px;
           transition: 0.25s;
           padding: 5px;
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+          background: #f1f2f7;
+          border: 1px solid #e5e6ed;
+          cursor: pointer;
           &:hover {
             background: #4c44ee;
           }
