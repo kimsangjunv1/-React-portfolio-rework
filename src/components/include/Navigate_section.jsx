@@ -11,6 +11,7 @@ import SkillComponents from "../common/SkillComponents";
 import WorklistComponents from "../common/WorklistComponents";
 
 const Navigate_section = () => {
+  const [toyProjectsInfo, setToyProjectsInfo] = useState([]);
   const [webstandardsInfo, setWebstandardsInfo] = useState([]);
   const [skillInfo, setSkillInfo] = useState([]);
   useEffect(() => {
@@ -24,6 +25,7 @@ const Navigate_section = () => {
       .then((res) => {
         setWebstandardsInfo(res.webstandards);
         setSkillInfo(res.usedskill);
+        setToyProjectsInfo(res.toyproject);
       });
     // .catch((error) => console.log("error", error));
   }, []);
@@ -35,10 +37,10 @@ const Navigate_section = () => {
       <SkillComponents information={skillInfo} />
       <DividerComponents />
       <TitleComponents title={"web standards"} subTitle={"웹표준공부"} />
-      <WorklistComponents />
+      <WorklistComponents information={webstandardsInfo} />
       <DividerComponents />
       <TitleComponents title={"Toy Project"} subTitle={"토이프로젝트"} />
-      <WorklistComponents information={webstandardsInfo} />
+      <WorklistComponents information={toyProjectsInfo} />
     </div>
   );
 };

@@ -5,11 +5,12 @@ const Desc_section = () => {
   const itemInfo = useSelector((state) => state.counter.iteminfo);
 
   console.log(Object.keys(itemInfo).length === 0);
+  console.log("부모 itemInfo : ", itemInfo);
   return (
     <div className="desc_section">
       {Object.keys(itemInfo).length !== 0 ? (
         <div className="desc_item">
-          <ScreenshotComponents />
+          <ScreenshotComponents image={itemInfo.image} />
 
           <div className="title_container clearfixed">
             <span>{itemInfo.title}</span>

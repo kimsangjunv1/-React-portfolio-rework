@@ -12,6 +12,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  overflow: hidden;
 }
 
 .swiper-slide img {
@@ -49,4 +51,8 @@
   stroke-dashoffset: calc(125.6 * (1 - var(--progress)));
   stroke-dasharray: 125.6;
   transform: rotate(-90deg);
+}
+
+.swiper-pagination-bullet {
+  background: rgb(83, 42, 232) !important;
 }

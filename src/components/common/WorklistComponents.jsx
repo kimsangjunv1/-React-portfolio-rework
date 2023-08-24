@@ -24,7 +24,7 @@ const WorklistComponents = ({ information }) => {
               <div className="worklist_screenshot_container">
                 <img
                   className="worklist_screenshot"
-                  src={Screenshot}
+                  src={item.image[0].url}
                   alt="미리보기"
                 />
                 <p className="worklist_date">{item.date}</p>
