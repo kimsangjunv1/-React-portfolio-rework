@@ -5,62 +5,6 @@
 .nav_section {
   max-width: 800px;
 
-  .information_container {
-    background: #f1f2f7;
-    padding: 20px;
-    position: relative;
-    height: 400px;
-
-    .information_desc {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      height: 100%;
-      .dajim {
-        /* color: red; */
-        font-size: 24px;
-        font-weight: 900;
-        em {
-          color: var(--main-color);
-        }
-      }
-      .my_info {
-        // padding: 20px;
-        .info_item {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          p {
-            color: #636d9e;
-            font-weight: bold;
-          }
-        }
-      }
-    }
-    .my_photo {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 50%;
-      img {
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100%;
-        width: 30px;
-        background: #f7990e;
-        // z-index: 1;
-      }
-    }
-  }
-
   .skill_container {
     .skill_section {
       margin-bottom: 10px;
@@ -239,7 +183,7 @@
 
     .title_container {
       // width: 100%;
-      background: #282d43;
+      background: var(--main-color);
       color: white;
       padding: 20px;
 

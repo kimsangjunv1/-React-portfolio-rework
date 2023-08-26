@@ -6,7 +6,7 @@ import DividerComponents from "../common/DividerComponents";
 import TitleComponents from "../common/TitleComponents";
 
 // 섹션별
-import Information from "../common/Information";
+
 import SkillComponents from "../common/SkillComponents";
 import WorklistComponents from "../common/WorklistComponents";
 
@@ -31,8 +31,6 @@ const Navigate_section = () => {
   }, []);
   return (
     <div className="nav_section">
-      <Information title={"테스트"} />
-      <DividerComponents />
       <TitleComponents title={"skill"} subTitle={"사용가능 기술"} />
       <SkillComponents information={skillInfo} />
       <DividerComponents />
