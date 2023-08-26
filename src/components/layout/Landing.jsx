@@ -14,7 +14,7 @@ import Landing_fur_006 from "./../../assets/img/landing_fur_006.svg";
 const Landing = () => {
   useEffect(() => {
     const landing = () => {
-      let rotate_que = Math.floor(Math.random() * 101);
+      // let rotate_que = Math.floor(Math.random() * 101);
       // let size_que = Math.floor(Math.random()*5)+1;
       const allList = document.querySelectorAll(".fur_container img");
 

@@ -3,9 +3,6 @@ import { useSelector } from "react-redux";
 
 const Desc_section = () => {
   const itemInfo = useSelector((state) => state.counter.iteminfo);
-
-  console.log(Object.keys(itemInfo).length === 0);
-  console.log("부모 itemInfo : ", itemInfo);
   return (
     <div className="desc_section">
       {Object.keys(itemInfo).length !== 0 ? (

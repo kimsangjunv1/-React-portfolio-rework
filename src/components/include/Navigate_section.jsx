@@ -1,6 +1,3 @@
-import React from "react";
-import { useState, useEffect } from "react";
-
 // 재사용 컴포넌트
 import DividerComponents from "../common/DividerComponents";
 import TitleComponents from "../common/TitleComponents";
@@ -10,30 +7,12 @@ import TitleComponents from "../common/TitleComponents";
 import SkillComponents from "../common/SkillComponents";
 import WorklistComponents from "../common/WorklistComponents";
 
-const Navigate_section = () => {
-  const [toyProjectsInfo, setToyProjectsInfo] = useState([]);
-  const [webstandardsInfo, setWebstandardsInfo] = useState([]);
-  const [skillInfo, setSkillInfo] = useState([]);
-  useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/kimsangjunv1/-React-portfolio-rework/main/src/components/utils/data.json",
-      {
-        method: "GET",
-      }
-    )
-      .then((res) => res.json())
-      .then((res) => {
-        setWebstandardsInfo(res.webstandards);
-        setSkillInfo(res.usedskill);
-        setToyProjectsInfo(res.toyproject);
-      });
-    // .catch((error) => console.log("error", error));
-  }, []);
+const Navigate_section = ({ skillInfo, webstandardsInfo, toyProjectsInfo }) => {
   return (
     <div className="nav_section">
-      <TitleComponents title={"skill"} subTitle={"사용가능 기술"} />
+      {/* <TitleComponents title={"skill"} subTitle={"사용가능 기술"} />
       <SkillComponents information={skillInfo} />
-      <DividerComponents />
+      <DividerComponents /> */}
       <TitleComponents title={"web standards"} subTitle={"웹표준공부"} />
       <WorklistComponents information={webstandardsInfo} />
       <DividerComponents />

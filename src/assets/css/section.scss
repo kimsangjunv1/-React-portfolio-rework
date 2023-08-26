@@ -5,37 +5,6 @@
 .nav_section {
   max-width: 800px;
 
-  .skill_container {
-    .skill_section {
-      margin-bottom: 10px;
-      &:last-child {
-        margin-bottom: 0;
-      }
-      .skill_category {
-        color: #636d9e;
-        font-weight: bold;
-      }
-      .skill_icon_container {
-        display: flex;
-        gap: 10px;
-        .skill_item {
-          border-radius: 100px;
-          transition: 0.25s;
-          padding: 5px;
-          width: 40px;
-          height: 40px;
-          object-fit: contain;
-          background: #f1f2f7;
-          border: 1px solid #e5e6ed;
-          cursor: pointer;
-          &:hover {
-            background: var(--main-color);
-          }
-        }
-      }
-    }
-  }
-
   .worklist_container {
     display: flex;
     flex-wrap: wrap;

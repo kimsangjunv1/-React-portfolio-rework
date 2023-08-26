@@ -55,61 +55,35 @@ const SkillComponents = ({ information }) => {
   const skillInfo = information;
   return (
     <div className="skill_container">
-      {skillInfo.map((item, key) => {
-        return (
-          <div className="skill_section" key={key}>
-            <p className="skill_category">{key}라이브러리</p>
-            <div className="skill_icon_container">
-              {item.list.map((item, key) => {
-                return (
-                  <img
-                    className="skill_item"
-                    key={key}
-                    src={test(item.name)}
-                    alt={Object.values(item.name)}
-                  />
-                );
-                // return <p key={key}>{test(item.name)}</p>;
-              })}
-            </div>
-            {/* 
+      <div className="skill_container_inner">
+        {skillInfo.map((item, key) => {
+          return (
+            <div className="skill_section" key={key}>
+              <p className="skill_category">{key}라이브러리</p>
+              <div className="skill_icon_container">
+                {item.list.map((item, key) => {
+                  return (
+                    <img
+                      className="skill_item"
+                      key={key}
+                      src={test(item.name)}
+                      alt={Object.values(item.name)}
+                    />
+                  );
+                  // return <p key={key}>{test(item.name)}</p>;
+                })}
+              </div>
+              {/* 
         <div className="skill_icon_container">
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
           <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
         </div> */}
-          </div>
-        );
-      })}
-
-      {/* <div className="skill_section">
-        <p className="skill_category">프론트엔드</p>
-        <div className="skill_icon_container">
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-        </div>
+            </div>
+          );
+        })}
       </div>
-      <div className="skill_section">
-        <p className="skill_category">백엔드</p>
-        <div className="skill_icon_container">
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-        </div>
-      </div>
-      <div className="skill_section">
-        <p className="skill_category">기타</p>
-        <div className="skill_icon_container">
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-          <img className="skill_item" src={Icon_Gitlab} alt="Gitlab 아이콘" />
-        </div>
-      </div> */}
     </div>
   );
 };

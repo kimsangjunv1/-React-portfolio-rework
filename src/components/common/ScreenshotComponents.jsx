@@ -7,8 +7,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-import screenshot_01 from "./../../assets/img/screenshot_01.jpg";
-
 const ScreenshotComponents = ({ image }) => {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
@@ -23,10 +21,10 @@ const ScreenshotComponents = ({ image }) => {
       <Swiper
         spaceBetween={30}
         centeredSlides={true}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 2500,
+        //   disableOnInteraction: false,
+        // }}
         pagination={{
           clickable: true,
         }}
@@ -44,9 +42,6 @@ const ScreenshotComponents = ({ image }) => {
               );
             })
           : ""}
-        {/* <SwiperSlide>
-          <img className="screenshot" src={screenshot_01} alt="썸네일" />
-        </SwiperSlide> */}
         <div className="autoplay-progress" slot="container-end">
           <svg viewBox="0 0 48 48" ref={progressCircle}>
             <circle cx="24" cy="24" r="20"></circle>
