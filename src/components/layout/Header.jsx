@@ -7,14 +7,23 @@ const Header = () => {
   const [menuItem, setMenuItem] = useState(null);
 
   useEffect(() => {
-    // fetch("https://jsonplaceholder.typicode.com/users/1", {
-    //   method: "get",
-    // })
-    //   .then((res) => res.json())
-    //   .then((res) => {
-    //     console.log("rqwdes : ", res);
-    //     setMenuItem(res);
-    //   });
+    const scroll_progress = () => {
+      window.onscroll = function () {
+        createPrograssBar();
+      };
+
+      function createPrograssBar() {
+        let winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        let height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        document.querySelector(".scroll_progress").style.width = scrolled + "%";
+        // document.getElementsByClassName
+      }
+    };
+    scroll_progress();
   }, []);
   return (
     <header>

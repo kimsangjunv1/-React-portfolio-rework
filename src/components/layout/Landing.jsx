@@ -13,35 +13,39 @@ import Landing_fur_006 from "./../../assets/img/landing_fur_006.svg";
 
 const Landing = () => {
   useEffect(() => {
-    let rotate_que = Math.floor(Math.random() * 101);
-    // let size_que = Math.floor(Math.random()*5)+1;
-    const allList = document.querySelectorAll(".fur_container img");
+    const landing = () => {
+      let rotate_que = Math.floor(Math.random() * 101);
+      // let size_que = Math.floor(Math.random()*5)+1;
+      const allList = document.querySelectorAll(".fur_container img");
 
-    document.querySelector(".landing").addEventListener("mousemove", (e) => {
-      //마우스 좌표 값
-      let mousePageX = e.pageX;
-      let mousePageY = e.pageY;
+      document.querySelector(".landing").addEventListener("mousemove", (e) => {
+        //마우스 좌표 값
+        let mousePageX = e.pageX;
+        let mousePageY = e.pageY;
 
-      // 전체 가로
-      let centerPageX = window.innerWidth / 2 - mousePageX;
-      let centerPageY = window.innerHeight / 2 - mousePageY;
+        // 전체 가로
+        let centerPageX = window.innerWidth / 2 - mousePageX;
+        let centerPageY = window.innerHeight / 2 - mousePageY;
 
-      //이미지 움직이기
-      for (let i = 1; i <= allList.length; i++) {
-        for (let q = 1; q <= 6; q++) {
-          document.querySelector(
-            ".fur_container img:nth-child(" + i + ")"
-          ).style.transform =
-            "translate(" +
-            -centerPageX / (i * 5) +
-            "px, " +
-            -centerPageY / (i * 5) +
-            "px) rotate(" +
-            centerPageX * (i * 0.01) +
-            "deg)";
+        //이미지 움직이기
+        for (let i = 1; i <= allList.length; i++) {
+          for (let q = 1; q <= 6; q++) {
+            document.querySelector(
+              ".fur_container img:nth-child(" + i + ")"
+            ).style.transform =
+              "translate(" +
+              -centerPageX / (i * 5) +
+              "px, " +
+              -centerPageY / (i * 5) +
+              "px) rotate(" +
+              centerPageX * (i * 0.01) +
+              "deg)";
+          }
         }
-      }
-    });
+      });
+    };
+
+    landing();
   }, []);
 
   return (
