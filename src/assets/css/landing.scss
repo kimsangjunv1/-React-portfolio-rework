@@ -1,4 +1,5 @@
 .landing {
+  position: relative;
   height: 100vh;
   background: var(--main-color);
   &::before {
@@ -11,6 +12,42 @@
     background: linear-gradient(0deg, var(--main-color) 0%, #002f3f00 100%);
   }
   .landing_inner {
+    .fur_container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      img {
+        position: absolute;
+      }
+
+      img:nth-child(1) {
+        top: 20vh;
+        left: 20vw;
+      }
+      img:nth-child(2) {
+        top: 30vh;
+        left: 10vw;
+      }
+      img:nth-child(3) {
+        top: 60vh;
+        left: 20vw;
+      }
+      img:nth-child(4) {
+        top: 25vh;
+        right: 20vw;
+      }
+      img:nth-child(5) {
+        top: 60vh;
+        right: 20vw;
+      }
+      img:nth-child(6) {
+        top: 60vh;
+        right: 20vw;
+      }
+    }
     .main_text {
       em {
         background: linear-gradient(45deg, #7aff93 0%, #f9f999 100%);
