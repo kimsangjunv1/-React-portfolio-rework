@@ -61,7 +61,7 @@ header {
         &:hover {
           background: rgba(255, 255, 255, 0.129);
           filter: none;
-          box-shadow: 0 0px 40px 0px #4c44ee;
+          box-shadow: 0 0px 40px 0px var(--main-color-hover-shadow);
           .bg {
             transform: scale(1.6);
           }
@@ -84,7 +84,7 @@ header {
     bottom: -2px;
     left: 0;
     .scroll_progress {
-      background: #5c43ff;
+      background: var(--main-color);
       width: 50px;
       height: 100%;
     }
