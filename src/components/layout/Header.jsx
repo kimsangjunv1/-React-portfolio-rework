@@ -8,6 +8,7 @@ const Header = () => {
 
   useEffect(() => {
     const scroll_progress = () => {
+      console.log("나옴");
       window.onscroll = function () {
         createPrograssBar();
       };

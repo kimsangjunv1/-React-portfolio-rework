@@ -1,6 +1,6 @@
 const Scroll_up = () => {
   const scrollBtnDisplay = function () {
-    const scrollBtn = document.querySelector(".up_btn");
+    const scrollBtn = document.querySelector(".nav_container");
     window.scrollY > window.innerHeight
       ? scrollBtn.classList.add("show")
       : scrollBtn.classList.remove("show");
@@ -14,14 +14,29 @@ const Scroll_up = () => {
       behavior: "smooth",
     });
   };
+  const scrollContact = () => {
+    window.scrollTo({
+      top: document.body.scrollHeight, // <- 페이지 총 Height
+      behavior: "smooth",
+    });
+  };
   return (
-    <div
-      className="up_btn"
-      onClick={() => {
-        scrollWindow();
-      }}
-    >
-      Scroll_up
+    <div className="nav_container">
+      <div
+        onClick={() => {
+          scrollContact();
+        }}
+      >
+        <p>아래로 </p>
+      </div>
+      <div
+        className="up_btn"
+        onClick={() => {
+          scrollWindow();
+        }}
+      >
+        <p>안녕</p>
+      </div>
     </div>
   );
 };

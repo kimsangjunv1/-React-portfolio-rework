@@ -2,6 +2,7 @@ import Header from "./../layout/Header";
 import Contents from "../layout/Contents";
 import Footer from "./../layout/Footer";
 import Landing from "../layout/Landing";
+import Contact from "../layout/Contact";
 import Information from "../common/Information";
 
 import SkillComponents from "../common/SkillComponents";
@@ -32,7 +33,6 @@ const Main = () => {
         setSkillInfo(res.usedskill);
         setToyProjectsInfo(res.toyproject);
       });
-    // .catch((error) => console.log("error", error));
   }, []);
   return (
     <div>
@@ -45,6 +45,7 @@ const Main = () => {
         setInner={true}
       />
       <SkillComponents information={skillInfo} />
+
       <Contents>
         <Navigate_section
           toyProjectsInfo={toyProjectsInfo}
@@ -54,6 +55,7 @@ const Main = () => {
         <Desc_section />
         {/* <Loading /> */}
       </Contents>
+      <Contact />
       <Scroll_up />
       <Footer />
     </div>

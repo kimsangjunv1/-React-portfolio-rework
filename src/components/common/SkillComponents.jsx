@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 const SkillComponents = ({ information }) => {
+  const [title, setTitle] = useState("없음");
+  const [desc, setDesc] = useState("설명이 없습니다");
   const test = (name) => {
     switch (name) {
       // 라이브러리
@@ -51,13 +53,12 @@ const SkillComponents = ({ information }) => {
         return "없음";
     }
   };
-  console.log("스킬 : ", information);
   const skillInfo = information;
   return (
     <div className="skill_container">
       <div className="skill_desc_container">
-        <h2 className="skill_name">asd</h2>
-        <p className="skill_desc">asd</p>
+        <h2 className="skill_name">{title}</h2>
+        <p className="skill_desc">{desc}</p>
       </div>
       <div className="skill_container_inner">
         <div className="bg_round">
@@ -77,6 +78,10 @@ const SkillComponents = ({ information }) => {
                             key={key}
                             src={test(item.name)}
                             alt={Object.values(item.name)}
+                            onMouseOver={() => {
+                              setTitle(item.name);
+                              setDesc(item.desc);
+                            }}
                           />
                         );
                       })}
@@ -93,11 +98,9 @@ const SkillComponents = ({ information }) => {
           {skillInfo.map((item, key) => {
             return (
               <>
-                {key === 1 || key === 3 ? (
+                {key === 1 ? (
                   <div className="skill_section" key={key}>
-                    <p className="skill_category">
-                      {key === 1 ? "프론트" : "프론트-라이브러리"}
-                    </p>
+                    <p className="skill_category">프론트</p>
                     <div className="skill_icon_container">
                       {item.list.map((item, key) => {
                         return (
@@ -106,6 +109,10 @@ const SkillComponents = ({ information }) => {
                             key={key}
                             src={test(item.name)}
                             alt={Object.values(item.name)}
+                            onMouseOver={() => {
+                              setTitle(item.name);
+                              setDesc(item.desc);
+                            }}
                           />
                         );
                       })}
@@ -133,6 +140,10 @@ const SkillComponents = ({ information }) => {
                             key={key}
                             src={test(item.name)}
                             alt={Object.values(item.name)}
+                            onMouseOver={() => {
+                              setTitle(item.name);
+                              setDesc(item.desc);
+                            }}
                           />
                         );
                       })}

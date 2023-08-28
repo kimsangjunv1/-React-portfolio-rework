@@ -7,7 +7,7 @@ import Screenshot from "./../../assets/img/screenshot_01.jpg";
 
 const WorklistComponents = ({ information }) => {
   const data = information;
-  console.log("information : ", information);
+
   const dispatch = useDispatch();
   return (
     <div className="worklist_container">

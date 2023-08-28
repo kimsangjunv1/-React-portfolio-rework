@@ -48,6 +48,16 @@ const Landing = () => {
     landing();
   }, []);
 
+  const test = () => {
+    const tt = document.querySelector(".fur_001");
+
+    tt.addEventListener("click", () => {
+      tt.classList.add("pop");
+      setTimeout(() => {
+        tt.classList.remove("pop");
+      }, 3000);
+    });
+  };
   return (
     <div className="landing">
       <div className="landing_inner">
@@ -56,6 +66,9 @@ const Landing = () => {
             className="fur_001"
             src={Landing_fur_001}
             alt="솜뭉치 캐릭터 001"
+            onClick={() => {
+              test();
+            }}
           />
           <img
             className="fur_002"

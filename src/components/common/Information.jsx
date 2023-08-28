@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 import Profile from "./../../assets/img/profile.jpg";
 
@@ -13,6 +14,32 @@ import TextImage002 from "./../../assets/img/landing_text_002.svg";
 import FurChar from "./../../assets/img/landing_profile_fur.svg";
 
 const Information = ({ title }) => {
+  useEffect(() => {
+    const movingPhoto = () => {
+      window.onscroll = function () {
+        moveItem();
+      };
+
+      function moveItem() {
+        let winScroll =
+          document.body.scrollTop || document.documentElement.scrollTop;
+        let height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        let scrolled = (winScroll / height) * 100;
+        // let furScale =
+        //   (winScroll / height) * 100 >= 10 ? 10 : (winScroll / height) * 100;
+        // document.querySelector(".myphoto").style.transform =
+        //   "translate(0," + scrolled + ")";
+        document.querySelector(".myphoto").style.width = scrolled + "%";
+        // document.querySelector(".fur").style.width = furScale * 10 + "px";
+        document.querySelector(".fur").style.transform =
+          "translate(" + scrolled + "px,0) scale(" + scrolled * 0.04 + ")";
+      }
+    };
+    movingPhoto();
+  }, []);
+
   return (
     <div className="information_container">
       <div className="information_desc">

@@ -15,7 +15,6 @@ const ScreenshotComponents = ({ image }) => {
     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
   };
 
-  console.log("image : ", image);
   return (
     <div className="screenshot_container">
       <Swiper
