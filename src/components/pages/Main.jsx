@@ -38,13 +38,11 @@ const Main = () => {
 
     // 스크롤
     window.onscroll = function () {
-      console.log("실행1");
       let winScroll =
         document.body.scrollTop || document.documentElement.scrollTop;
       let height =
         document.documentElement.scrollHeight -
         document.documentElement.clientHeight;
-      console.log((winScroll / height) * 100);
       setScrolled((winScroll / height) * 100);
     };
   }, []);

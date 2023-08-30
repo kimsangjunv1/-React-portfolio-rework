@@ -4,7 +4,6 @@ import LogoBackground from "./../../assets/img/logo_bg.jpg";
 import LogoMain from "./../../assets/img/logo.svg";
 
 const Header = ({ scrolled }) => {
-  console.log("scrolled Header : ", scrolled);
   const [menuItem, setMenuItem] = useState(null);
   useEffect(() => {
     document.querySelector(".scroll_progress").style.width = scrolled + "%";

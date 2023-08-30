@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const SkillComponents = ({ information }) => {
   const [title, setTitle] = useState("없음");
@@ -82,7 +83,15 @@ const SkillComponents = ({ information }) => {
     };
   });
   return (
-    <div className="skill_container">
+    <motion.div
+      className="skill_container"
+      onViewportEnter={() => {
+        console.log("출현!");
+      }}
+      onViewportLeave={() => {
+        console.log("사라짐!");
+      }}
+    >
       <div className="skill_desc_container">
         <h2 className="skill_name">{title}</h2>
         <p className="skill_desc">{desc}</p>
@@ -184,7 +193,7 @@ const SkillComponents = ({ information }) => {
           })}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

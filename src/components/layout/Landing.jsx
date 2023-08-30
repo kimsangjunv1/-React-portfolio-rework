@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 
 import { useEffect } from "react";
 import { motion } from "framer-motion";
@@ -17,7 +17,8 @@ import landing_img_002 from "./../../assets/img/landing_img_02.jpg";
 import landing_img_003 from "./../../assets/img/landing_img_03.jpg";
 
 const Landing = ({ scrolled }) => {
-  console.log("scrolled Landing : ", scrolled);
+  const boxRef = useRef(null);
+
   const landing = () => {
     // let rotate_que = Math.floor(Math.random() * 101);
     // let size_que = Math.floor(Math.random()*5)+1;
@@ -49,25 +50,14 @@ const Landing = ({ scrolled }) => {
   };
 
   const good = document.querySelectorAll(".landing_image");
-  console.log("el : ", scrolled);
-  good.forEach((el, i) => {
+  good.forEach((el) => {
     el.style.transform = "translate(-50%,-" + scrolled * 10 + "px)";
   });
 
-  const test = () => {
-    const tt = document.querySelector(".fur_001");
-
-    tt.addEventListener("click", () => {
-      tt.classList.add("pop");
-      setTimeout(() => {
-        tt.classList.remove("pop");
-      }, 3000);
-    });
-  };
   return (
     <div className="landing">
       <div className="landing_inner">
-        <div className="fur_container">
+        <div className="fur_container" ref={boxRef}>
           <motion.img
             className="fur_001"
             src={Landing_fur_001}
@@ -80,9 +70,11 @@ const Landing = ({ scrolled }) => {
               opacity: [0, 1],
               transition: { delay: 0.4 },
             }}
-            onClick={() => {
-              test();
-            }}
+            drag
+            dragConstraints={boxRef}
+            dragSnapToOrigin
+            dragElastic={0.5}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
           />
           <motion.img
             className="fur_002"
@@ -96,6 +88,11 @@ const Landing = ({ scrolled }) => {
               opacity: [0, 1],
               transition: { delay: 0.5 },
             }}
+            drag
+            dragConstraints={boxRef}
+            dragSnapToOrigin
+            dragElastic={0.5}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
           />
           <motion.img
             className="fur_003"
@@ -109,6 +106,11 @@ const Landing = ({ scrolled }) => {
               opacity: [0, 1],
               transition: { delay: 0.6 },
             }}
+            drag
+            dragConstraints={boxRef}
+            dragSnapToOrigin
+            dragElastic={0.5}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
           />
           <motion.img
             className="fur_004"
@@ -122,6 +124,11 @@ const Landing = ({ scrolled }) => {
               opacity: [0, 1],
               transition: { delay: 0.7 },
             }}
+            drag
+            dragConstraints={boxRef}
+            dragSnapToOrigin
+            dragElastic={0.5}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
           />
           <motion.img
             className="fur_005"
@@ -135,6 +142,11 @@ const Landing = ({ scrolled }) => {
               opacity: [0, 1],
               transition: { delay: 0.8 },
             }}
+            drag
+            dragConstraints={boxRef}
+            dragSnapToOrigin
+            dragElastic={0.5}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
           />
           <motion.img
             className="fur_006"
@@ -148,6 +160,11 @@ const Landing = ({ scrolled }) => {
               opacity: [0, 1],
               transition: { delay: 0.9 },
             }}
+            drag
+            dragConstraints={boxRef}
+            dragSnapToOrigin
+            dragElastic={0.5}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
           />
           <div className="lading_contents">
             <div className="row">
