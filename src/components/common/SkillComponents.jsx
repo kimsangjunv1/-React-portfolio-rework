@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 
 const SkillComponents = ({ information }) => {
   const [title, setTitle] = useState("없음");
   const [desc, setDesc] = useState("설명이 없습니다");
-  const test = (name) => {
+  const scrollRef = useRef(null);
+
+  const getSkillImage = (name) => {
     switch (name) {
       // 라이브러리
       case "SCSS":
@@ -58,33 +60,11 @@ const SkillComponents = ({ information }) => {
   };
   const skillInfo = information;
 
-  // 옵저버
-  useEffect(() => {
-    // 화면 영역 기준으로 클래스 붙여주는 함수
-    const skillEffect = () => {
-      const boxes = document.querySelectorAll(".skill_item");
-      const option = {
-        root: null, //viewport
-        rootMargin: "0px",
-        threshold: 0.5, // 50%가 viewport에 들어와 있어야 callback 실행
-      };
-      const callback = (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-          } else {
-            entry.target.classList.remove("active");
-          }
-        });
-      };
-      const observer = new IntersectionObserver(callback, option);
-
-      boxes.forEach((box) => observer.observe(box));
-    };
-  });
   return (
     <motion.div
       className="skill_container"
+      ref={scrollRef}
+      viewport={{ amount: "all" }}
       onViewportEnter={() => {
         document.querySelector("body").classList.add("dark");
       }}
@@ -112,7 +92,7 @@ const SkillComponents = ({ information }) => {
                           <img
                             className="skill_item"
                             key={key}
-                            src={test(item.name)}
+                            src={getSkillImage(item.name)}
                             alt={Object.values(item.name)}
                             onMouseOver={() => {
                               setTitle(item.name);
@@ -143,7 +123,7 @@ const SkillComponents = ({ information }) => {
                           <img
                             className="skill_item"
                             key={key}
-                            src={test(item.name)}
+                            src={getSkillImage(item.name)}
                             alt={Object.values(item.name)}
                             onMouseOver={() => {
                               setTitle(item.name);
@@ -174,7 +154,7 @@ const SkillComponents = ({ information }) => {
                           <img
                             className="skill_item"
                             key={key}
-                            src={test(item.name)}
+                            src={getSkillImage(item.name)}
                             alt={Object.values(item.name)}
                             onMouseOver={() => {
                               setTitle(item.name);

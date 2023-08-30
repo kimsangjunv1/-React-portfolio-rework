@@ -197,7 +197,7 @@ main {
 }
 
 .skill_container {
-  background: #f8faff;
+  // background: #f8faff;
   padding: 40px 0;
   height: 500px;
   position: relative;
@@ -225,7 +225,7 @@ main {
     // 배경
     .bg_round {
       position: absolute;
-      border: 1px solid var(--main-color-focus);
+      border: 1px solid #404047;
       left: 50%;
       transform: translate(-50%, 50%);
       bottom: 0;
@@ -416,6 +416,26 @@ main {
     .scroll_background {
       .scroll_progress {
         background: white;
+      }
+    }
+  }
+  .skill_container {
+    .skill_container_inner {
+      .bg_round {
+        .skill_section {
+          .skill_icon_container {
+            .skill_item {
+              background: #151515;
+            }
+          }
+        }
+      }
+    }
+  }
+  .section_title_container {
+    .section_title_container_inner {
+      .section_subTitle {
+        color: white;
       }
     }
   }
