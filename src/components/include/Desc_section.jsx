@@ -7,7 +7,7 @@ const Desc_section = () => {
   const itemInfo = useSelector((state) => state.counter.iteminfo);
   return (
     <div className="desc_section">
-      <TitleComponents title={"''"} subTitle={"''"} />
+      {/* <TitleComponents title={"''"} subTitle={"''"} /> */}
 
       {Object.keys(itemInfo).length !== 0 ? (
         <div className="desc_item">

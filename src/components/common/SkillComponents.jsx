@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const SkillComponents = ({ information }) => {
   const [title, setTitle] = useState("없음");
@@ -54,6 +54,28 @@ const SkillComponents = ({ information }) => {
     }
   };
   const skillInfo = information;
+
+  // 옵저버
+  useEffect(() => {
+    const boxes = document.querySelectorAll(".skill_item");
+    const option = {
+      root: null, //viewport
+      rootMargin: "0px",
+      threshold: 0.5, // 50%가 viewport에 들어와 있어야 callback 실행
+    };
+    const callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("active");
+        } else {
+          entry.target.classList.remove("active");
+        }
+      });
+    };
+    const observer = new IntersectionObserver(callback, option);
+
+    boxes.forEach((box) => observer.observe(box));
+  });
   return (
     <div className="skill_container">
       <div className="skill_desc_container">

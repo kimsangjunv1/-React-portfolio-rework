@@ -20,6 +20,8 @@ const Main = () => {
   const [toyProjectsInfo, setToyProjectsInfo] = useState([]);
   const [webstandardsInfo, setWebstandardsInfo] = useState([]);
   const [skillInfo, setSkillInfo] = useState([]);
+
+  const [scrolled, setScrolled] = useState(0);
   useEffect(() => {
     fetch(
       "https://raw.githubusercontent.com/kimsangjunv1/-React-portfolio-rework/main/src/components/utils/data.json",
@@ -33,15 +35,27 @@ const Main = () => {
         setSkillInfo(res.usedskill);
         setToyProjectsInfo(res.toyproject);
       });
+
+    // 스크롤
+    window.onscroll = function () {
+      console.log("실행1");
+      let winScroll =
+        document.body.scrollTop || document.documentElement.scrollTop;
+      let height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
+      console.log((winScroll / height) * 100);
+      setScrolled((winScroll / height) * 100);
+    };
   }, []);
   return (
     <div>
-      <Landing />
-      <Header />
-      <Information title={"테스트"} />
+      <Landing scrolled={scrolled} />
+      <Header scrolled={scrolled} />
+      <Information title={"테스트"} scrolled={scrolled} />
       <TitleComponents
         title={"web standards"}
-        subTitle={"웹표준공부"}
+        subTitle={"Technics"}
         setInner={true}
       />
       <SkillComponents information={skillInfo} />

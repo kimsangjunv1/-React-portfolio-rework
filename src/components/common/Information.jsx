@@ -13,41 +13,26 @@ import TextImage002 from "./../../assets/img/landing_text_002.svg";
 
 import FurChar from "./../../assets/img/landing_profile_fur.svg";
 
-const Information = ({ title }) => {
+const Information = ({ title, scrolled }) => {
   useEffect(() => {
-    const movingPhoto = () => {
-      window.onscroll = function () {
-        moveItem();
-      };
-
-      function moveItem() {
-        let winScroll =
-          document.body.scrollTop || document.documentElement.scrollTop;
-        let height =
-          document.documentElement.scrollHeight -
-          document.documentElement.clientHeight;
-        let scrolled = (winScroll / height) * 100;
-        // let furScale =
-        //   (winScroll / height) * 100 >= 10 ? 10 : (winScroll / height) * 100;
-        // document.querySelector(".myphoto").style.transform =
-        //   "translate(0," + scrolled + ")";
-        document.querySelector(".myphoto").style.width = scrolled + "%";
-        // document.querySelector(".fur").style.width = furScale * 10 + "px";
-        document.querySelector(".fur").style.transform =
-          "translate(" + scrolled + "px,0) scale(" + scrolled * 0.04 + ")";
-      }
-    };
-    movingPhoto();
-  }, []);
+    // document.querySelector(".myphoto").style.width = scrolled + "%";
+    // // document.querySelector(".fur").style.width = furScale * 10 + "px";
+    // document.querySelector(".fur").style.transform =
+    //   "scale(" + scrolled * 0.04 + ")";
+    // document.querySelector(".text_left").style.transform =
+    //   "scale(" + scrolled * 0.04 + ")";
+    // document.querySelector(".text_right").style.transform =
+    //   "scale(" + scrolled * 0.04 + ")";
+  });
 
   return (
     <div className="information_container">
       <div className="information_desc">
         <div className="photo_container">
           <img className="fur" src={FurChar} alt="" />
-          <img src={TextImage001} alt="" />
+          <img className="text_left" src={TextImage001} alt="" />
           <img className="myphoto" src={Profile} alt="내얼굴" />
-          <img src={TextImage002} alt="" />
+          <img className="text_right" src={TextImage002} alt="" />
         </div>
         <p className="dajim">
           안녕하세요! {title} 김상준 입니다.

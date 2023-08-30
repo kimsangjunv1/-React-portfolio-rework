@@ -11,42 +11,47 @@ import Landing_fur_004 from "./../../assets/img/landing_fur_004.svg";
 import Landing_fur_005 from "./../../assets/img/landing_fur_005.svg";
 import Landing_fur_006 from "./../../assets/img/landing_fur_006.svg";
 
-const Landing = () => {
-  useEffect(() => {
-    const landing = () => {
-      // let rotate_que = Math.floor(Math.random() * 101);
-      // let size_que = Math.floor(Math.random()*5)+1;
-      const allList = document.querySelectorAll(".fur_container img");
+import landing_img_001 from "./../../assets/img/landing_img_01.jpg";
+import landing_img_002 from "./../../assets/img/landing_img_02.jpg";
+import landing_img_003 from "./../../assets/img/landing_img_03.jpg";
 
-      document.querySelector(".landing").addEventListener("mousemove", (e) => {
-        //마우스 좌표 값
-        let mousePageX = e.pageX;
-        let mousePageY = e.pageY;
+const Landing = ({ scrolled }) => {
+  console.log("scrolled Landing : ", scrolled);
+  const landing = () => {
+    // let rotate_que = Math.floor(Math.random() * 101);
+    // let size_que = Math.floor(Math.random()*5)+1;
+    const allList = document.querySelectorAll(".fur_container > img");
 
-        // 전체 가로
-        let centerPageX = window.innerWidth / 2 - mousePageX;
-        let centerPageY = window.innerHeight / 2 - mousePageY;
+    document.querySelector(".landing").addEventListener("mousemove", (e) => {
+      //마우스 좌표 값
+      let mousePageX = e.pageX;
+      let mousePageY = e.pageY;
 
-        //이미지 움직이기
-        for (let i = 1; i <= allList.length; i++) {
-          for (let q = 1; q <= 6; q++) {
-            document.querySelector(
-              ".fur_container img:nth-child(" + i + ")"
-            ).style.transform =
-              "translate(" +
-              -centerPageX / (i * 5) +
-              "px, " +
-              -centerPageY / (i * 5) +
-              "px) rotate(" +
-              centerPageX * (i * 0.01) +
-              "deg)";
-          }
-        }
-      });
-    };
+      // 전체 가로
+      let centerPageX = window.innerWidth / 2 - mousePageX;
+      let centerPageY = window.innerHeight / 2 - mousePageY;
 
-    landing();
-  }, []);
+      //이미지 움직이기
+      for (let i = 1; i <= allList.length; i++) {
+        document.querySelector(
+          ".fur_container img:nth-child(" + i + ")"
+        ).style.transform =
+          "translate(" +
+          -centerPageX / (i * 5) +
+          "px, " +
+          -centerPageY / (i * 5) +
+          "px) rotate(" +
+          centerPageX * (i * 0.01) +
+          "deg)";
+      }
+    });
+  };
+
+  const good = document.querySelectorAll(".landing_image");
+  console.log("el : ", scrolled);
+  good.forEach((el, i) => {
+    el.style.transform = "translate(-50%,-" + scrolled * 10 + "px)";
+  });
 
   const test = () => {
     const tt = document.querySelector(".fur_001");
@@ -95,13 +100,40 @@ const Landing = () => {
             src={Landing_fur_006}
             alt="솜뭉치 캐릭터 001"
           />
+          <div className="lading_contents">
+            <div className="row">
+              <div className="image_box">
+                <img
+                  className="landing_image"
+                  src={landing_img_001}
+                  alt="랜딩 이미지 1"
+                />
+              </div>
+              <h2>즐기며 개발하는</h2>
+            </div>
+            <div className="row">
+              <h2>김상준 입니다.</h2>
+              <div className="image_box">
+                <img
+                  className="landing_image"
+                  src={landing_img_002}
+                  alt="랜딩 이미지 2"
+                />
+              </div>
+            </div>
+            <div className="row">
+              <div className="image_box">
+                <img
+                  className="landing_image"
+                  src={landing_img_003}
+                  alt="랜딩 이미지 3"
+                />
+              </div>
+              <h2>하하하 호호호호</h2>
+            </div>
+          </div>
+          <div className="line"></div>
         </div>
-        <h2 className="main_text">
-          <em>즐기며</em> 개발하는
-          <br />
-          개발자 김상준 입니다 ;)
-        </h2>
-        <img src={Landing_glow} alt="" />
       </div>
     </div>
   );

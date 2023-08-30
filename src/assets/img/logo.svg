@@ -1,31 +1,5 @@
-<svg width="76" height="66" viewBox="0 0 76 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M23.8862 18.7102L60.9512 8V23.7732L23.8862 28.252V18.7102Z" fill="white"/>
-<g filter="url(#filter0_d_24_750)">
-<path d="M55.6016 44.0877L18.5366 55V38.9292L55.6016 34.3659V44.0877Z" fill="white"/>
-</g>
-<g filter="url(#filter1_d_24_750)">
-<path d="M55.6035 29.8712L23.8865 20.8008V33.9837L55.6035 37.9016V29.8712Z" fill="white"/>
-</g>
-<defs>
-<filter id="filter0_d_24_750" x="0.53656" y="9.36585" width="73.0651" height="56.6341" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="-7"/>
-<feGaussianBlur stdDeviation="9"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_24_750"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_24_750" result="shape"/>
-</filter>
-<filter id="filter1_d_24_750" x="3.88654" y="0.800797" width="71.7169" height="57.1008" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-<feFlood flood-opacity="0" result="BackgroundImageFix"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="10"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_24_750"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_24_750" result="shape"/>
-</filter>
-</defs>
+<svg width="52" height="59" viewBox="0 0 52 59" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 13.2212L52 0V19.4712L3 25V13.2212Z" fill="black" fill-opacity="0.9"/>
+<path d="M41 28.6082L3 18V33.4179L41 38V28.6082Z" fill="black"/>
+<path d="M41 45.7397L-4.28059e-07 59V39.7276L41 34V45.7397Z" fill="black" fill-opacity="0.9"/>
 </svg>
