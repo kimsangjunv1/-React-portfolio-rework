@@ -1,16 +1,16 @@
 import React from "react";
 import { useEffect } from "react";
 
-import Profile from "./../../assets/img/profile.jpg";
+import { motion } from "framer-motion";
 
+// 이미지
+import Profile from "./../../assets/img/profile.jpg";
 import LocationIcon from "./../../assets/img/icon_location.svg";
 import PhoneIcon from "./../../assets/img/icon_phone.svg";
 import DateIcon from "./../../assets/img/icon_date.svg";
 import EmailIcon from "./../../assets/img/icon_email.svg";
-
 import TextImage001 from "./../../assets/img/landing_text_001.svg";
 import TextImage002 from "./../../assets/img/landing_text_002.svg";
-
 import FurChar from "./../../assets/img/landing_profile_fur.svg";
 
 const Information = ({ title, scrolled }) => {
@@ -27,13 +27,26 @@ const Information = ({ title, scrolled }) => {
 
   return (
     <div className="information_container">
+      {/* <motion.div initial={{ scale: 0 }} animate={{ scale: 1, rotateZ: 360 }} /> */}
       <div className="information_desc">
-        <div className="photo_container">
+        <motion.div
+          className="photo_container"
+          whileInView={{
+            opacity: [0, 1],
+            // rotate: [0, 360],
+            borderRadius: ["20%", "50%"],
+            transition: { delay: 1 },
+          }}
+          whileHover={{
+            scale: 1.2,
+            transition: { type: "spring", stiffness: 400, damping: 10 },
+          }}
+        >
           <img className="fur" src={FurChar} alt="" />
           <img className="text_left" src={TextImage001} alt="" />
           <img className="myphoto" src={Profile} alt="내얼굴" />
           <img className="text_right" src={TextImage002} alt="" />
-        </div>
+        </motion.div>
         <p className="dajim">
           안녕하세요! {title} 김상준 입니다.
           <br />

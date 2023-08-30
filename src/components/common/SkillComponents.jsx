@@ -8,10 +8,12 @@ const SkillComponents = ({ information }) => {
       // 라이브러리
       case "SCSS":
         return "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/skill_sass.png?raw=true";
-      case "lenis":
+      case "Lenis":
         return "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/skill_lenis.png?raw=true";
       case "스와이퍼":
         return "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/skill_swiper.png?raw=true";
+      case "Framer":
+        return "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/skill_framer.png?raw=true";
 
       // 프론트엔드
       case "리액트":
@@ -57,24 +59,27 @@ const SkillComponents = ({ information }) => {
 
   // 옵저버
   useEffect(() => {
-    const boxes = document.querySelectorAll(".skill_item");
-    const option = {
-      root: null, //viewport
-      rootMargin: "0px",
-      threshold: 0.5, // 50%가 viewport에 들어와 있어야 callback 실행
-    };
-    const callback = (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("active");
-        } else {
-          entry.target.classList.remove("active");
-        }
-      });
-    };
-    const observer = new IntersectionObserver(callback, option);
+    // 화면 영역 기준으로 클래스 붙여주는 함수
+    const skillEffect = () => {
+      const boxes = document.querySelectorAll(".skill_item");
+      const option = {
+        root: null, //viewport
+        rootMargin: "0px",
+        threshold: 0.5, // 50%가 viewport에 들어와 있어야 callback 실행
+      };
+      const callback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("active");
+          } else {
+            entry.target.classList.remove("active");
+          }
+        });
+      };
+      const observer = new IntersectionObserver(callback, option);
 
-    boxes.forEach((box) => observer.observe(box));
+      boxes.forEach((box) => observer.observe(box));
+    };
   });
   return (
     <div className="skill_container">
