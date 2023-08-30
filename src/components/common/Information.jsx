@@ -34,12 +34,8 @@ const Information = ({ title, scrolled }) => {
           whileInView={{
             opacity: [0, 1],
             // rotate: [0, 360],
-            borderRadius: ["20%", "50%"],
-            transition: { delay: 1 },
-          }}
-          whileHover={{
-            scale: 1.2,
-            transition: { type: "spring", stiffness: 400, damping: 10 },
+            // borderRadius: ["20%", "50%"],
+            transition: { delay: 0.1 },
           }}
         >
           <img className="fur" src={FurChar} alt="" />

@@ -86,10 +86,10 @@ const SkillComponents = ({ information }) => {
     <motion.div
       className="skill_container"
       onViewportEnter={() => {
-        console.log("출현!");
+        document.querySelector("body").classList.add("dark");
       }}
       onViewportLeave={() => {
-        console.log("사라짐!");
+        document.querySelector("body").classList.remove("dark");
       }}
     >
       <div className="skill_desc_container">

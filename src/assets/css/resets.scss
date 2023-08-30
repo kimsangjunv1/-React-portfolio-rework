@@ -20,6 +20,10 @@
   margin: 0;
 }
 
+body {
+  transition: 0.25s;
+}
+
 .clearfixed {
   &::after {
     content: "";
