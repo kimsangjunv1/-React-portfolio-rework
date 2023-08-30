@@ -9,6 +9,7 @@ Redux Toolkit
 SCSS
 Swiper
 Lenis
+Framer
 
 ```
 
