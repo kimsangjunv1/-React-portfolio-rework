@@ -1,3 +1,6 @@
+import { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+
 import Header from "./../layout/Header";
 import Contents from "../layout/Contents";
 import Footer from "./../layout/Footer";
@@ -14,7 +17,6 @@ import Desc_section from "./../include/Desc_section";
 import Scroll_up from "../common/Scroll_up";
 
 // import loading from ''
-import { useState, useEffect } from "react";
 
 const Main = () => {
   const [toyProjectsInfo, setToyProjectsInfo] = useState([]);
@@ -22,6 +24,7 @@ const Main = () => {
   const [skillInfo, setSkillInfo] = useState([]);
 
   const [scrolled, setScrolled] = useState(0);
+
   useEffect(() => {
     fetch(
       "https://raw.githubusercontent.com/kimsangjunv1/-React-portfolio-rework/main/src/components/utils/data.json",
@@ -46,6 +49,8 @@ const Main = () => {
       setScrolled((winScroll / height) * 100);
     };
   }, []);
+  const itemInfo = useSelector((state) => state.counter.iteminfo);
+
   return (
     <div>
       <Landing scrolled={scrolled} />
@@ -57,6 +62,9 @@ const Main = () => {
         setInner={true}
       />
       <SkillComponents information={skillInfo} />
+      {Object.keys(itemInfo).length !== 0 && (
+        <Desc_section itemInfo={itemInfo} />
+      )}
 
       <Contents>
         <Navigate_section
@@ -64,7 +72,7 @@ const Main = () => {
           webstandardsInfo={webstandardsInfo}
           skillInfo={skillInfo}
         />
-        <Desc_section />
+
         {/* <Loading /> */}
       </Contents>
       <Contact />

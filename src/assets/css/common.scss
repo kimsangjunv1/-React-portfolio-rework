@@ -408,9 +408,11 @@ main {
   background: black;
   header {
     background: transparent;
-    .header_inner {
-      a {
-        color: white;
+    .header_text_container {
+      .test {
+        a {
+          color: white;
+        }
       }
     }
     .scroll_background {
