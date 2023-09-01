@@ -568,6 +568,32 @@ main {
   }
 }
 
+.study_container {
+  width: 100%;
+  .study_container_inner {
+    width: 100%;
+    max-width: var(--web);
+    margin: 0 auto;
+    .item {
+      .title {
+        color: black;
+      }
+      .desc {
+        font-size: 16px;
+        color: black;
+        margin-bottom: 10px;
+      }
+      .date_container {
+        display: inline-flex;
+        // gap: 5px;
+        background: black;
+        color: white;
+        padding: 2px 5px;
+      }
+    }
+  }
+}
+
 // 다크모드
 .dark {
   color: white;

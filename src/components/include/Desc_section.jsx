@@ -1,6 +1,7 @@
 import ScreenshotComponents from "../common/ScreenshotComponents";
 // import { useSelector } from "react-redux";
 import { saveItemInfo } from "../utils/infoContainerStore";
+import { AnimatePresence, motion } from "framer-motion";
 
 import TitleComponents from "../common/TitleComponents";
 import { useDispatch } from "react-redux";
@@ -9,7 +10,16 @@ const Desc_section = ({ itemInfo }) => {
   // const itemInfo = useSelector((state) => state.counter.iteminfo);
   const dispatch = useDispatch();
   return (
-    <div className="desc_container">
+    <motion.div
+      className="desc_container"
+      // initial={{ opacity: 0 }}
+      // animate={{ opacity: 1 }}
+      // exit={{ opacity: 0 }}
+      initial={{ y: 10, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: -10, opacity: 0 }}
+      transition={{ duration: 0.2 }}
+    >
       <div className="desc_container_inner">
         <button
           onClick={() => {
@@ -53,7 +63,7 @@ const Desc_section = ({ itemInfo }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

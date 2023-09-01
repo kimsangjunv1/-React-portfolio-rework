@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
+import { AnimatePresence } from "framer-motion";
 
 import Header from "./../layout/Header";
 import Contents from "../layout/Contents";
@@ -12,6 +13,7 @@ import SkillComponents from "../common/SkillComponents";
 import TitleComponents from "../common/TitleComponents";
 import WorklistComponents from "../common/WorklistComponents";
 import SectionSpace from "../common/SpaceComponents";
+import StudyComponents from "../common/StudyComponents";
 
 import Navigate_section from "./../include/Navigate_section";
 import Desc_section from "./../include/Desc_section";
@@ -66,9 +68,11 @@ const Main = () => {
         setInner={true}
       />
       <SkillComponents information={skillInfo} />
-      {Object.keys(itemInfo).length !== 0 && (
-        <Desc_section itemInfo={itemInfo} />
-      )}
+      <AnimatePresence>
+        {Object.keys(itemInfo).length !== 0 && (
+          <Desc_section itemInfo={itemInfo} />
+        )}
+      </AnimatePresence>
       <SectionSpace height={120} />
       <TitleComponents
         title={"Toy Project"}
@@ -81,6 +85,9 @@ const Main = () => {
         webstandardsInfo={webstandardsInfo}
         skillInfo={skillInfo}
       /> */}
+      <SectionSpace height={120} />
+      <TitleComponents title={"공부"} subTitle={"Study"} setInner={true} />
+      <StudyComponents />
       <SectionSpace height={120} />
 
       <Contact />
