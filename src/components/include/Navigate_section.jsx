@@ -9,11 +9,10 @@ import WorklistComponents from "../common/WorklistComponents";
 const Navigate_section = ({ webstandardsInfo, toyProjectsInfo }) => {
   return (
     <div className="nav_section">
-      <TitleComponents title={"Toy Project"} subTitle={"Projects"} />
       <WorklistComponents information={toyProjectsInfo} />
-      <DividerComponents />
+      {/* <DividerComponents /> */}
       {/* <TitleComponents title={""} subTitle={""} /> */}
-      <WorklistComponents information={webstandardsInfo} />
+      {/* <WorklistComponents information={webstandardsInfo} /> */}
     </div>
   );
 };

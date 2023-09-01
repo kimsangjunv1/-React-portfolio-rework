@@ -62,7 +62,7 @@ const Information = ({ title, scrolled }) => {
           <br />
           다양한 직군과 함께 멋지고 즐거운 UX를 만드는 데 관심이 많습니다.
         </p>
-        <div className="my_info">
+        {/* <div className="my_info">
           <div className="info_item">
             <img src={DateIcon} alt="아이콘" />
             <p>1997-08-09</p>
@@ -79,7 +79,7 @@ const Information = ({ title, scrolled }) => {
             <img src={EmailIcon} alt="아이콘" />
             <p>to_before@naver.com</p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

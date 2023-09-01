@@ -65,16 +65,17 @@ const Main = () => {
       {Object.keys(itemInfo).length !== 0 && (
         <Desc_section itemInfo={itemInfo} />
       )}
-
-      <Contents>
-        <Navigate_section
-          toyProjectsInfo={toyProjectsInfo}
-          webstandardsInfo={webstandardsInfo}
-          skillInfo={skillInfo}
-        />
-
-        {/* <Loading /> */}
-      </Contents>
+      <TitleComponents
+        title={"Toy Project"}
+        subTitle={"Projects"}
+        setInner={true}
+      />
+      <Navigate_section
+        toyProjectsInfo={toyProjectsInfo}
+        webstandardsInfo={webstandardsInfo}
+        skillInfo={skillInfo}
+      />
+      <Contents>{/* <Loading /> */}</Contents>
       <Contact />
       <Scroll_up />
       <Footer />

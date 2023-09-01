@@ -28,15 +28,15 @@ const WorklistComponents = ({ information }) => {
                   alt="미리보기"
                 />
                 <p className="worklist_date">{item.date}</p>
-              </div>
-              <div className="used_skill_container">
-                {item.skill.map((item, key) => {
-                  return <p key={key}>{item.name}</p>;
-                })}
-              </div>
-              <div className="item_desc_container">
-                <p>{item.category ? item.category : "설정 값 없음"}</p>
-                <p>{item.title ? item.title : "설정 값 없음"}</p>
+                <div className="used_skill_container">
+                  {item.skill.map((item, key) => {
+                    return <p key={key}>{item.name}</p>;
+                  })}
+                </div>
+                <div className="item_desc_container">
+                  <p>{item.category ? item.category : "설정 값 없음"}</p>
+                  <p>{item.title ? item.title : "설정 값 없음"}</p>
+                </div>
               </div>
             </div>
           );

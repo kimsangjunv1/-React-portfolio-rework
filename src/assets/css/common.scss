@@ -1,4 +1,6 @@
 :root {
+  --web: 1300px;
+
   --bg-color: #fff;
   --main-color: #002f3f;
   --main-color-focus: #0c8a37;
@@ -14,7 +16,7 @@ main {
   .main_inner {
     padding: 120px 20px 0 20px;
     width: 100%;
-    max-width: 1500px;
+    max-width: var(--web);
     // max-width: 1680px;
     margin: 0 auto;
     display: flex;
@@ -98,7 +100,7 @@ main {
   margin-bottom: 20px;
   font-family: poppins;
   .section_title_container_inner {
-    max-width: 1500px;
+    max-width: var(--web);
     margin: 0 auto;
     .section_title {
       font-size: 14px;
@@ -219,7 +221,7 @@ main {
   }
   .skill_container_inner {
     height: 100%;
-    max-width: 1500px;
+    max-width: var(--web);
     margin: 0 auto;
 
     // 배경
@@ -422,6 +424,15 @@ main {
     }
   }
   .skill_container {
+    .skill_desc_container {
+      .skill_desc,
+      .skill_name {
+        color: white;
+      }
+      .skill_desc {
+        background: #151515;
+      }
+    }
     .skill_container_inner {
       .bg_round {
         .skill_section {
@@ -435,6 +446,11 @@ main {
     }
   }
   .section_title_container {
+    > div {
+      .section_subTitle {
+        color: white;
+      }
+    }
     .section_title_container_inner {
       .section_subTitle {
         color: white;
