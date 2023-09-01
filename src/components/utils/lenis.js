@@ -2,7 +2,7 @@ import Lenis from "@studio-freight/lenis";
 
 const lenis = () => {
   const lenis = new Lenis({
-    duration: 0.3,
+    duration: 0.9,
     smooth: true,
   });
 

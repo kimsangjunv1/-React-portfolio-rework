@@ -28,32 +28,34 @@ main {
 // 위로 이동
 .nav_container {
   position: fixed;
+  z-index: 1000;
   bottom: 20px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  /* width: 130px; */
-  height: 20px;
-  padding: 20px 30px;
-  background: #002f3fc7;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-weight: 900;
-  cursor: pointer;
-  transition: 0.25s;
+  right: 20px;
+  // left: 50%;
+  // transform: translate(-50%, 0);
   opacity: 0;
-  border-radius: 100px;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  /* width: 130px; */
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    width: 80px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    background: black;
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+    color: white;
+    cursor: pointer;
+    transition: 0.25s;
+    &:hover {
+      background: white;
+      color: black;
+    }
+  }
   &.show {
     opacity: 1;
-  }
-  .up_btn {
-    &:hover {
-      filter: brightness(0.7);
-    }
   }
 }
 
@@ -98,7 +100,7 @@ main {
 .section_title_container {
   font-weight: bold;
   margin-bottom: 20px;
-  font-family: poppins;
+  font-family: GmarketSans;
   .section_title_container_inner {
     max-width: var(--web);
     margin: 0 auto;
@@ -124,7 +126,7 @@ main {
     line-height: 1.2em;
     color: #000;
     font-weight: 700;
-    font-family: "Poppins", "Noto Sans";
+    font-family: "GmarketSans", "Poppins", "Noto Sans";
     position: relative;
     // transform: translateY(101%);
     display: inline-block;
@@ -423,7 +425,7 @@ main {
       &:hover {
         .worklist_screenshot_container {
           position: relative;
-          height: 400px;
+          // height: 400px;
           width: 400px;
           transition: 0.25s;
           &::before,
@@ -462,7 +464,7 @@ main {
       .worklist_screenshot_container {
         position: relative;
         width: 400px;
-        height: 400px;
+        height: 300px;
         transition: 0.25s;
         overflow: hidden;
         border-radius: var(--radius);
@@ -480,7 +482,7 @@ main {
           content: "";
           opacity: 0;
           // z-index: 10;
-          background: #f2a900;
+          background: #2082ff;
           backdrop-filter: blur(5px);
           -webkit-backdrop-filter: blur(5px);
         }
@@ -548,8 +550,18 @@ main {
           }
         }
         .title {
-          font-size: 32px;
+          font-size: 28px;
           font-weight: 500;
+          color: black;
+          margin-bottom: 10px;
+        }
+        .desc {
+          font-size: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
         }
       }
     }
@@ -568,6 +580,9 @@ main {
           color: white;
         }
       }
+    }
+    .logo {
+      filter: invert(1);
     }
     .scroll_background {
       .scroll_progress {

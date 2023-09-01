@@ -10,6 +10,8 @@ import Screenshot from "./../../assets/img/screenshot_01.jpg";
 const WorklistComponents = ({ information }) => {
   const data = information;
 
+  console.log(data);
+
   const dispatch = useDispatch();
 
   return (
@@ -51,6 +53,7 @@ const WorklistComponents = ({ information }) => {
                   <h2 className="title">
                     {item.title ? item.title : "설정 값 없음"}
                   </h2>
+                  <p className="desc">{item.desc}</p>
 
                   <div className="used_skill_container">
                     {item.skill.map((item, key) => {

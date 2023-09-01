@@ -27,7 +27,7 @@ const Scroll_up = () => {
           scrollContact();
         }}
       >
-        <p>아래로 </p>
+        <p>CONTACT </p>
       </div>
       <div
         className="up_btn"
@@ -35,7 +35,7 @@ const Scroll_up = () => {
           scrollWindow();
         }}
       >
-        <p>안녕</p>
+        <p>UP</p>
       </div>
     </div>
   );
