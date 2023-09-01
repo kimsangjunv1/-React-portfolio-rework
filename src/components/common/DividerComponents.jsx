@@ -1,7 +1,7 @@
 import React from "react";
 
 const DividerComponents = () => {
-  return <hr />;
+  return <hr style={{ background: "transparent" }} />;
 };
 
 export default DividerComponents;

@@ -10,6 +10,8 @@ import Information from "../common/Information";
 
 import SkillComponents from "../common/SkillComponents";
 import TitleComponents from "../common/TitleComponents";
+import WorklistComponents from "../common/WorklistComponents";
+import SectionSpace from "../common/SpaceComponents";
 
 import Navigate_section from "./../include/Navigate_section";
 import Desc_section from "./../include/Desc_section";
@@ -55,7 +57,9 @@ const Main = () => {
     <div>
       <Landing scrolled={scrolled} />
       <Header scrolled={scrolled} />
+      <SectionSpace height={120} />
       <Information title={"테스트"} scrolled={scrolled} />
+      <SectionSpace height={120} />
       <TitleComponents
         title={"web standards"}
         subTitle={"Technics"}
@@ -65,17 +69,20 @@ const Main = () => {
       {Object.keys(itemInfo).length !== 0 && (
         <Desc_section itemInfo={itemInfo} />
       )}
+      <SectionSpace height={120} />
       <TitleComponents
         title={"Toy Project"}
         subTitle={"Projects"}
         setInner={true}
       />
-      <Navigate_section
+      <WorklistComponents information={toyProjectsInfo} />
+      {/* <Navigate_section
         toyProjectsInfo={toyProjectsInfo}
         webstandardsInfo={webstandardsInfo}
         skillInfo={skillInfo}
-      />
-      <Contents>{/* <Loading /> */}</Contents>
+      /> */}
+      <SectionSpace height={120} />
+
       <Contact />
       <Scroll_up />
       <Footer />
