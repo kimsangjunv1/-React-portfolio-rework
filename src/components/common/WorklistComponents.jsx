@@ -39,19 +39,23 @@ const WorklistComponents = ({ information }) => {
                     src={item.image[0].url}
                     alt="미리보기"
                   />
-                  {/* <p className="worklist_date">{item.date}</p> */}
-                  <div className="item_desc_container">
-                    <p>
-                      {item.category ? item.category : "설정 값 없음"}・
-                      {item.date}
+                  <div className="info_container">
+                    <p className="category">
+                      {item.category ? item.category : "설정 값 없음"}
                     </p>
-                    {/* <p className="worklist_date">{item.date}</p> */}
-                    <p>{item.title ? item.title : "설정 값 없음"}</p>
-                    <div className="used_skill_container">
-                      {item.skill.map((item, key) => {
-                        return <p key={key}>{item.name}</p>;
-                      })}
-                    </div>
+                    <p className="date">{item.date}</p>
+                  </div>
+                  {/* <p className="worklist_date">{item.date}</p> */}
+                </div>
+                <div className="item_desc_container">
+                  <h2 className="title">
+                    {item.title ? item.title : "설정 값 없음"}
+                  </h2>
+
+                  <div className="used_skill_container">
+                    {item.skill.map((item, key) => {
+                      return <p key={key}>{item.name}</p>;
+                    })}
                   </div>
                 </div>
               </SwiperSlide>

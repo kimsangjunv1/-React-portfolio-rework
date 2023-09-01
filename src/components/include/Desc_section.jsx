@@ -1,21 +1,30 @@
 import ScreenshotComponents from "../common/ScreenshotComponents";
 // import { useSelector } from "react-redux";
+import { saveItemInfo } from "../utils/infoContainerStore";
 
 import TitleComponents from "../common/TitleComponents";
+import { useDispatch } from "react-redux";
 
 const Desc_section = ({ itemInfo }) => {
   // const itemInfo = useSelector((state) => state.counter.iteminfo);
+  const dispatch = useDispatch();
   return (
-    <div className="desc_section">
-      <div className="desc_item">
-        <ScreenshotComponents image={itemInfo.image} />
-
+    <div className="desc_container">
+      <div className="desc_container_inner">
+        <button
+          onClick={() => {
+            dispatch(saveItemInfo([]));
+          }}
+        >
+          닫기
+        </button>
         <div className="title_container clearfixed">
           <span>{itemInfo.title}</span>
           <span>{itemInfo.date}</span>
         </div>
+        <ScreenshotComponents image={itemInfo.image} />
         <div className="all_container">
-          <div className="desc_container">
+          <div className="info_container">
             <div className="stack_section">
               <p className="sub_title">사용스택</p>
               <div className="stack_container">
