@@ -9,8 +9,12 @@ const StudyComponents = () => {
         <motion.div
           className="item"
           whileHover={{
-            scale: 1,
-            transition: { type: "just", stiffness: 0, damping: 0 },
+            scale: 1.02,
+            // transition: { type: "spring", stiffness: 400, damping: 10 },
+          }}
+          whileInView={{
+            opacity: [0, 1],
+            transition: { delay: 0.4 },
           }}
         >
           <h2 className="title">Redux Toolkit Store 사용해보기</h2>
@@ -28,11 +32,12 @@ const StudyComponents = () => {
         <motion.div
           className="item"
           whileHover={{
-            fontWeight: "900",
-            transition: { type: "just", stiffness: 0, damping: 0 },
+            scale: 1.02,
+            // transition: { type: "spring", stiffness: 400, damping: 10 },
           }}
-          onHoverEnd={{
-            background: "#fff",
+          whileInView={{
+            opacity: [0, 1],
+            transition: { delay: 0.4 },
           }}
         >
           <h2 className="title">Redux Toolkit Store 사용해보기</h2>
@@ -50,8 +55,12 @@ const StudyComponents = () => {
         <motion.div
           className="item"
           whileHover={{
-            scale: 1,
-            transition: { type: "just", stiffness: 0, damping: 0 },
+            scale: 1.02,
+            // transition: { type: "spring", stiffness: 400, damping: 10 },
+          }}
+          whileInView={{
+            opacity: [0, 1],
+            transition: { delay: 0.4 },
           }}
         >
           <h2 className="title">useRef란?</h2>
@@ -69,8 +78,12 @@ const StudyComponents = () => {
         <motion.div
           className="item"
           whileHover={{
-            scale: 1,
-            transition: { type: "just", stiffness: 0, damping: 0 },
+            scale: 1.02,
+            // transition: { type: "spring", stiffness: 400, damping: 10 },
+          }}
+          whileInView={{
+            opacity: [0, 1],
+            transition: { delay: 0.4 },
           }}
         >
           <h2 className="title">Redux Toolkit Store 사용해보기</h2>
@@ -88,8 +101,12 @@ const StudyComponents = () => {
         <motion.div
           className="item"
           whileHover={{
-            scale: 1,
-            transition: { type: "just", stiffness: 0, damping: 0 },
+            scale: 1.02,
+            // transition: { type: "spring", stiffness: 400, damping: 10 },
+          }}
+          whileInView={{
+            opacity: [0, 1],
+            transition: { delay: 0.4 },
           }}
         >
           <h2 className="title">Redux Toolkit Store 사용해보기</h2>

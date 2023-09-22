@@ -12,6 +12,10 @@
   --heavy-gray: #5e678d;
 }
 
+html {
+  cursor: none;
+}
+
 main {
   .main_inner {
     padding: 120px 20px 0 20px;
@@ -650,6 +654,46 @@ main {
       }
     }
   }
+}
+
+// .mouse_cursor2,
+// .mouse_cursor {
+//   width: 181px;
+
+//   position: absolute;
+//   height: 29px;
+//   z-index: 1000;
+//   transform: translate(40%, 50%);
+//   // transition: 0.25s;
+//   img {
+//     width: 60px;
+//   }
+// }
+.mouse_cursor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 10px;
+  height: 10px;
+  z-index: 9999;
+  border-radius: 50%;
+  background: black;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.3s, opacity 0.2s;
+}
+.mouse_cursor2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 9998;
+  border-radius: 50%;
+  background: black;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.3s, opacity 0.2s;
 }
 
 // 애니메이션

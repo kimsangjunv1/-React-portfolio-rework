@@ -9,6 +9,8 @@ import Landing from "../layout/Landing";
 import Contact from "../layout/Contact";
 import Information from "../common/Information";
 
+import MouseSection from "../include/Mouse_section";
+
 import SkillComponents from "../common/SkillComponents";
 import TitleComponents from "../common/TitleComponents";
 import WorklistComponents from "../common/WorklistComponents";
@@ -57,6 +59,7 @@ const Main = () => {
 
   return (
     <div>
+      <MouseSection />
       <Landing scrolled={scrolled} />
       <Header scrolled={scrolled} />
       <SectionSpace height={120} />
