@@ -677,12 +677,12 @@ main {
   height: 10px;
   z-index: 9999;
   border-radius: 50%;
-  background: black;
+  // background: black;
   user-select: none;
   pointer-events: none;
   transition: transform 0.3s, opacity 0.2s;
 }
-.mouse_cursor2 {
+.cursor_particle_001 {
   position: absolute;
   left: 0;
   top: 0;
@@ -690,10 +690,25 @@ main {
   height: 30px;
   z-index: 9998;
   border-radius: 50%;
-  background: black;
+  // background: black;
   user-select: none;
   pointer-events: none;
   transition: transform 0.3s, opacity 0.2s;
+  transform: translate(50px, 50px);
+}
+.cursor_particle_002 {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 30px;
+  height: 30px;
+  z-index: 9998;
+  border-radius: 50%;
+  // background: black;
+  user-select: none;
+  pointer-events: none;
+  transition: transform 0.3s, opacity 0.2s;
+  transform: translate(80px, 60px);
 }
 
 // 애니메이션

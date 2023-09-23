@@ -7,46 +7,56 @@ import LogoBackground from "./../../assets/img/logo_bg.jpg";
 import LogoMain from "./../../assets/img/logo.svg";
 
 const Header = ({ scrolled }) => {
-  const test = useRef(null);
+  const headerBox = useRef(null);
 
-  const [offsetTop, setOffsetTop] = useState(test.current?.offsetTop);
+  const [nowScroll, setNowScroll] = useState(true);
+
+  const [lastScroll, setLastScroll] = useState(0);
+  const [offsetTop, setOffsetTop] = useState(headerBox.current?.offsetTop);
   const [menuItem, setMenuItem] = useState(null);
 
   useEffect(() => {
     document.querySelector(".scroll_progress").style.width = scrolled + "%";
+
+    const test = () => {
+      if (offsetTop >= window.scrollY) {
+        console.log("Hide");
+      } else {
+        // console.log("Show", offsetTop);
+
+        let scrollTop =
+          window.pageYOffset ||
+          window.scrollY ||
+          document.documentElement.scrollTop;
+
+        console.log(scrollTop < lastScroll);
+        // console.log("lastScroll : ", lastScroll);
+        // console.log("scrollTop : ", scrollTop);
+
+        if (scrollTop < lastScroll) {
+          //현재 스크롤 값이 이전 스크롤 값보다 작다면
+          // document.querySelector("header").style.top = "0px";
+          headerBox.current.style.top = "0px";
+        } else {
+          // document.querySelector("header").style.top = "-100px";
+          headerBox.current.style.top = "-85px";
+        }
+        setLastScroll(scrollTop); // 지금 현재 스크롤 값을 이전 스크롤 값에 넣은 뒤
+
+        // console.log("headerBox.current ; ", headerBox.current);
+        // console.log("header : ", document.querySelector("header"));
+      }
+    };
+
+    window.addEventListener("scroll", test);
   });
 
   useEffect(() => {
-    setOffsetTop(test.current?.offsetTop);
+    setOffsetTop(headerBox.current?.offsetTop);
   }, []);
 
-  // if (test) {
-  //   console.log(
-  //     "window.scrollY : ",
-  //     window.scrollY,
-  //     "test.current.offsetTop : ",
-  //     test.current?.offsetTop
-  //   );
-  // }
-  let hohoho = window.scrollY;
-  if (offsetTop >= window.scrollY) {
-    console.log("Hide");
-  } else {
-    console.log("Show", offsetTop);
-    console.log(
-      "window.scrollY > hohoho : ",
-      window.scrollY > hohoho,
-      "window.scrollY : ",
-      window.scrollY,
-      "hohoho : ",
-      hohoho
-    );
-    if (window.scrollY > hohoho) console.log("Show 상태에서 hohoho", hohoho);
-    hohoho = window.scrollY;
-  }
-
   return (
-    <header ref={test}>
+    <header ref={headerBox}>
       <div className="header_inner">
         <HeaderMenu title={"Information"} />
         <HeaderMenu title={"Technics"} />

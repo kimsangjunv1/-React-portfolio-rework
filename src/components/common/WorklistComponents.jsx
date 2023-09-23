@@ -10,7 +10,7 @@ import Screenshot from "./../../assets/img/screenshot_01.jpg";
 const WorklistComponents = ({ information }) => {
   const data = information;
 
-  console.log(data);
+  // console.log(data);
 
   const dispatch = useDispatch();
 
