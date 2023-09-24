@@ -50,6 +50,12 @@ const Main = () => {
         setToyProjectsInfo(res.toyproject);
       });
 
+    // 이미지 로딩
+    imagesLoaded(document.querySelector("body"), function () {
+      console.log("로딩완려");
+      setIsLoaded(true);
+    });
+
     // 스크롤
     window.onscroll = function () {
       let winScroll =
@@ -60,14 +66,6 @@ const Main = () => {
       setScrolled((winScroll / height) * 100);
     };
   }, []);
-
-  // 이미지 로딩
-  // let imgLoad = imagesLoaded("body");
-
-  imagesLoaded(document.querySelector("body"), function () {
-    console.log("로딩완려");
-    setIsLoaded(true);
-  });
 
   const itemInfo = useSelector((state) => state.counter.iteminfo);
 
