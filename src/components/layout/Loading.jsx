@@ -9,7 +9,7 @@ const Loading = () => {
   return (
     <motion.div
       initial={{ y: 0, translateY: "0%" }}
-      animate={{ y: 0, translateY: "100%" }}
+      //   animate={{ y: 0, translateY: "100%" }}
       exit={{ y: 0, translateY: "-100%" }}
       transition={{ duration: 1.0, delay: 0.5 }}
       className="loading_container"
