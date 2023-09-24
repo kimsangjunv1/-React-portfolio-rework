@@ -32,6 +32,8 @@ const Main = () => {
   const [webstandardsInfo, setWebstandardsInfo] = useState([]);
   const [skillInfo, setSkillInfo] = useState([]);
 
+  const [isLoaded, setIsLoaded] = useState(false);
+
   const [scrolled, setScrolled] = useState(0);
 
   useEffect(() => {
@@ -60,16 +62,19 @@ const Main = () => {
   }, []);
 
   // 이미지 로딩
-  let imgLoad = imagesLoaded("body");
+  // let imgLoad = imagesLoaded("body");
+
+  imagesLoaded(document.querySelector("body"), function () {
+    console.log("로딩완려");
+    setIsLoaded(true);
+  });
 
   const itemInfo = useSelector((state) => state.counter.iteminfo);
 
   return (
     <Fragment>
       <MouseSection />
-      <AnimatePresence>
-        {imgLoad.images.length > 0 ? "" : <Loading />}
-      </AnimatePresence>
+      <AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
       <Landing scrolled={scrolled} />
       <Header scrolled={scrolled} />
       <SectionSpace height={120} />
