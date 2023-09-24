@@ -18,37 +18,29 @@ const Header = ({ scrolled }) => {
   useEffect(() => {
     document.querySelector(".scroll_progress").style.width = scrolled + "%";
 
-    const test = () => {
+    const checkTop = () => {
       if (offsetTop >= window.scrollY) {
-        console.log("Hide");
+        // 안닿았을때
       } else {
-        // console.log("Show", offsetTop);
-
+        // 닿았을때
         let scrollTop =
           window.pageYOffset ||
           window.scrollY ||
           document.documentElement.scrollTop;
 
-        console.log(scrollTop < lastScroll);
-        // console.log("lastScroll : ", lastScroll);
-        // console.log("scrollTop : ", scrollTop);
+        // console.log(scrollTop < lastScroll);
 
         if (scrollTop < lastScroll) {
           //현재 스크롤 값이 이전 스크롤 값보다 작다면
-          // document.querySelector("header").style.top = "0px";
           headerBox.current.style.top = "0px";
         } else {
-          // document.querySelector("header").style.top = "-100px";
           headerBox.current.style.top = "-85px";
         }
         setLastScroll(scrollTop); // 지금 현재 스크롤 값을 이전 스크롤 값에 넣은 뒤
-
-        // console.log("headerBox.current ; ", headerBox.current);
-        // console.log("header : ", document.querySelector("header"));
       }
     };
 
-    window.addEventListener("scroll", test);
+    window.addEventListener("scroll", checkTop);
   });
 
   useEffect(() => {
