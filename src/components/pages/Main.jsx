@@ -73,6 +73,7 @@ const Main = () => {
     <Fragment>
       <MouseSection />
       <AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
+      {/* <AnimatePresence>{isLoaded ? <Loading /> : <Loading />}</AnimatePresence> */}
       <Landing scrolled={scrolled} />
       <Header scrolled={scrolled} />
       <SectionSpace height={120} />
