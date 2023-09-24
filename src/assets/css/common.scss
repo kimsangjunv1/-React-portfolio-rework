@@ -711,6 +711,16 @@ main {
   transform: translate(80px, 60px);
 }
 
+.testest {
+  position: fixed;
+  background: red;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10000;
+}
+
 // 애니메이션
 .pop {
   -webkit-animation: rubberBand 1.1s alternate 0s;

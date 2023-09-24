@@ -1,11 +1,14 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 import { useSelector } from "react-redux";
 import { AnimatePresence } from "framer-motion";
+
+import imagesLoaded from "imagesloaded";
 
 import Header from "./../layout/Header";
 import Contents from "../layout/Contents";
 import Footer from "./../layout/Footer";
 import Landing from "../layout/Landing";
+import Loading from "../layout/Loading";
 import Contact from "../layout/Contact";
 import Information from "../common/Information";
 
@@ -55,11 +58,18 @@ const Main = () => {
       setScrolled((winScroll / height) * 100);
     };
   }, []);
+
+  // 이미지 로딩
+  let imgLoad = imagesLoaded("body");
+
   const itemInfo = useSelector((state) => state.counter.iteminfo);
 
   return (
-    <div>
+    <Fragment>
       <MouseSection />
+      <AnimatePresence>
+        {imgLoad.images.length > 0 ? "" : <Loading />}
+      </AnimatePresence>
       <Landing scrolled={scrolled} />
       <Header scrolled={scrolled} />
       <SectionSpace height={120} />
@@ -96,7 +106,7 @@ const Main = () => {
       <Contact />
       <Scroll_up />
       <Footer />
-    </div>
+    </Fragment>
   );
 };
 

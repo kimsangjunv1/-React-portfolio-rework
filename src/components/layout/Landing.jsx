@@ -12,6 +12,10 @@ import Landing_fur_004 from "./../../assets/img/landing_fur_004.svg";
 import Landing_fur_005 from "./../../assets/img/landing_fur_005.svg";
 import Landing_fur_006 from "./../../assets/img/landing_fur_006.svg";
 
+import Landing_text_focus from "./../../assets/img/landing_text_focus.svg";
+import Landing_arrow_001 from "./../../assets/img/landing_arrow_001.svg";
+import Landing_arrow_002 from "./../../assets/img/landing_arrow_002.svg";
+
 import landing_img_001 from "./../../assets/img/landing_img_01.jpg";
 import landing_img_002 from "./../../assets/img/landing_img_02.jpg";
 import landing_img_003 from "./../../assets/img/landing_img_03.jpg";
@@ -58,7 +62,7 @@ const Landing = ({ scrolled }) => {
     <div className="landing">
       <div className="landing_inner">
         <div className="fur_container" ref={boxRef}>
-          <motion.img
+          {/* <motion.img
             className="fur_001"
             src={Landing_fur_001}
             alt="솜뭉치 캐릭터 001"
@@ -165,21 +169,30 @@ const Landing = ({ scrolled }) => {
             dragSnapToOrigin
             dragElastic={0.5}
             dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
-          />
+          /> */}
           <div className="lading_contents">
             <div className="row">
+              <motion.h2
+                whileInView={{
+                  opacity: [0, 1],
+                  transition: { delay: 0.65 },
+                }}
+              >
+                즐기며
+              </motion.h2>
               <motion.div
-                className="image_box"
+                className="arrow_box"
                 whileInView={{
                   opacity: [0, 1],
                   transition: { delay: 0.45 },
                 }}
               >
-                <img
+                {/* <img
                   className="landing_image"
                   src={landing_img_001}
                   alt="랜딩 이미지 1"
-                />
+                /> */}
+                <img className="arrow_image" src={Landing_arrow_001} alt="" />
               </motion.div>
               <motion.h2
                 whileInView={{
@@ -187,7 +200,7 @@ const Landing = ({ scrolled }) => {
                   transition: { delay: 0.65 },
                 }}
               >
-                즐기며 개발하는
+                개발하는
               </motion.h2>
             </div>
             <div className="row">
@@ -197,7 +210,7 @@ const Landing = ({ scrolled }) => {
                   transition: { delay: 0.35 },
                 }}
               >
-                김상준 입니다.
+                김상준
               </motion.h2>
               <motion.div
                 className="image_box"
@@ -210,6 +223,42 @@ const Landing = ({ scrolled }) => {
                   className="landing_image"
                   src={landing_img_002}
                   alt="랜딩 이미지 2"
+                />
+              </motion.div>
+              <motion.h2
+                whileInView={{
+                  opacity: [0, 1],
+                  transition: { delay: 0.35 },
+                }}
+              >
+                입니다.
+              </motion.h2>
+            </div>
+            <div className="row">
+              <motion.h2
+                whileInView={{
+                  opacity: [0, 1],
+                  transition: { delay: 0.25 },
+                }}
+              >
+                많은것을 남긴
+                <img
+                  className="text_focus_bg"
+                  src={Landing_text_focus}
+                  alt=""
+                />
+              </motion.h2>
+              <motion.div
+                className="image_box"
+                whileInView={{
+                  opacity: [0, 1],
+                  transition: { delay: 0.15 },
+                }}
+              >
+                <img
+                  className="landing_image"
+                  src={landing_img_003}
+                  alt="랜딩 이미지 3"
                 />
               </motion.div>
             </div>
@@ -236,8 +285,8 @@ const Landing = ({ scrolled }) => {
                 하하하 호호호호
               </motion.h2>
             </div>
+            <img src={Landing_arrow_002} alt="화살표" />
           </div>
-          <div className="line"></div>
         </div>
       </div>
     </div>
