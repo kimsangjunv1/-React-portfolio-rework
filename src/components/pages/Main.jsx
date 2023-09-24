@@ -71,6 +71,21 @@ const Main = () => {
 
   return (
     <Fragment>
+      <button
+        onClick={() => {
+          isLoaded ? setIsLoaded(false) : setIsLoaded(true);
+        }}
+        style={{
+          background: "red",
+          zIndex: "10000000",
+          position: "fixed",
+          border: "none",
+          padding: "20px",
+          cursor: "pointer",
+        }}
+      >
+        클릭
+      </button>
       <MouseSection />
       <AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
       {/* <AnimatePresence>{isLoaded ? <Loading /> : <Loading />}</AnimatePresence> */}
