@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { motion } from "framer-motion";
 
 // 이미지
-import Profile from "./../../assets/img/profile.jpg";
+import Profile from "./../../assets/img/information_smile.svg";
 import LocationIcon from "./../../assets/img/icon_location.svg";
 import PhoneIcon from "./../../assets/img/icon_phone.svg";
 import DateIcon from "./../../assets/img/icon_date.svg";
@@ -38,7 +38,7 @@ const Information = ({ title, scrolled }) => {
             transition: { delay: 0.1 },
           }}
         >
-          <img className="fur" src={FurChar} alt="" />
+          {/* <img className="fur" src={FurChar} alt="" /> */}
           <img className="text_left" src={TextImage001} alt="" />
           <img className="myphoto" src={Profile} alt="내얼굴" />
           <img className="text_right" src={TextImage002} alt="" />

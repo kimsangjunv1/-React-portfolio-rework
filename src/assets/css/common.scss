@@ -156,7 +156,7 @@ main {
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 20px;
+      gap: 40px;
       .text_left {
         z-index: -1;
         left: 30%;
@@ -166,10 +166,9 @@ main {
       }
       .text_right,
       .text_left {
-        position: absolute;
-        top: 50%;
-        // left: 50%;
-        transform: translate(-50%, -50%);
+        // position: absolute;
+        // top: 50%;
+        // transform: translate(-50%, -50%);
       }
       // .test_right{
       // }
@@ -180,10 +179,10 @@ main {
         transform: translate(-50%, 0);
       }
       .myphoto {
-        border-radius: 1000px;
-        width: 500px;
-        height: 236px;
-        object-fit: cover;
+        // border-radius: 1000px;
+        // width: 500px;
+        // height: 236px;
+        // object-fit: cover;
       }
     }
 
