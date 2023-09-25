@@ -23,6 +23,33 @@
       }
       .image_text {
       }
+      .info_container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        .item {
+          background: #e8e8ed;
+          padding: 20px;
+          border-radius: 20px;
+          hr {
+            margin: 5px 0;
+          }
+        }
+      }
+      .line_container {
+        position: relative;
+        hr {
+          margin: 20px 0 50px 0;
+        }
+        p {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background: white;
+          padding: 0 20px;
+        }
+      }
     }
   }
 }

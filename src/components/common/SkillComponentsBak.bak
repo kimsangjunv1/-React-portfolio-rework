@@ -64,13 +64,13 @@ const SkillComponents = ({ information }) => {
     <motion.div
       className="skill_container"
       ref={scrollRef}
-      // viewport={{ amount: "all" }}
-      // onViewportEnter={() => {
-      //   document.querySelector("body").classList.add("dark");
-      // }}
-      // onViewportLeave={() => {
-      //   document.querySelector("body").classList.remove("dark");
-      // }}
+      viewport={{ amount: "all" }}
+      onViewportEnter={() => {
+        document.querySelector("body").classList.add("dark");
+      }}
+      onViewportLeave={() => {
+        document.querySelector("body").classList.remove("dark");
+      }}
     >
       <div className="skill_desc_container">
         <h2 className="skill_name">{title}</h2>

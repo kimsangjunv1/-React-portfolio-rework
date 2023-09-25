@@ -1,3 +1,6 @@
+import IconArrowUp from "./../../assets/img/icon_arrow_up.svg";
+import IconArrowDown from "./../../assets/img/icon_arrow_down.svg";
+
 const Scroll_up = () => {
   const scrollBtnDisplay = function () {
     const scrollBtn = document.querySelector(".nav_container");
@@ -23,19 +26,19 @@ const Scroll_up = () => {
   return (
     <div className="nav_container">
       <div
-        onClick={() => {
-          scrollContact();
-        }}
-      >
-        <p>CONTACT </p>
-      </div>
-      <div
         className="up_btn"
         onClick={() => {
           scrollWindow();
         }}
       >
-        <p>UP</p>
+        <img src={IconArrowUp} alt="위로" />
+      </div>
+      <div
+        onClick={() => {
+          scrollContact();
+        }}
+      >
+        <img src={IconArrowDown} alt="아래로" />
       </div>
     </div>
   );

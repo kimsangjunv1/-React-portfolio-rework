@@ -33,12 +33,10 @@ main {
 .nav_container {
   position: fixed;
   z-index: 1000;
-  bottom: 20px;
+  top: 50%;
   right: 20px;
-  // left: 50%;
-  // transform: translate(-50%, 0);
+  transform: translate(0, -50%);
   opacity: 0;
-  /* width: 130px; */
   > div {
     display: flex;
     align-items: center;
@@ -47,15 +45,22 @@ main {
     width: 80px;
     margin-bottom: 5px;
     font-size: 14px;
-    background: black;
-    backdrop-filter: blur(50px);
+    // background: #00000000;
+    // border: 1px solid #0000000d;
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(50px);
-    color: white;
+    color: black;
     cursor: pointer;
     transition: 0.25s;
-    &:hover {
-      background: white;
-      color: black;
+    &:first-child {
+      &:hover {
+        transform: translateY(-10px);
+      }
+    }
+    &:last-child {
+      &:hover {
+        transform: translateY(10px);
+      }
     }
   }
   &.show {
@@ -104,7 +109,7 @@ main {
 .section_title_container {
   font-weight: bold;
   margin-bottom: 20px;
-  font-family: GmarketSans;
+  // font-family: GmarketSans;
   .section_title_container_inner {
     max-width: var(--web);
     margin: 0 auto;
@@ -114,8 +119,8 @@ main {
       text-transform: uppercase;
     }
     .section_subTitle {
-      font-size: 35px;
-      font-weight: 700;
+      font-size: 42px;
+      font-weight: 800;
     }
   }
   .section_title {
@@ -130,7 +135,7 @@ main {
     line-height: 1.2em;
     color: #000;
     font-weight: 700;
-    font-family: "GmarketSans", "Poppins", "Noto Sans";
+    // font-family: "GmarketSans", "Poppins", "Noto Sans";
     position: relative;
     // transform: translateY(101%);
     display: inline-block;
