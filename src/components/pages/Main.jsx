@@ -28,50 +28,50 @@ import Scroll_up from "../common/Scroll_up";
 // import loading from ''
 
 const Main = () => {
-  const [toyProjectsInfo, setToyProjectsInfo] = useState([]);
-  const [webstandardsInfo, setWebstandardsInfo] = useState([]);
-  const [skillInfo, setSkillInfo] = useState([]);
+	const [toyProjectsInfo, setToyProjectsInfo] = useState([]);
+	const [webstandardsInfo, setWebstandardsInfo] = useState([]);
+	const [skillInfo, setSkillInfo] = useState([]);
 
-  const [isLoaded, setIsLoaded] = useState(false);
+	const [isLoaded, setIsLoaded] = useState(false);
 
-  const [scrolled, setScrolled] = useState(0);
+	const [scrolled, setScrolled] = useState(0);
 
-  useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/kimsangjunv1/-React-portfolio-rework/main/src/components/utils/data.json",
-      {
-        method: "GET",
-      }
-    )
-      .then((res) => res.json())
-      .then((res) => {
-        setWebstandardsInfo(res.webstandards);
-        setSkillInfo(res.usedskill);
-        setToyProjectsInfo(res.toyproject);
-      });
+	useEffect(() => {
+		fetch(
+			"https://raw.githubusercontent.com/kimsangjunv1/-React-portfolio-rework/main/src/components/utils/data.json",
+			{
+				method: "GET",
+			}
+		)
+			.then((res) => res.json())
+			.then((res) => {
+				setWebstandardsInfo(res.webstandards);
+				setSkillInfo(res.usedskill);
+				setToyProjectsInfo(res.toyproject);
+			});
 
-    // 이미지 로딩
-    imagesLoaded(document.querySelector("body"), function () {
-      console.log("로딩완려");
-      setIsLoaded(true);
-    });
+		// 이미지 로딩
+		imagesLoaded(document.querySelector("body"), function () {
+			console.log("로딩완려");
+			setIsLoaded(true);
+		});
 
-    // 스크롤
-    window.onscroll = function () {
-      let winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      let height =
-        document.documentElement.scrollHeight -
-        document.documentElement.clientHeight;
-      setScrolled((winScroll / height) * 100);
-    };
-  }, []);
+		// 스크롤
+		window.onscroll = function () {
+			let winScroll =
+				document.body.scrollTop || document.documentElement.scrollTop;
+			let height =
+				document.documentElement.scrollHeight -
+				document.documentElement.clientHeight;
+			setScrolled((winScroll / height) * 100);
+		};
+	}, []);
 
-  const itemInfo = useSelector((state) => state.counter.iteminfo);
+	const itemInfo = useSelector((state) => state.counter.iteminfo);
 
-  return (
-    <Fragment>
-      <button
+	return (
+		<Fragment>
+			{/* <button
         onClick={() => {
           isLoaded ? setIsLoaded(false) : setIsLoaded(true);
         }}
@@ -85,48 +85,50 @@ const Main = () => {
         }}
       >
         클릭
-      </button>
-      <MouseSection />
-      <AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
-      {/* <AnimatePresence>{isLoaded ? <Loading /> : <Loading />}</AnimatePresence> */}
-      <Landing scrolled={scrolled} />
-      <Header scrolled={scrolled} />
-      <SectionSpace height={120} />
-      <Information title={"테스트"} scrolled={scrolled} />
-      <SectionSpace height={120} />
-      <TitleComponents
-        title={"web standards"}
-        subTitle={"Technics"}
-        setInner={true}
-      />
-      <SkillComponents information={skillInfo} />
-      <AnimatePresence>
-        {Object.keys(itemInfo).length !== 0 && (
-          <Desc_section itemInfo={itemInfo} />
-        )}
-      </AnimatePresence>
-      <SectionSpace height={120} />
-      <TitleComponents
-        title={"Toy Project"}
-        subTitle={"Projects"}
-        setInner={true}
-      />
-      <WorklistComponents information={toyProjectsInfo} />
-      {/* <Navigate_section
+      </button> */}
+			<MouseSection />
+			<AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
+			{/* <AnimatePresence>{isLoaded ? <Loading /> : <Loading />}</AnimatePresence> */}
+			<Landing scrolled={scrolled} />
+			<Header scrolled={scrolled} />
+			<SectionSpace height={120} />
+			<Information title={"테스트"} scrolled={scrolled} />
+			<SectionSpace height={120} />
+			<TitleComponents
+				title={"web standards"}
+				subTitle={`저는 총 15가지 <br /> 다음과 같은 기술들을 다뤘어요`}
+				setInner={true}
+				type={"skill"}
+			/>
+			<SkillComponents information={skillInfo} />
+			<AnimatePresence>
+				{Object.keys(itemInfo).length !== 0 && (
+					<Desc_section itemInfo={itemInfo} />
+				)}
+			</AnimatePresence>
+			<SectionSpace height={120} />
+			<TitleComponents
+				title={"Toy Project"}
+				subTitle={"다음과 같은 작업물들이 있습니다!"}
+				setInner={true}
+				type={"project"}
+			/>
+			<WorklistComponents information={toyProjectsInfo} />
+			{/* <Navigate_section
         toyProjectsInfo={toyProjectsInfo}
         webstandardsInfo={webstandardsInfo}
         skillInfo={skillInfo}
       /> */}
-      <SectionSpace height={120} />
-      <TitleComponents title={"공부"} subTitle={"Study"} setInner={true} />
-      <StudyComponents />
-      <SectionSpace height={120} />
+			<SectionSpace height={120} />
+			<TitleComponents title={"공부"} subTitle={"Study"} setInner={true} />
+			<StudyComponents />
+			<SectionSpace height={120} />
 
-      <Contact />
-      <Scroll_up />
-      <Footer />
-    </Fragment>
-  );
+			<Contact />
+			<Scroll_up />
+			<Footer />
+		</Fragment>
+	);
 };
 
 export default Main;
