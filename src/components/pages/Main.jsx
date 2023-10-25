@@ -96,7 +96,7 @@ const Main = () => {
 			<SectionSpace height={120} />
 			<TitleComponents
 				title={"web standards"}
-				subTitle={`저는 총 15가지 <br /> 다음과 같은 기술들을 다뤘어요`}
+				subTitle={`저는 총 15가지<br />다음과 같은 기술들을 다뤘어요`}
 				setInner={true}
 				type={"skill"}
 			/>
@@ -109,7 +109,7 @@ const Main = () => {
 			<SectionSpace height={120} />
 			<TitleComponents
 				title={"Toy Project"}
-				subTitle={"다음과 같은 작업물들이 있습니다!"}
+				subTitle={`다음과 같은<br />작업물들이 있어요!`}
 				setInner={true}
 				type={"project"}
 			/>

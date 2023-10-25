@@ -113,6 +113,11 @@ main {
 	.section_title_container_inner {
 		max-width: var(--web);
 		margin: 0 auto;
+		img {
+			padding-bottom: 20px;
+			margin: 0 auto;
+			display: block;
+		}
 		.section_title {
 			font-size: 14px;
 			color: var(--main-color-focus);
@@ -671,6 +676,11 @@ main {
 			}
 		}
 	}
+}
+
+// 라이트
+.gray {
+	background: #f8fafc;
 }
 
 // .mouse_cursor2,
