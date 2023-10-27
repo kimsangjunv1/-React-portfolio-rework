@@ -72,70 +72,57 @@ const Main = () => {
 
 	return (
 		<Fragment>
-			{/* <button
-        onClick={() => {
-          isLoaded ? setIsLoaded(false) : setIsLoaded(true);
-        }}
-        style={{
-          background: "red",
-          zIndex: "10000000",
-          position: "fixed",
-          border: "none",
-          padding: "20px",
-          cursor: "pointer",
-        }}
-      >
-        클릭
-      </button> */}
-			<MouseSection />
-			<AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
-			{/* <AnimatePresence>{isLoaded ? <Loading /> : <Loading />}</AnimatePresence> */}
-			<Landing scrolled={scrolled} />
 			<Header scrolled={scrolled} />
-			<SectionSpace height={120} />
-			<Information title={"테스트"} scrolled={scrolled} />
-			<SectionSpace height={120} />
-			<div className="testest">
-				<TitleComponents
-					title={"web standards"}
-					subTitle={`다음과 같은<br />기술들을 다뤘어요!`}
-					setInner={true}
-					type={"skill"}
-				/>
-				<SkillComponents information={skillInfo} />
-				<AnimatePresence>
-					{Object.keys(itemInfo).length !== 0 && (
-						<Desc_section itemInfo={itemInfo} />
-					)}
-				</AnimatePresence>
+			<main>
+				<MouseSection />
+				<AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
+				{/* <AnimatePresence>{isLoaded ? <Loading /> : <Loading />}</AnimatePresence> */}
+				<Landing scrolled={scrolled} />
 				<SectionSpace height={120} />
-				<TitleComponents
-					title={"Toy Project"}
-					subTitle={`다음과 같은<br />작업물들이 있어요!`}
-					setInner={true}
-					type={"project"}
-				/>
-				{/* <Test /> */}
-				<WorklistComponents information={toyProjectsInfo} />
-			</div>
+				<Information title={"테스트"} scrolled={scrolled} />
+				<SectionSpace height={120} />
+				<div className="testest">
+					<TitleComponents
+						title={"web standards"}
+						subTitle={`다음과 같은<br />기술들을 다뤘어요!`}
+						setInner={true}
+						type={"skill"}
+					/>
+					<SkillComponents information={skillInfo} />
+					<AnimatePresence>
+						{Object.keys(itemInfo).length !== 0 && (
+							<Desc_section itemInfo={itemInfo} />
+						)}
+					</AnimatePresence>
+					<SectionSpace height={120} />
+					<TitleComponents
+						title={"Toy Project"}
+						subTitle={`다음과 같은<br />작업물들이 있어요!`}
+						setInner={true}
+						type={"project"}
+					/>
+					{/* <Test /> */}
+					<WorklistComponents information={toyProjectsInfo} />
+				</div>
 
-			{/* <Navigate_section
+				{/* <Navigate_section
         toyProjectsInfo={toyProjectsInfo}
         webstandardsInfo={webstandardsInfo}
         skillInfo={skillInfo}
       /> */}
-			<SectionSpace height={120} />
-			<TitleComponents
-				title={"공부"}
-				subTitle={"요러한 것들을<br />공부하고 있어요!"}
-				setInner={true}
-				type={"study"}
-			/>
-			<StudyComponents />
-			<SectionSpace height={120} />
+				<SectionSpace height={120} />
+				<TitleComponents
+					title={"공부"}
+					subTitle={"요러한 것들을<br />공부하고 있어요!"}
+					setInner={true}
+					type={"study"}
+				/>
+				<StudyComponents />
+				<SectionSpace height={120} />
 
-			<Contact />
-			<Scroll_up />
+				<Contact />
+				<Scroll_up />
+			</main>
 			<Footer />
 		</Fragment>
 	);
