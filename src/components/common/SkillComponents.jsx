@@ -107,7 +107,10 @@ const SkillComponents = ({ information }) => {
 												src={getSkillImage(item.name)}
 												alt={Object.values(item.name)}
 											/>
-											<p>{item.desc}</p>
+											<div className="description">
+												<p>{item.name}</p>
+												<p>{item.desc}</p>
+											</div>
 										</div>
 									);
 								})}

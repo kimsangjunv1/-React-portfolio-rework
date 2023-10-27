@@ -9,6 +9,9 @@ import { motion } from "framer-motion";
 
 import Screenshot from "./../../assets/img/screenshot_01.jpg";
 
+import SectionProjectSingle from "./../../assets/img/section_project_single.svg";
+import SectionProjectTeam from "./../../assets/img/section_project_team.svg";
+
 const WorklistComponents = ({ information }) => {
 	const data = information;
 
@@ -19,13 +22,13 @@ const WorklistComponents = ({ information }) => {
 	return (
 		<motion.div
 			className="worklist_container"
-			viewport={{ amount: "all" }}
-			onViewportEnter={() => {
-				document.querySelector("body").classList.add("gray");
-			}}
-			onViewportLeave={() => {
-				document.querySelector("body").classList.remove("gray");
-			}}
+			// viewport={{ amount: "all" }}
+			// onViewportEnter={() => {
+			// 	document.querySelector("body").classList.add("gray");
+			// }}
+			// onViewportLeave={() => {
+			// 	document.querySelector("body").classList.remove("gray");
+			// }}
 		>
 			<Swiper
 				slidesPerView={3}
@@ -53,10 +56,20 @@ const WorklistComponents = ({ information }) => {
 										alt="미리보기"
 									/>
 									<div className="info_container">
-										<p className="category">
-											{item.category ? item.category : "설정 값 없음"}
-										</p>
-										<p className="date">{item.date}</p>
+										<img
+											src={
+												item.category === "팀 프로젝트"
+													? SectionProjectTeam
+													: SectionProjectSingle
+											}
+											alt="없음"
+										/>
+										<div className="description">
+											<p className="category">
+												{item.category ? item.category : "설정 값 없음"}
+											</p>
+											<p className="date">{item.date}</p>
+										</div>
 									</div>
 									{/* <p className="worklist_date">{item.date}</p> */}
 								</div>

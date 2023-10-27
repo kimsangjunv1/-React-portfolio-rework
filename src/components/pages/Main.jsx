@@ -1,6 +1,7 @@
 import { useState, useEffect, Fragment } from "react";
 import { useSelector } from "react-redux";
 import { AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import imagesLoaded from "imagesloaded";
 
@@ -25,7 +26,7 @@ import Desc_section from "./../include/Desc_section";
 
 import Scroll_up from "../common/Scroll_up";
 
-// import loading from ''
+import Test from "../common/Test";
 
 const Main = () => {
 	const [toyProjectsInfo, setToyProjectsInfo] = useState([]);
@@ -94,33 +95,42 @@ const Main = () => {
 			<SectionSpace height={120} />
 			<Information title={"테스트"} scrolled={scrolled} />
 			<SectionSpace height={120} />
-			<TitleComponents
-				title={"web standards"}
-				subTitle={`저는 총 15가지<br />다음과 같은 기술들을 다뤘어요`}
-				setInner={true}
-				type={"skill"}
-			/>
-			<SkillComponents information={skillInfo} />
-			<AnimatePresence>
-				{Object.keys(itemInfo).length !== 0 && (
-					<Desc_section itemInfo={itemInfo} />
-				)}
-			</AnimatePresence>
-			<SectionSpace height={120} />
-			<TitleComponents
-				title={"Toy Project"}
-				subTitle={`다음과 같은<br />작업물들이 있어요!`}
-				setInner={true}
-				type={"project"}
-			/>
-			<WorklistComponents information={toyProjectsInfo} />
+			<div className="testest">
+				<TitleComponents
+					title={"web standards"}
+					subTitle={`다음과 같은<br />기술들을 다뤘어요!`}
+					setInner={true}
+					type={"skill"}
+				/>
+				<SkillComponents information={skillInfo} />
+				<AnimatePresence>
+					{Object.keys(itemInfo).length !== 0 && (
+						<Desc_section itemInfo={itemInfo} />
+					)}
+				</AnimatePresence>
+				<SectionSpace height={120} />
+				<TitleComponents
+					title={"Toy Project"}
+					subTitle={`다음과 같은<br />작업물들이 있어요!`}
+					setInner={true}
+					type={"project"}
+				/>
+				{/* <Test /> */}
+				<WorklistComponents information={toyProjectsInfo} />
+			</div>
+
 			{/* <Navigate_section
         toyProjectsInfo={toyProjectsInfo}
         webstandardsInfo={webstandardsInfo}
         skillInfo={skillInfo}
       /> */}
 			<SectionSpace height={120} />
-			<TitleComponents title={"공부"} subTitle={"Study"} setInner={true} />
+			<TitleComponents
+				title={"공부"}
+				subTitle={"요러한 것들을<br />공부하고 있어요!"}
+				setInner={true}
+				type={"study"}
+			/>
 			<StudyComponents />
 			<SectionSpace height={120} />
 
