@@ -926,3 +926,15 @@ main {
 		transform: scale3d(1, 1, 1);
 	}
 }
+
+@keyframes variable-loop {
+	0% {
+		font-weight: 45;
+	}
+	50% {
+		font-weight: 930;
+	}
+	100% {
+		font-weight: 45;
+	}
+}

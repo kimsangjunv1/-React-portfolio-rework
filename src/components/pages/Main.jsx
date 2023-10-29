@@ -72,14 +72,16 @@ const Main = () => {
 
 	return (
 		<Fragment>
-			<Header scrolled={scrolled} />
+			{/* <Header scrolled={scrolled} /> */}
 			<main>
 				<MouseSection />
 				<AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
 				{/* <AnimatePresence>{isLoaded ? <Loading /> : <Loading />}</AnimatePresence> */}
 				<Landing scrolled={scrolled} />
+				<Header scrolled={scrolled} />
 				<SectionSpace height={120} />
 				<Information title={"테스트"} scrolled={scrolled} />
+
 				<SectionSpace height={120} />
 				<div className="testest">
 					<TitleComponents
