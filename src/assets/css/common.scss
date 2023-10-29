@@ -224,13 +224,21 @@ main {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background: #6028ff;
+			color: white;
+			transition: 0.25s;
+			transform: translateY(100%);
 			.skill_name {
 				font-size: 28px;
-				color: var(--main-color);
+				color: white;
 			}
 			.skill_desc {
-				background: #e9edf4;
-				color: #002f3faf;
+				// background: #e9edf4;
+				color: white;
 				border-radius: 5px;
 				padding: 5px;
 			}

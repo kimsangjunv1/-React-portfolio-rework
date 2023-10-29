@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 
 const SkillComponents = ({ information }) => {
-	const [title, setTitle] = useState("없음");
-	const [desc, setDesc] = useState("설명이 없습니다");
+	const [title, setTitle] = useState(null);
+	const [desc, setDesc] = useState(null);
 	const scrollRef = useRef(null);
 
 	const getSkillImage = (name) => {
@@ -72,10 +73,6 @@ const SkillComponents = ({ information }) => {
 			//   document.querySelector("body").classList.remove("dark");
 			// }}
 		>
-			{/* <div className="skill_desc_container">
-				<h2 className="skill_name">{title}</h2>
-				<p className="skill_desc">{desc}</p>
-			</div> */}
 			<div className="skill_container_inner">
 				{skillInfo.map((item, key) => {
 					return (
@@ -100,6 +97,10 @@ const SkillComponents = ({ information }) => {
 												setTitle(item.name);
 												setDesc(item.desc);
 											}}
+											onMouseOut={() => {
+												setTitle(null);
+												setDesc(null);
+											}}
 										>
 											<img
 												className="skill_item"
@@ -119,6 +120,26 @@ const SkillComponents = ({ information }) => {
 					);
 				})}
 			</div>
+			<AnimatePresence>
+				{title === null ? (
+					""
+				) : (
+					<motion.div
+						className="skill_desc_container"
+						initial={{ y: 0, translateY: "0%" }}
+						//   animate={{ y: 0, translateY: "100%" }}
+						exit={{ y: 0, translateY: "100%" }}
+						transition={{
+							duration: 1.0,
+							// delay: 0.5,
+							ease: [0, 0.71, 0.2, 1.01],
+						}}
+					>
+						<h2 className="skill_name">{title}</h2>
+						<p className="skill_desc">{desc}</p>
+					</motion.div>
+				)}
+			</AnimatePresence>
 		</motion.div>
 	);
 };
