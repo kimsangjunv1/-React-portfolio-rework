@@ -31,13 +31,22 @@ const Landing = ({ scrolled }) => {
 			<div className="landing_inner">
 				<div className="landing_contents">
 					<div className="row">
-						<h2>새싹을 틔울 수 있는</h2>
+						<h2>
+							새싹을
+							<br />
+							<i>틔울 수 있는</i>
+						</h2>
+						<img className="circle" src={Landing_circle} alt="하단 이미지" />
+						<img className="emoji" src={Landing_emoji} alt="하단 이미지" />
+						<h2>
+							<i>씨앗</i>이
+							<br />
+							되겠습니다.
+						</h2>
 					</div>
-					<div className="row">
-						<h2>씨앗이 되겠습니다.</h2>
-					</div>
-					<img className="circle" src={Landing_circle} alt="하단 이미지" />
-					<img className="emoji" src={Landing_emoji} alt="하단 이미지" />
+					<div className="row"></div>
+					{/* <img className="circle" src={Landing_circle} alt="하단 이미지" />
+					<img className="emoji" src={Landing_emoji} alt="하단 이미지" /> */}
 					<img className="sprout" src={Landing_sprout} alt="하단 이미지" />
 				</div>
 			</div>

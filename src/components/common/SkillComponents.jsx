@@ -120,23 +120,26 @@ const SkillComponents = ({ information }) => {
 					);
 				})}
 			</div>
+			{/* <motion.div className="skill_desc_container">
+				<h2 className="skill_name">asdasd</h2>
+				<p className="skill_desc">asdasd</p>
+			</motion.div> */}
 			<AnimatePresence>
-				{title === null ? (
-					""
-				) : (
+				{title && (
 					<motion.div
 						className="skill_desc_container"
-						initial={{ y: 0, translateY: "0%" }}
-						//   animate={{ y: 0, translateY: "100%" }}
-						exit={{ y: 0, translateY: "100%" }}
+						initial={{ y: 0, translateX: "-50%", translateY: "200%" }}
+						animate={{ y: 0, translateX: "-50%", translateY: "0%" }}
+						exit={{ y: 0, translateX: "-50%", translateY: "200%" }}
 						transition={{
-							duration: 1.0,
+							duration: 0.25,
 							// delay: 0.5,
-							ease: [0, 0.71, 0.2, 1.01],
+							ease: [0, 0.25, 0.2, 1.01],
 						}}
 					>
-						<h2 className="skill_name">{title}</h2>
-						<p className="skill_desc">{desc}</p>
+						{/* <h2 className="skill_name">{title}asdasd</h2> */}
+						<span className="skill_desc">{desc}</span>
+						<span>╳</span>
 					</motion.div>
 				)}
 			</AnimatePresence>

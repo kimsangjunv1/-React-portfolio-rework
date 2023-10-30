@@ -12,35 +12,24 @@ const TitleComponents = ({ title, subTitle, setInner, type }) => {
 	return (
 		<div className="section_title_container">
 			<div className={setInner ? "section_title_container_inner" : ""}>
-				{type === "skill" ? (
-					<img src={section_skill_part_001} alt="파트1" />
-				) : (
-					""
+				{type === "skill" && (
+					<div className="skill">
+						<img src={section_skill_part_001} alt="파트1" />
+						<img src={section_skill_part_002} alt="파트2" />
+						<img src={SectionSkill} alt="파트2" />
+					</div>
 				)}
-				{type === "skill" ? (
-					<img src={section_skill_part_002} alt="파트2" />
-				) : (
-					""
+				{type === "study" && (
+					<div className="study">
+						<img src={SectionStudy} alt="공부" />
+					</div>
 				)}
-				{/* type에 따른 그림 종류 */}
-				{type === "study" ? <img src={SectionStudy} alt="공부" /> : ""}
-				<img
-					src={
-						type === "skill"
-							? SectionSkill
-							: type === "project"
-							? SectionProject
-							: ""
-					}
-					alt={
-						type === "skill"
-							? "노트북 그림"
-							: type === "project"
-							? SectionProject
-							: ""
-					}
-				/>
-				{/* <p className="section_title">{title}</p> */}
+				{type === "project" && (
+					<div className="project">
+						<img src={SectionProject} alt="공부" />
+					</div>
+				)}
+
 				<p className="section_subTitle">
 					{subTitle.replace(/(<br>|<br\/>|<br \/>)/g, "\r\n")}
 				</p>
