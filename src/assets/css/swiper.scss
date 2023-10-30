@@ -21,7 +21,7 @@
 	display: block;
 	width: 100%;
 	height: 100%;
-	object-fit: cover;
+	object-fit: contain;
 }
 
 .autoplay-progress {
@@ -65,4 +65,9 @@
 	background: black !important;
 	border-radius: 0;
 	width: 40px;
+}
+
+.swiper-wrapper {
+	align-items: center;
+	background: #e8e8f0;
 }

@@ -30,11 +30,19 @@ const WorklistComponents = ({ information }) => {
 			// 	document.querySelector("body").classList.remove("gray");
 			// }}
 		>
-			<div className="worklist_container_inner">
+			<Swiper
+				slidesPerView={3}
+				spaceBetween={30}
+				pagination={{
+					clickable: true,
+				}}
+				modules={[Pagination]}
+				className="worklist_container_inner"
+			>
 				{data ? (
 					data.map((item, key) => {
 						return (
-							<div
+							<SwiperSlide
 								className="worklist_item"
 								key={key}
 								onClick={() => {
@@ -77,13 +85,13 @@ const WorklistComponents = ({ information }) => {
 										})}
 									</div>
 								</div>
-							</div>
+							</SwiperSlide>
 						);
 					})
 				) : (
 					<>데이터가 없습니다.</>
 				)}
-			</div>
+			</Swiper>
 		</motion.div>
 	);
 };

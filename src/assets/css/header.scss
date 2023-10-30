@@ -135,10 +135,14 @@ header {
 		bottom: 0;
 		left: 0;
 		z-index: -1;
+		display: flex;
+		align-items: end;
 		.scroll_progress {
 			background: #6028ff;
 			width: 0px;
-			height: 100%;
+			height: 5%;
+			margin: 0 auto;
+			// border-radius: 100px;
 		}
 	}
 }
