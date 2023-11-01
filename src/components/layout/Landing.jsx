@@ -17,9 +17,9 @@ import Landing_arrow_001 from "./../../assets/img/landing_arrow_001.svg";
 import Landing_arrow_002 from "./../../assets/img/landing_arrow_002.svg";
 
 // import Landing_bottom from "./../../assets/img/landing_bottom.svg";
-import Landing_circle from "./../../assets/img/Landing_circle.svg";
-import Landing_emoji from "./../../assets/img/Landing_emoji.svg";
-import Landing_sprout from "./../../assets/img/Landing_sprout.svg";
+import Landing_circle from "./../../assets/img/landing_circle.svg";
+import Landing_emoji from "./../../assets/img/landing_emoji.svg";
+import Landing_sprout from "./../../assets/img/landing_sprout.svg";
 
 import landing_img_001 from "./../../assets/img/landing_img_01.jpg";
 import landing_img_002 from "./../../assets/img/landing_img_02.jpg";
