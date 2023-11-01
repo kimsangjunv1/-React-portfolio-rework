@@ -123,6 +123,7 @@ const Main = () => {
 				<SectionSpace height={120} />
 
 				<Contact />
+
 				<Scroll_up />
 			</main>
 			<Footer />

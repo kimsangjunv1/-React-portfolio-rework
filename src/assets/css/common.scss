@@ -251,15 +251,19 @@ main {
 		overflow: hidden;
 		.skill_desc_container {
 			display: flex;
-			padding: 10px 10px 10px 20px;
+			max-width: 50vw;
+			padding: 3px;
 			align-items: center;
 			position: fixed;
 			bottom: 20px;
 			left: 50%;
-			gap: 10px;
-			border-radius: 100px;
-			background: rgba(27, 19, 47, 0.819);
-			color: white;
+			gap: 15px;
+			border-radius: 20px;
+			word-wrap: break-word;
+			background: rgb(255 255 255 / 82%);
+			// border: 1px solid #00000014;
+			box-shadow: 0 5px 5px -2px #00000014;
+			color: black;
 			transition: 0.25s;
 			transform: translateY(100%) translateX(-50%);
 			z-index: 1000;
@@ -267,17 +271,50 @@ main {
 			-webkit-backdrop-filter: blur(5px);
 			span {
 				display: inline-block;
-				&:last-child {
-					font-size: 12px;
-					background: black;
+			}
+			.information {
+				// background: gray;
+				margin-right: 15px;
+				h2 {
+					font-size: 16px;
+					font-weight: 700;
+					color: #6028ff;
+				}
+				span {
+					color: #3f414f;
+				}
+			}
+
+			.message_icon {
+				background: #f9f6ff;
+				border-radius: 20px;
+				padding: 15px;
+				img {
+					background: #6028ff;
+					padding: 10px;
 					border-radius: 100px;
-					width: 30px;
-					height: 30px;
-					text-align: center;
-					line-height: 2.6;
-					&:hover {
-						background: white;
-					}
+					display: flex;
+					// width: 25px;
+				}
+			}
+			.close_icon {
+				font-size: 12px;
+				background: black;
+				border-radius: 100px;
+				width: 30px;
+				height: 30px;
+				text-align: center;
+				line-height: 2.6;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				img {
+					width: 10px;
+					height: 10px;
+				}
+				&:hover {
+					background: white;
 				}
 			}
 		}
@@ -453,16 +490,25 @@ main {
 					flex-direction: column;
 					width: 100%;
 					.item {
+						position: relative;
 						padding: 20px;
 						background: white;
-						// border-radius: 20px;
-						// border: 1px solid #e7edf4;
-						// box-shadow: 0px 4px 0px 0px #e7edf4;
+						overflow: hidden;
 						display: flex;
 						align-items: center;
 						gap: 20px;
 						transition: 0.25s;
 						cursor: pointer;
+
+						&::after {
+							position: absolute;
+							content: "";
+							top: 0;
+							right: 0;
+							height: 100%;
+							width: 20px;
+							background: linear-gradient(90deg, rgba(255, 255, 255, 0), white);
+						}
 
 						&:hover {
 							background: #6028ff;
@@ -485,6 +531,9 @@ main {
 						}
 						.description {
 							p {
+								width: 100px;
+								white-space: nowrap;
+
 								&:nth-child(1) {
 									font-weight: 400;
 									font-size: 18px;
