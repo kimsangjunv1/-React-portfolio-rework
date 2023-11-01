@@ -1,214 +1,229 @@
 {
-  "usedskill": [
-    {
-      "list": [
-        { "name": "스와이퍼", "desc": "사용한 이유는..." },
-        { "name": "SCSS", "desc": "사용한 이유는..." },
-        { "name": "Lenis", "desc": "사용한 이유는..." },
-        {
-          "name": "Framer",
-          "desc": "사실적인 애니메이션을 표현하는데 있어서 우수하기에 사용하였습니다"
-        }
-      ]
-    },
-    {
-      "list": [
-        { "name": "리액트", "desc": "사용한 이유는..." },
-        { "name": "뷰", "desc": "사용한 이유는..." },
-        { "name": "스벨트", "desc": "사용한 이유는..." },
-        { "name": "Redux Toolkit", "desc": "사용한 이유는..." },
-        { "name": "Styled-components", "desc": "사용한 이유는..." },
-        { "name": "Zustand", "desc": "사용한 이유는..." }
-      ]
-    },
-    {
-      "list": [
-        { "name": "PHP", "desc": "사용한 이유는..." },
-        { "name": "MySQL", "desc": "사용한 이유는..." }
-      ]
-    },
-    {
-      "list": [
-        { "name": "Redux Toolkit", "desc": "사용한 이유는..." },
-        { "name": "Styled-components", "desc": "사용한 이유는..." },
-        { "name": "Zustand", "desc": "사용한 이유는..." }
-      ]
-    },
-    {
-      "list": [
-        { "name": "Zeplin", "desc": "사용한 이유는..." },
-        { "name": "Figma", "desc": "사용한 이유는..." },
-        { "name": "Jira", "desc": "사용한 이유는..." },
-        { "name": "Slack", "desc": "사용한 이유는..." },
-        { "name": "Gitlab", "desc": "사용한 이유는..." },
-        { "name": "Github", "desc": "사용한 이유는..." }
-      ]
-    }
-  ],
-  "webstandards": [
-    {
-      "title": "꾸다",
-      "category": "팀 프로젝트",
-      "skill": [{ "name": "PHP" }, { "name": "SCSS" }],
-      "image": "이미지",
-      "date": "2023.08.18",
-      "desc": "꾸다는 팀 프로젝트이며, <br />다이어리 꾸미기라는 어쩌구 저쩌구",
-      "github": "www.naver.com",
-      "view": "www.naver.com"
-    },
-    {
-      "title": "테크 튜브",
-      "category": "개인 프로젝트",
-      "skill": [{ "name": "React" }],
-      "image": "이미지",
-      "date": "2023.08.18",
-      "desc": "넷마블은 변화하는 홈페이지 이용 환경에 맞춘 이번 개편으로 사용자가 원하는 정보와 서비스를 제공하고 더욱 넓어진 화면 및 심플한 디자인으로 보다 편리하게 이용할 수 있도록 했다.<br />또한 게임을 보다 쉽게 찾을 수 있도록 온라인게임과 모바일게임 영역을 구분하고 게임정보 및 이벤트 등 다양한 소식을 한눈에 확인할 수 있는 넷마블 소식 코너를 신설했다. 특히 친구 초대, 게임별 게시판 등을 적용해 모바일 게임에 대한 커뮤니케이션을 강화했다.<br /> 모바일 사용자를 위한 최적화 작업도 끝마쳤다.<br />모바일 이용자가 급증하고 있는 환경에 있어서 방문자들은 데스크톱, 스마트폰, 태블릿 PC 등 접속 방법에 상관없이 각 기기에 최적화 된 홈페이지 이용이 가능하다.",
-      "github": "www.naver.com",
-      "view": "www.naver.com"
-    },
-    {
-      "title": "Pick",
-      "category": "개인 프로젝트",
-      "skill": [
-        { "name": "React" },
-        { "name": "Redux Toolkit" },
-        { "name": "SCSS" }
-      ],
-      "image": "이미지",
-      "date": "2023.08.18",
-      "desc": "꾸다는 팀 프로젝트이며",
-      "github": "www.naver.com",
-      "view": "www.naver.com"
-    },
-    {
-      "title": "라마의 여행",
-      "category": "개인 프로젝트",
-      "skill": [{ "name": "React" }, { "name": "SCSS" }],
-      "image": "이미지",
-      "date": "2023.08.18",
-      "desc": "처음에는 취업을 위한 포트폴리오 용도로 제작했으며, 스크롤을 내리면 라마 캐릭터가 스크롤을 내릴때마다 유저를 따라오는듯하게 스토리 라인을 그렸습니다.",
-      "github": "www.naver.com",
-      "view": "www.naver.com"
-    }
-  ],
-  "toyproject": [
-    {
-      "title": "꾸다",
-      "category": "팀 프로젝트",
-      "skill": [{ "name": "PHP" }, { "name": "SCSS" }],
-      "participationContents": "이런것들을 참여했습니다~",
-      "participationRate": [
-        { "design": "100" },
-        { "publishing": "60" },
-        { "front": "70" }
-      ],
-      "image": [
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_gguda_001.jpg?raw=true"
-        },
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_gguda_002.jpg?raw=true"
-        },
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_gguda_003.jpg?raw=true"
-        }
-      ],
-      "date": "2023.08.18",
-      "desc": "꾸다는 팀 프로젝트이며, <br />다이어리 꾸미기라는 어쩌구 저쩌구",
-      "github": "www.naver.com",
-      "view": "www.naver.com"
-    },
-    {
-      "title": "테크 튜브",
-      "category": "개인 프로젝트",
-      "skill": [{ "name": "React" }],
-      "participationContents": "이런것들을 참여했습니다~",
-      "participationRate": [
-        { "design": "100" },
-        { "publishing": "60" },
-        { "front": "70" }
-      ],
+	"usedskill": [
+		{
+			"list": [
+				{ "name": "스와이퍼", "desc": "사용한 이유는..." },
+				{ "name": "SCSS", "desc": "사용한 이유는..." },
+				{ "name": "Lenis", "desc": "사용한 이유는..." },
+				{
+					"name": "Framer",
+					"desc": "사실적인 애니메이션을 표현하는데 있어서 우수하기에 사용하였습니다"
+				}
+			]
+		},
+		{
+			"list": [
+				{ "name": "리액트", "desc": "사용한 이유는..." },
+				{ "name": "뷰", "desc": "사용한 이유는..." },
+				{ "name": "스벨트", "desc": "사용한 이유는..." },
+				{ "name": "Redux Toolkit", "desc": "사용한 이유는..." },
+				{ "name": "Styled-components", "desc": "사용한 이유는..." },
+				{ "name": "Zustand", "desc": "사용한 이유는..." }
+			]
+		},
+		{
+			"list": [
+				{ "name": "PHP", "desc": "사용한 이유는..." },
+				{ "name": "MySQL", "desc": "사용한 이유는..." }
+			]
+		},
+		{
+			"list": [
+				{ "name": "Redux Toolkit", "desc": "사용한 이유는..." },
+				{ "name": "Styled-components", "desc": "사용한 이유는..." },
+				{ "name": "Zustand", "desc": "사용한 이유는..." }
+			]
+		},
+		{
+			"list": [
+				{ "name": "Zeplin", "desc": "사용한 이유는..." },
+				{ "name": "Figma", "desc": "사용한 이유는..." },
+				{ "name": "Jira", "desc": "사용한 이유는..." },
+				{ "name": "Slack", "desc": "사용한 이유는..." },
+				{ "name": "Gitlab", "desc": "사용한 이유는..." },
+				{ "name": "Github", "desc": "사용한 이유는..." }
+			]
+		}
+	],
+	"webstandards": [
+		{
+			"title": "꾸다",
+			"category": "팀 프로젝트",
+			"skill": [{ "name": "PHP" }, { "name": "SCSS" }],
+			"image": "이미지",
+			"date": "2023.08.18",
+			"desc": "꾸다는 팀 프로젝트이며, <br />다이어리 꾸미기라는 어쩌구 저쩌구",
+			"github": "www.naver.com",
+			"view": "www.naver.com",
+			"color": "#3A1D69"
+		},
+		{
+			"title": "테크 튜브",
+			"category": "개인 프로젝트",
+			"skill": [{ "name": "React" }],
+			"image": "이미지",
+			"date": "2023.08.18",
+			"desc": "넷마블은 변화하는 홈페이지 이용 환경에 맞춘 이번 개편으로 사용자가 원하는 정보와 서비스를 제공하고 더욱 넓어진 화면 및 심플한 디자인으로 보다 편리하게 이용할 수 있도록 했다.<br />또한 게임을 보다 쉽게 찾을 수 있도록 온라인게임과 모바일게임 영역을 구분하고 게임정보 및 이벤트 등 다양한 소식을 한눈에 확인할 수 있는 넷마블 소식 코너를 신설했다. 특히 친구 초대, 게임별 게시판 등을 적용해 모바일 게임에 대한 커뮤니케이션을 강화했다.<br /> 모바일 사용자를 위한 최적화 작업도 끝마쳤다.<br />모바일 이용자가 급증하고 있는 환경에 있어서 방문자들은 데스크톱, 스마트폰, 태블릿 PC 등 접속 방법에 상관없이 각 기기에 최적화 된 홈페이지 이용이 가능하다.",
+			"github": "www.naver.com",
+			"view": "www.naver.com",
+			"color": "#086B65"
+		},
+		{
+			"title": "Pick",
+			"category": "개인 프로젝트",
+			"skill": [
+				{ "name": "React" },
+				{ "name": "Redux Toolkit" },
+				{ "name": "SCSS" }
+			],
+			"image": "이미지",
+			"date": "2023.08.18",
+			"desc": "꾸다는 팀 프로젝트이며",
+			"github": "www.naver.com",
+			"view": "www.naver.com",
+			"color": "#027C00"
+		},
+		{
+			"title": "라마의 여행",
+			"category": "개인 프로젝트",
+			"skill": [{ "name": "React" }, { "name": "SCSS" }],
+			"image": "이미지",
+			"date": "2023.08.18",
+			"desc": "처음에는 취업을 위한 포트폴리오 용도로 제작했으며, 스크롤을 내리면 라마 캐릭터가 스크롤을 내릴때마다 유저를 따라오는듯하게 스토리 라인을 그렸습니다.",
+			"github": "www.naver.com",
+			"view": "www.naver.com",
+			"color": "#086B65"
+		},
+		{
+			"title": "PlayGround",
+			"category": "개인 프로젝트",
+			"skill": [{ "name": "React" }, { "name": "SCSS" }],
+			"image": "이미지",
+			"date": "2023.08.18",
+			"desc": "처음에는 취업을 위한 포트폴리오 용도로 제작했으며, 스크롤을 내리면 라마 캐릭터가 스크롤을 내릴때마다 유저를 따라오는듯하게 스토리 라인을 그렸습니다.",
+			"github": "www.naver.com",
+			"view": "www.naver.com",
+			"color": "#066839"
+		}
+	],
+	"toyproject": [
+		{
+			"title": "꾸다",
+			"category": "팀 프로젝트",
+			"skill": [{ "name": "PHP" }, { "name": "SCSS" }],
+			"participationContents": "이런것들을 참여했습니다~",
+			"participationRate": [
+				{ "design": "100" },
+				{ "publishing": "60" },
+				{ "front": "70" }
+			],
+			"image": [
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_gguda_001.jpg?raw=true"
+				},
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_gguda_002.jpg?raw=true"
+				},
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_gguda_003.jpg?raw=true"
+				}
+			],
+			"date": "2023.08.18",
+			"desc": "꾸다는 팀 프로젝트이며, <br />다이어리 꾸미기라는 어쩌구 저쩌구",
+			"github": "www.naver.com",
+			"view": "www.naver.com"
+		},
+		{
+			"title": "테크 튜브",
+			"category": "개인 프로젝트",
+			"skill": [{ "name": "React" }],
+			"participationContents": "이런것들을 참여했습니다~",
+			"participationRate": [
+				{ "design": "100" },
+				{ "publishing": "60" },
+				{ "front": "70" }
+			],
 
-      "image": [
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_techtube_001.jpg?raw=true"
-        },
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_techtube_002.jpg?raw=true"
-        },
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_techtube_003.jpg?raw=true"
-        }
-      ],
-      "date": "2023.08.18",
-      "desc": "넷마블은 변화하는 홈페이지 이용 환경에 맞춘 이번 개편으로 사용자가 원하는 정보와 서비스를 제공하고 더욱 넓어진 화면 및 심플한 디자인으로 보다 편리하게 이용할 수 있도록 했다.<br />또한 게임을 보다 쉽게 찾을 수 있도록 온라인게임과 모바일게임 영역을 구분하고 게임정보 및 이벤트 등 다양한 소식을 한눈에 확인할 수 있는 넷마블 소식 코너를 신설했다. 특히 친구 초대, 게임별 게시판 등을 적용해 모바일 게임에 대한 커뮤니케이션을 강화했다.<br /> 모바일 사용자를 위한 최적화 작업도 끝마쳤다.<br />모바일 이용자가 급증하고 있는 환경에 있어서 방문자들은 데스크톱, 스마트폰, 태블릿 PC 등 접속 방법에 상관없이 각 기기에 최적화 된 홈페이지 이용이 가능하다.",
-      "github": "www.naver.com",
-      "view": "www.naver.com"
-    },
-    {
-      "title": "Pick",
-      "category": "개인 프로젝트",
-      "skill": [
-        { "name": "React" },
-        { "name": "Redux Toolkit" },
-        { "name": "SCSS" }
-      ],
-      "participationContents": "이런것들을 참여했습니다~",
-      "participationRate": [
-        { "design": "100" },
-        { "publishing": "60" },
-        { "front": "70" }
-      ],
-      "image": [
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_pick_001.jpg?raw=true"
-        },
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_pick_002.jpg?raw=true"
-        },
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_pick_003.jpg?raw=true"
-        }
-      ],
-      "date": "2023.08.18",
-      "desc": "꾸다는 팀 프로젝트이며",
-      "github": "www.naver.com",
-      "view": "www.naver.com"
-    },
-    {
-      "title": "라마의 여행",
-      "category": "개인 프로젝트",
-      "skill": [{ "name": "React" }, { "name": "SCSS" }],
-      "participationContents": "이런것들을 참여했습니다~",
-      "participationRate": [
-        { "design": "100" },
-        { "publishing": "60" },
-        { "front": "70" }
-      ],
-      "image": [
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_001.jpg?raw=true"
-        },
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_002.jpg?raw=true"
-        },
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_003.jpg?raw=true"
-        },
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_004.jpg?raw=true"
-        },
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_005.jpg?raw=true"
-        },
-        {
-          "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_006.jpg?raw=true"
-        }
-      ],
-      "date": "2023.08.18",
-      "desc": "처음에는 취업을 위한 포트폴리오 용도로 제작했으며, 스크롤을 내리면 라마 캐릭터가 스크롤을 내릴때마다 유저를 따라오는듯하게 스토리 라인을 그렸습니다.",
-      "github": "www.naver.com",
-      "view": "www.naver.com"
-    }
-  ]
+			"image": [
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_techtube_001.jpg?raw=true"
+				},
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_techtube_002.jpg?raw=true"
+				},
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_techtube_003.jpg?raw=true"
+				}
+			],
+			"date": "2023.08.18",
+			"desc": "넷마블은 변화하는 홈페이지 이용 환경에 맞춘 이번 개편으로 사용자가 원하는 정보와 서비스를 제공하고 더욱 넓어진 화면 및 심플한 디자인으로 보다 편리하게 이용할 수 있도록 했다.<br />또한 게임을 보다 쉽게 찾을 수 있도록 온라인게임과 모바일게임 영역을 구분하고 게임정보 및 이벤트 등 다양한 소식을 한눈에 확인할 수 있는 넷마블 소식 코너를 신설했다. 특히 친구 초대, 게임별 게시판 등을 적용해 모바일 게임에 대한 커뮤니케이션을 강화했다.<br /> 모바일 사용자를 위한 최적화 작업도 끝마쳤다.<br />모바일 이용자가 급증하고 있는 환경에 있어서 방문자들은 데스크톱, 스마트폰, 태블릿 PC 등 접속 방법에 상관없이 각 기기에 최적화 된 홈페이지 이용이 가능하다.",
+			"github": "www.naver.com",
+			"view": "www.naver.com"
+		},
+		{
+			"title": "Pick",
+			"category": "개인 프로젝트",
+			"skill": [
+				{ "name": "React" },
+				{ "name": "Redux Toolkit" },
+				{ "name": "SCSS" }
+			],
+			"participationContents": "이런것들을 참여했습니다~",
+			"participationRate": [
+				{ "design": "100" },
+				{ "publishing": "60" },
+				{ "front": "70" }
+			],
+			"image": [
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_pick_001.jpg?raw=true"
+				},
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_pick_002.jpg?raw=true"
+				},
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_pick_003.jpg?raw=true"
+				}
+			],
+			"date": "2023.08.18",
+			"desc": "꾸다는 팀 프로젝트이며",
+			"github": "www.naver.com",
+			"view": "www.naver.com"
+		},
+		{
+			"title": "라마의 여행",
+			"category": "개인 프로젝트",
+			"skill": [{ "name": "React" }, { "name": "SCSS" }],
+			"participationContents": "이런것들을 참여했습니다~",
+			"participationRate": [
+				{ "design": "100" },
+				{ "publishing": "60" },
+				{ "front": "70" }
+			],
+			"image": [
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_001.jpg?raw=true"
+				},
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_002.jpg?raw=true"
+				},
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_003.jpg?raw=true"
+				},
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_004.jpg?raw=true"
+				},
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_005.jpg?raw=true"
+				},
+				{
+					"url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_portfolio_006.jpg?raw=true"
+				}
+			],
+			"date": "2023.08.18",
+			"desc": "처음에는 취업을 위한 포트폴리오 용도로 제작했으며, 스크롤을 내리면 라마 캐릭터가 스크롤을 내릴때마다 유저를 따라오는듯하게 스토리 라인을 그렸습니다.",
+			"github": "www.naver.com",
+			"view": "www.naver.com"
+		}
+	]
 }
