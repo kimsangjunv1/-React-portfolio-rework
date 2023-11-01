@@ -47,7 +47,12 @@ const WorklistComponents = ({ information }) => {
 										src={item.image[0].url}
 										alt="미리보기"
 									/>
-									<div className="info_container">
+									<div
+										className="info_container"
+										style={{
+											background: `linear-gradient(180deg,transparent,${item.color})`,
+										}}
+									>
 										<img
 											src={
 												item.category === "팀 프로젝트"
@@ -60,6 +65,7 @@ const WorklistComponents = ({ information }) => {
 											<p className="category">
 												{item.category ? item.category : "설정 값 없음"}
 											</p>
+											{item.color}
 											<p className="date">{item.date}</p>
 										</div>
 										<div className="item_desc_container">
