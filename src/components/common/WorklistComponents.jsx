@@ -62,20 +62,20 @@ const WorklistComponents = ({ information }) => {
 											</p>
 											<p className="date">{item.date}</p>
 										</div>
+										<div className="item_desc_container">
+											<h2 className="title">
+												{item.title ? item.title : "설정 값 없음"}
+											</h2>
+											<p className="desc">{item.desc}</p>
+
+											<div className="used_skill_container">
+												{item.skill.map((item, key) => {
+													return <p key={key}>{item.name}</p>;
+												})}
+											</div>
+										</div>
 									</div>
 									{/* <p className="worklist_date">{item.date}</p> */}
-								</div>
-								<div className="item_desc_container">
-									<h2 className="title">
-										{item.title ? item.title : "설정 값 없음"}
-									</h2>
-									<p className="desc">{item.desc}</p>
-
-									<div className="used_skill_container">
-										{item.skill.map((item, key) => {
-											return <p key={key}>{item.name}</p>;
-										})}
-									</div>
 								</div>
 							</div>
 						);

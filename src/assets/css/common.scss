@@ -491,13 +491,15 @@ main {
 					width: 100%;
 					.item {
 						position: relative;
-						padding: 20px;
+						padding: 15px 20px;
 						background: white;
 						overflow: hidden;
 						display: flex;
 						align-items: center;
 						gap: 20px;
 						transition: 0.25s;
+						cursor: pointer;
+						border-radius: 20px;
 						cursor: pointer;
 
 						&::after {
@@ -523,11 +525,11 @@ main {
 						}
 
 						.skill_item {
-							// border-radius: 100px;
-							width: 40px;
+							width: 35px;
 							height: 40px;
 							object-fit: contain;
 							overflow: inherit;
+							/* background: black; */
 						}
 						.description {
 							p {
@@ -620,7 +622,7 @@ main {
 
 				.worklist_screenshot_container {
 					position: relative;
-					height: 400px;
+					height: 640px;
 					transition: 0.25s;
 					overflow: hidden;
 					border-radius: var(--radius);
@@ -674,7 +676,7 @@ main {
 					}
 					.info_container {
 						display: flex;
-						align-items: end;
+						flex-direction: column;
 						position: absolute;
 						bottom: 0;
 						left: 0;
@@ -684,8 +686,9 @@ main {
 						box-sizing: border-box;
 						padding: 20px;
 						width: 100%;
-						height: 50%;
+						// height: 50%;
 						background: linear-gradient(180deg, transparent, black);
+						color: white;
 						> img {
 							width: 42px;
 							height: 42px;
