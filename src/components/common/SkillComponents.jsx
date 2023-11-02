@@ -62,7 +62,7 @@ const SkillComponents = ({ information }) => {
 				return "없음";
 		}
 	};
-	const skillInfo = information;
+	const skillInfo = information.filter((el, i) => i !== 3);
 
 	return (
 		<motion.div

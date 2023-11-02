@@ -50,7 +50,7 @@ const WorklistComponents = ({ information }) => {
 									<div
 										className="info_container"
 										style={{
-											background: `linear-gradient(180deg,transparent,${item.color})`,
+											background: `linear-gradient(180deg,transparent,${item.color}+70%)`,
 										}}
 									>
 										<img

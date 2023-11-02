@@ -491,15 +491,14 @@ main {
 					width: 100%;
 					.item {
 						position: relative;
-						padding: 15px 20px;
+						padding: 3px;
 						background: white;
+						border-radius: 15px;
 						overflow: hidden;
 						display: flex;
 						align-items: center;
 						gap: 20px;
 						transition: 0.25s;
-						cursor: pointer;
-						border-radius: 20px;
 						cursor: pointer;
 
 						&::after {
@@ -514,9 +513,9 @@ main {
 
 						&:hover {
 							background: #6028ff;
-							.skill_item {
-								filter: brightness(0) invert(1);
-							}
+							// .skill_item {
+							// 	filter: brightness(0) invert(1);
+							// }
 							.description {
 								p {
 									color: white;
@@ -529,7 +528,9 @@ main {
 							height: 40px;
 							object-fit: contain;
 							overflow: inherit;
-							/* background: black; */
+							background: #f8fafc;
+							border-radius: 15px;
+							padding: 15px;
 						}
 						.description {
 							p {

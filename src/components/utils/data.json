@@ -14,8 +14,6 @@
 		{
 			"list": [
 				{ "name": "리액트", "desc": "사용한 이유는..." },
-				{ "name": "뷰", "desc": "사용한 이유는..." },
-				{ "name": "스벨트", "desc": "사용한 이유는..." },
 				{ "name": "Redux Toolkit", "desc": "사용한 이유는..." },
 				{ "name": "Styled-components", "desc": "사용한 이유는..." },
 				{ "name": "Zustand", "desc": "사용한 이유는..." }
@@ -30,8 +28,7 @@
 		{
 			"list": [
 				{ "name": "Redux Toolkit", "desc": "사용한 이유는..." },
-				{ "name": "Styled-components", "desc": "사용한 이유는..." },
-				{ "name": "Zustand", "desc": "사용한 이유는..." }
+				{ "name": "Styled-components", "desc": "사용한 이유는..." }
 			]
 		},
 		{
@@ -265,5 +262,10 @@
 			"view": "www.naver.com",
 			"color": "#066839"
 		}
+	],
+	"RecycleBin": [
+		{ "name": "Zustand", "desc": "사용한 이유는..." },
+		{ "name": "뷰", "desc": "사용한 이유는..." },
+		{ "name": "스벨트", "desc": "사용한 이유는..." }
 	]
 }
