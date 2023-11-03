@@ -13,6 +13,12 @@ import TextImage001 from "./../../assets/img/landing_text_001.svg";
 import TextImage002 from "./../../assets/img/landing_text_002.svg";
 import FurChar from "./../../assets/img/landing_profile_fur.svg";
 
+// 스크린샷
+import Mypic001 from "./../../assets/img/information_mypic_001.jpg";
+import Mypic002 from "./../../assets/img/information_mypic_002.jpg";
+import Mypic003 from "./../../assets/img/information_mypic_003.jpg";
+import Mypic004 from "./../../assets/img/information_mypic_004.jpg";
+
 const Information = ({ title, scrolled }) => {
 	useEffect(() => {
 		// document.querySelector(".myphoto").style.width = scrolled + "%";
@@ -30,6 +36,20 @@ const Information = ({ title, scrolled }) => {
 			{/* <motion.div initial={{ scale: 0 }} animate={{ scale: 1, rotateZ: 360 }} /> */}
 			<div className="information_desc">
 				<motion.div
+					className="mypic_container"
+					whileInView={{
+						opacity: [0, 1],
+						// rotate: [0, 360],
+						// borderRadius: ["20%", "50%"],
+						transition: { delay: 0.1 },
+					}}
+				>
+					<img src={Mypic001} alt="내 사진" />
+					<img src={Mypic002} alt="내 사진" />
+					<img src={Mypic003} alt="내 사진" />
+					<img src={Mypic004} alt="내 사진" />
+				</motion.div>
+				<motion.div
 					className="photo_container"
 					whileInView={{
 						opacity: [0, 1],
@@ -39,15 +59,17 @@ const Information = ({ title, scrolled }) => {
 					}}
 				>
 					{/* <img className="fur" src={FurChar} alt="" /> */}
-					<img className="text_left" src={TextImage001} alt="" />
+					{/* <img className="text_left" src={TextImage001} alt="" /> */}
 					<img className="myphoto" src={Profile} alt="내얼굴" />
-					<img className="text_right" src={TextImage002} alt="" />
+					{/* <img className="text_right" src={TextImage002} alt="" /> */}
 				</motion.div>
 				<p className="dajim">
-					안녕하세요! {title} 김상준 입니다.
-					<br />
-					좋아하면 더 잘한다는 마음으로 UI 개발 일을 하고 있습니다. {title}을
-					빠삭하게 다룹니다.
+					<i>
+						"안녕하세요! {title} 김상준 입니다.
+						<br />
+						즐기면 더 잘한다는 마음으로 UI 개발 일을 하고 있습니다."
+					</i>
+					{/* {title}을 빠삭하게 다룹니다. */}
 					<br />
 					<br />
 					React/TypeScript 등 프레임워크 환경에서 컴포넌트 단위의 마크업 작업을

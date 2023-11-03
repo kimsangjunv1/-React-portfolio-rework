@@ -156,6 +156,9 @@ main {
 			text-align: center;
 			white-space: pre-wrap;
 			margin-bottom: 20px;
+			color: white;
+			text-shadow: -3px 0 #000, 0px 3px #6028ff, 3px 0 #000000, 0 -3px #6028ff;
+			font-weight: bold;
 		}
 	}
 
@@ -166,6 +169,7 @@ main {
 	}
 
 	.section_subTitle {
+		font-family: "IMHyemin";
 		font-size: 36px;
 		line-height: 1.2em;
 		color: #000;
@@ -185,6 +189,50 @@ main {
 		align-items: center;
 		flex-direction: column;
 		gap: 40px;
+		position: relative;
+
+		.mypic_container {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			max-width: 1300px;
+			z-index: -1;
+			img {
+				// opacity: 0.2;
+				position: absolute;
+				object-fit: cover;
+				&:nth-child(1) {
+					// 사람1
+					top: 50%;
+					right: -100px;
+					width: 200px;
+					height: 200px;
+				}
+				&:nth-child(2) {
+					// 고양이
+					top: 60%;
+					right: 0px;
+					width: 250px;
+					height: 300px;
+					z-index: 1;
+				}
+				&:nth-child(3) {
+					// 타블렛
+					bottom: 120px;
+					left: 220px;
+					width: 220px;
+					height: 220px;
+				}
+				&:nth-child(4) {
+					// 사람2
+					left: 120px;
+					right: 50px;
+					width: 300px;
+					height: 300px;
+				}
+			}
+		}
+
 		.photo_container {
 			position: relative;
 			width: 100%;
@@ -224,6 +272,14 @@ main {
 		.dajim {
 			color: #000;
 			text-align: center;
+			i {
+				font-family: "IMHyemin";
+				text-shadow: -3px 0 #000, 0px 3px #6028ff, 3px 0 #000000, 0 -3px #6028ff;
+
+				font-size: 42px;
+				color: white;
+				font-weight: bold;
+			}
 		}
 
 		.my_info {
