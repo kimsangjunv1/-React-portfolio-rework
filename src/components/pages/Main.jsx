@@ -113,14 +113,14 @@ const Main = () => {
         skillInfo={skillInfo}
       /> */}
 				<SectionSpace height={120} />
-				<TitleComponents
+				{/* <TitleComponents
 					title={"공부"}
 					subTitle={"요러한 것들을<br />공부하고 있어요!"}
 					setInner={true}
 					type={"study"}
 				/>
 				<StudyComponents />
-				<SectionSpace height={120} />
+				<SectionSpace height={120} /> */}
 
 				<Contact />
 

@@ -113,7 +113,7 @@ const SkillComponents = ({ information }) => {
 											/>
 											<div className="description">
 												<p>{item.name}</p>
-												<p>{item.desc}</p>
+												{/* <p>{item.desc}</p> */}
 											</div>
 										</div>
 									);
