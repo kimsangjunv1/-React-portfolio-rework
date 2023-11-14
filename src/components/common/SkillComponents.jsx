@@ -44,7 +44,7 @@ const SkillComponents = ({ information }) => {
 			case "Styled-components":
 				return "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/skill_styledcomponents.png?raw=true";
 			case "Zustand":
-				return "성공";
+				return "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/skill_zustand.png?raw=true";
 
 			// etc
 			case "Zeplin":
