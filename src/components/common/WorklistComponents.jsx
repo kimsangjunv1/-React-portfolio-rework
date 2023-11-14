@@ -20,7 +20,7 @@ const WorklistComponents = ({ information }) => {
 	const dispatch = useDispatch();
 
 	return (
-		<motion.div
+		<motion.section
 			className="worklist_container"
 			// viewport={{ amount: "all" }}
 			// onViewportEnter={() => {
@@ -90,7 +90,7 @@ const WorklistComponents = ({ information }) => {
 					<>데이터가 없습니다.</>
 				)}
 			</div>
-		</motion.div>
+		</motion.section>
 	);
 };
 

@@ -65,7 +65,7 @@ const SkillComponents = ({ information }) => {
 	const skillInfo = information.filter((el, i) => i !== 3);
 
 	return (
-		<motion.div
+		<motion.section
 			className="skill_container"
 			ref={scrollRef}
 			// viewport={{ amount: "all" }}
@@ -153,7 +153,7 @@ const SkillComponents = ({ information }) => {
 					</motion.div>
 				)}
 			</AnimatePresence>
-		</motion.div>
+		</motion.section>
 	);
 };
 

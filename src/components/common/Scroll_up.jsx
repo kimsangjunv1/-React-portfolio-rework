@@ -33,9 +33,9 @@ const Scroll_up = () => {
 			{state && (
 				<motion.div
 					className="nav_container show"
-					initial={{ opacity: 0, translateX: "200%" }}
-					animate={{ opacity: 1, translateX: "0%" }}
-					exit={{ opacity: 0, translateX: "200%" }}
+					initial={{ opacity: 0, translateX: "200%", translateY: "-50%" }}
+					animate={{ opacity: 1, translateX: "0%", translateY: "-50%" }}
+					exit={{ opacity: 0, translateX: "200%", translateY: "-50%" }}
 					transition={{ duration: 0.2, ease: [0, 0.25, 0.2, 1.01] }}
 				>
 					<div

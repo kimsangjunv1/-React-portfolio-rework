@@ -48,7 +48,7 @@ const Header = ({ scrolled }) => {
 	}, []);
 
 	return (
-		<header ref={headerBox}>
+		<nav ref={headerBox}>
 			<div className="header_inner">
 				{/* <HeaderMenu title={"Information"} /> */}
 				{/* <HeaderMenu title={"Technics"} /> */}
@@ -68,7 +68,7 @@ const Header = ({ scrolled }) => {
 			<div className="scroll_background">
 				<div className="scroll_progress"></div>
 			</div>
-		</header>
+		</nav>
 	);
 };
 

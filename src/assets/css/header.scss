@@ -1,4 +1,4 @@
-header {
+nav {
 	width: 100%;
 	background: rgba(255, 255, 255, 0.847);
 	position: relative;
@@ -138,11 +138,11 @@ header {
 		display: flex;
 		align-items: end;
 		.scroll_progress {
-			background: #00c853;
+			background: #092812;
 			width: 0px;
 			height: 5%;
+			border-radius: 100px;
 			margin: 0 auto;
-			// border-radius: 100px;
 		}
 	}
 }

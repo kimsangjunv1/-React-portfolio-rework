@@ -32,7 +32,7 @@ const Information = ({ title, scrolled }) => {
 	});
 
 	return (
-		<div className="information_container">
+		<section className="information_container">
 			{/* <motion.div initial={{ scale: 0 }} animate={{ scale: 1, rotateZ: 360 }} /> */}
 			<div className="information_desc">
 				<motion.div
@@ -106,7 +106,7 @@ const Information = ({ title, scrolled }) => {
           </div>
         </div> */}
 			</div>
-		</div>
+		</section>
 	);
 };
 
