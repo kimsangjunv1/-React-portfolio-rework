@@ -28,7 +28,7 @@ import landing_img_003 from "./../../assets/img/landing_img_03.jpg";
 
 const Landing = ({ scrolled }) => {
 	return (
-		<div className="landing">
+		<section className="landing">
 			<div className="landing_inner">
 				<div className="landing_contents">
 					<div className="row">
@@ -55,7 +55,7 @@ const Landing = ({ scrolled }) => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

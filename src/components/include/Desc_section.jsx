@@ -20,14 +20,14 @@ const Desc_section = ({ itemInfo }) => {
 			exit={{ y: -10, opacity: 0 }}
 			transition={{ duration: 0.2 }}
 		>
+			<button
+				onClick={() => {
+					dispatch(saveItemInfo([]));
+				}}
+			>
+				╳
+			</button>
 			<div className="desc_container_inner">
-				<button
-					onClick={() => {
-						dispatch(saveItemInfo([]));
-					}}
-				>
-					╳
-				</button>
 				<ScreenshotComponents image={itemInfo.image} />
 				<div className="all_container">
 					<div className="title_container clearfixed">

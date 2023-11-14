@@ -4,6 +4,8 @@ import { AnimatePresence } from "framer-motion";
 
 import Close from "./../../assets/img/close.svg";
 import Message from "./../../assets/img/message.svg";
+import TitleComponents from "./TitleComponents";
+import SubTitleComponents from "./SubTitleComponents";
 
 const SkillComponents = ({ information }) => {
 	const [title, setTitle] = useState(null);
@@ -76,20 +78,28 @@ const SkillComponents = ({ information }) => {
 			//   document.querySelector("body").classList.remove("dark");
 			// }}
 		>
+			<TitleComponents
+				title={"web standards"}
+				subTitle={`다음과 같은<br />기술들을 다뤘어요!`}
+				setInner={true}
+				type={"skill"}
+			/>
+			<SubTitleComponents title={"주로 리액트를 했습니다!"} />
+
 			<div className="skill_container_inner">
 				{skillInfo.map((item, key) => {
 					return (
 						<div className="skill_section" key={key}>
 							<p className="skill_category">
 								{key === 0
-									? "라이브러리"
+									? "Library"
 									: key === 1
-									? "프론트"
+									? "Front"
 									: key === 2
-									? "백엔드"
+									? "Backend"
 									: key === 3
-									? "라이브러리"
-									: "기타"}
+									? "Misc"
+									: "Misc"}
 							</p>
 							<div className="skill_icon_container">
 								{item.list.map((item, key) => {
@@ -113,7 +123,7 @@ const SkillComponents = ({ information }) => {
 											/>
 											<div className="description">
 												<p>{item.name}</p>
-												{/* <p>{item.desc}</p> */}
+												<p>{item.desc}</p>
 											</div>
 										</div>
 									);

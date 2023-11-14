@@ -74,32 +74,21 @@ const Main = () => {
 		<Fragment>
 			{/* <Header scrolled={scrolled} /> */}
 			<main>
-				<MouseSection />
 				<AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
 				<Landing scrolled={scrolled} />
+				{/* <SectionSpace height={120} /> */}
 				<Header scrolled={scrolled} />
-				<SectionSpace height={120} />
+
 				<Information title={"테스트"} scrolled={scrolled} />
-				<SectionSpace height={120} />
-				<TitleComponents
-					title={"web standards"}
-					subTitle={`다음과 같은<br />기술들을 다뤘어요!`}
-					setInner={true}
-					type={"skill"}
-				/>
+				{/* <SectionSpace height={120} /> */}
+
 				<SkillComponents information={skillInfo} />
 				<AnimatePresence>
 					{Object.keys(itemInfo).length !== 0 && (
 						<Desc_section itemInfo={itemInfo} />
 					)}
 				</AnimatePresence>
-				<SectionSpace height={120} />
-				<TitleComponents
-					title={"Toy Project"}
-					subTitle={`다음과 같은<br />작업물들이 있어요!`}
-					setInner={true}
-					type={"project"}
-				/>
+				{/* <SectionSpace height={120} /> */}
 
 				<WorklistComponents information={toyProjectsInfo} />
 				{/* </div> */}
@@ -109,7 +98,7 @@ const Main = () => {
         webstandardsInfo={webstandardsInfo}
         skillInfo={skillInfo}
       /> */}
-				<SectionSpace height={120} />
+				{/* <SectionSpace height={120} /> */}
 				{/* <TitleComponents
 					title={"공부"}
 					subTitle={"요러한 것들을<br />공부하고 있어요!"}
@@ -120,8 +109,10 @@ const Main = () => {
 				<SectionSpace height={120} /> */}
 
 				<Contact />
-
-				<Scroll_up />
+				<section className="function_box">
+					<MouseSection />
+					<Scroll_up />
+				</section>
 			</main>
 			<Footer />
 		</Fragment>

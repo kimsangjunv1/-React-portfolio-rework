@@ -12,6 +12,7 @@ import EmailIcon from "./../../assets/img/icon_email.svg";
 import TextImage001 from "./../../assets/img/landing_text_001.svg";
 import TextImage002 from "./../../assets/img/landing_text_002.svg";
 import FurChar from "./../../assets/img/landing_profile_fur.svg";
+import SectionSpace from "./SpaceComponents";
 
 // 스크린샷
 import Mypic001 from "./../../assets/img/information_mypic_001.jpg";
@@ -35,10 +36,33 @@ const Information = ({ title, scrolled }) => {
 		<section className="information_container">
 			{/* <motion.div initial={{ scale: 0 }} animate={{ scale: 1, rotateZ: 360 }} /> */}
 			<div className="information_desc">
+				<div className="description_container">
+					<p className="dajim">
+						즐기면 더 잘한다는 마음으로
+						<br />
+						개발 일을 하고 있어요!
+					</p>
+					<p className="dajim">
+						React 등 프레임워크 환경에서 컴포넌트 단위의 마크업 작업을 능숙하게
+						할 수 있어요.
+						<br />
+						어디에서도 잘 보이는 반응형, 웹 접근성과 웹 표준을 고려한 웹
+						페이지를 그려냅니다.
+						<br />
+						맡은 프로젝트의 목적을 우선적으로 고려하며, 원활한 협업을 중요하게
+						생각해요.
+						<br />
+						<br />
+						우연히 접하게 된 개발공부에 매력을 느끼고개발자의 길을 걷게
+						되었습니다. 문제에서 기회를 포착하고, 해결을 통한 성취감을
+						좋아합니다. 지금에 안주하지않고 끝없이 발전하려고 합니다.
+						프론트에서부터 시작해 풀스택까지 달려나가고싶습니다.
+					</p>
+				</div>
 				<motion.div
 					className="mypic_container"
 					whileInView={{
-						opacity: [0, 1],
+						opacity: [0, 0.4],
 						// rotate: [0, 360],
 						// borderRadius: ["20%", "50%"],
 						transition: { delay: 0.1 },
@@ -63,30 +87,7 @@ const Information = ({ title, scrolled }) => {
 					<img className="myphoto" src={Profile} alt="내얼굴" />
 					{/* <img className="text_right" src={TextImage002} alt="" /> */}
 				</motion.div>
-				<p className="dajim">
-					<i>
-						"안녕하세요! {title} 김상준 입니다.
-						<br />
-						즐기면 더 잘한다는 마음으로 UI 개발 일을 하고 있습니다."
-					</i>
-					{/* {title}을 빠삭하게 다룹니다. */}
-					<br />
-					<br />
-					React 등 프레임워크 환경에서 컴포넌트 단위의 마크업 작업을 능숙하게 할
-					수 있어요.
-					<br />
-					어디에서도 잘 보이는 반응형, 웹 접근성과 웹 표준을 고려한 웹 페이지를
-					그려냅니다.
-					<br />
-					맡은 프로젝트의 목적을 우선적으로 고려하며, 원활한 협업을 중요하게
-					생각해요.
-					<br />
-					<br />
-					우연히 접하게 된 개발공부에 매력을 느끼고개발자의 길을 걷게
-					되었습니다. 문제에서 기회를 포착하고, 해결을 통한 성취감을 좋아합니다.
-					지금에 안주하지않고 끝없이 발전하려고 합니다. 프론트에서부터 시작해
-					풀스택까지 달려나가고싶습니다.
-				</p>
+
 				{/* <div className="my_info">
           <div className="info_item">
             <img src={DateIcon} alt="아이콘" />
@@ -106,6 +107,7 @@ const Information = ({ title, scrolled }) => {
           </div>
         </div> */}
 			</div>
+			{/* <SectionSpace height={120} /> */}
 		</section>
 	);
 };

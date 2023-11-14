@@ -11,6 +11,8 @@ import Screenshot from "./../../assets/img/screenshot_01.jpg";
 
 import SectionProjectSingle from "./../../assets/img/section_project_single.svg";
 import SectionProjectTeam from "./../../assets/img/section_project_team.svg";
+import TitleComponents from "./TitleComponents";
+import SubTitleComponents from "./SubTitleComponents";
 
 const WorklistComponents = ({ information }) => {
 	const data = information;
@@ -30,6 +32,13 @@ const WorklistComponents = ({ information }) => {
 			// 	document.querySelector("body").classList.remove("gray");
 			// }}
 		>
+			<TitleComponents
+				title={"Toy Project"}
+				subTitle={`다음과 같은<br />작업물들이 있어요!`}
+				setInner={true}
+				type={"project"}
+			/>
+			<SubTitleComponents title={"총 4개의 작업물이 있습니다."} />
 			<div className="worklist_container_inner">
 				{data ? (
 					data.map((item, key) => {
@@ -50,23 +59,24 @@ const WorklistComponents = ({ information }) => {
 									<div
 										className="info_container"
 										style={{
-											background: `linear-gradient(180deg,transparent,${item.color}+70%)`,
+											background: `linear-gradient(180deg,transparent,black+110%)`,
+											// background: `linear-gradient(180deg,transparent,${item.color}+110%)`,
 										}}
 									>
-										<img
+										{/* <img
 											src={
 												item.category === "팀 프로젝트"
 													? SectionProjectTeam
 													: SectionProjectSingle
 											}
 											alt="없음"
-										/>
+										/> */}
 										<div className="description">
-											<p className="category">
+											{/* <p className="category">
 												{item.category ? item.category : "설정 값 없음"}
-											</p>
-											{item.color}
-											<p className="date">{item.date}</p>
+											</p> */}
+											{/* {item.color} */}
+											{/* <p className="date">{item.date}</p> */}
 										</div>
 										<div className="item_desc_container">
 											<h2 className="title">

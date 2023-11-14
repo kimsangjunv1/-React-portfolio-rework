@@ -7,12 +7,12 @@ import SectionStudy from "./../../assets/img/section_study.svg";
 import section_skill_part_001 from "./../../assets/img/section_skill_part_001.svg";
 import section_skill_part_002 from "./../../assets/img/section_skill_part_002.svg";
 
-const TitleComponents = ({ title, subTitle, setInner, type }) => {
+const TitleComponents = ({ title, subTitle, setInner, type, sub }) => {
 	let replace_result = subTitle.replace(/(<br>|<br\/>|<br \/>)/g, "\r\n");
 	return (
 		<div className="section_title_container">
 			<div className={setInner ? "section_title_container_inner" : ""}>
-				{type === "skill" && (
+				{/* {type === "skill" && (
 					<div className="skill">
 						<img src={section_skill_part_001} alt="파트1" />
 						<img src={section_skill_part_002} alt="파트2" />
@@ -28,7 +28,7 @@ const TitleComponents = ({ title, subTitle, setInner, type }) => {
 					<div className="project">
 						<img src={SectionProject} alt="공부" />
 					</div>
-				)}
+				)} */}
 
 				<p className="section_subTitle">
 					{subTitle.replace(/(<br>|<br\/>|<br \/>)/g, "\r\n")}

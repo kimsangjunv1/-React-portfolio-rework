@@ -43,6 +43,7 @@
 					}
 				}
 				h2 {
+					font-family: "omyu_pretty";
 					/* width: 100%; */
 					font-size: 12vmin;
 					font-weight: 100;
@@ -59,7 +60,8 @@
 					}
 					i {
 						font-weight: 900;
-						// color: #00d959;
+						-webkit-text-stroke: 6px;
+						-webkit-text-stroke-color: #092811;
 					}
 
 					// animation: variable-loop 4s infinite both;
