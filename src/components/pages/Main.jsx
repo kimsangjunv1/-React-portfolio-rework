@@ -83,14 +83,15 @@ const Main = () => {
 				{/* <SectionSpace height={120} /> */}
 
 				<SkillComponents information={skillInfo} />
-				<AnimatePresence>
-					{Object.keys(itemInfo).length !== 0 && (
-						<Desc_section itemInfo={itemInfo} />
-					)}
-				</AnimatePresence>
+
 				{/* <SectionSpace height={120} /> */}
 
 				<WorklistComponents information={toyProjectsInfo} />
+				{/* <AnimatePresence>
+					{Object.keys(itemInfo).length !== 0 && (
+						<Desc_section itemInfo={itemInfo} />
+					)}
+				</AnimatePresence> */}
 				{/* </div> */}
 
 				{/* <Navigate_section
@@ -109,7 +110,7 @@ const Main = () => {
 				<SectionSpace height={120} /> */}
 
 				<Contact />
-				<section className="function_box">
+				<section className="function_box" id="function">
 					<MouseSection />
 					<Scroll_up />
 				</section>

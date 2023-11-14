@@ -28,7 +28,7 @@ import landing_img_003 from "./../../assets/img/landing_img_03.jpg";
 
 const Landing = ({ scrolled }) => {
 	return (
-		<section className="landing">
+		<section className="landing" id="landing">
 			<div className="landing_inner">
 				<div className="landing_contents">
 					<div className="row">

@@ -69,6 +69,7 @@ const SkillComponents = ({ information }) => {
 	return (
 		<motion.section
 			className="skill_container"
+			id="skill"
 			ref={scrollRef}
 			// viewport={{ amount: "all" }}
 			// onViewportEnter={() => {

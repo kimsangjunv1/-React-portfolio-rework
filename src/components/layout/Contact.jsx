@@ -2,10 +2,13 @@ import React from "react";
 
 import Contact_text from "./../../assets/img/contact_text.svg";
 import Contact_bg from "./../../assets/img/contact_bg.svg";
+import icon_phone from "./../../assets/img/icon_phone.svg";
+import icon_email from "./../../assets/img/icon_email.svg";
+import icon_link from "./../../assets/img/icon_link.svg";
 
 const Contact = () => {
 	return (
-		<section className="contact_container">
+		<section className="contact_container" id="contact">
 			<div className="contact_container_inner">
 				<div className="image_container">
 					<img
@@ -19,28 +22,28 @@ const Contact = () => {
 					</div>
 					<div className="info_container">
 						<div className="item">
-							<div>
-								<span>휴대전화</span>
-								<span>휴대전화</span>
-							</div>
-							<hr />
-							<p>010-6607-7265</p>
-						</div>
-						<div className="item">
-							<div>
-								<span>휴대전화</span>
+							<div className="title">
+								<img src={icon_phone} alt="" />
 								<span>휴대전화</span>
 							</div>
 							<hr />
 							<p>010-6607-7265</p>
 						</div>
 						<div className="item">
-							<div>
-								<span>휴대전화</span>
-								<span>휴대전화</span>
+							<div className="title">
+								<img src={icon_email} alt="" />
+								<span>이메일</span>
 							</div>
 							<hr />
-							<p>010-6607-7265</p>
+							<p>to_before@naver.com</p>
+						</div>
+						<div className="item">
+							<div className="title">
+								<img src={icon_link} alt="" />
+								<span>링크</span>
+							</div>
+							<hr />
+							<p>https://github.com/kimsangjunv1</p>
 						</div>
 					</div>
 					{/* <img

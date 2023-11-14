@@ -10,7 +10,7 @@ const Desc_section = ({ itemInfo }) => {
 	// const itemInfo = useSelector((state) => state.counter.iteminfo);
 	const dispatch = useDispatch();
 	return (
-		<motion.div
+		<motion.section
 			className="desc_container"
 			// initial={{ opacity: 0 }}
 			// animate={{ opacity: 1 }}
@@ -20,14 +20,15 @@ const Desc_section = ({ itemInfo }) => {
 			exit={{ y: -10, opacity: 0 }}
 			transition={{ duration: 0.2 }}
 		>
-			<button
-				onClick={() => {
-					dispatch(saveItemInfo([]));
-				}}
-			>
-				╳
-			</button>
 			<div className="desc_container_inner">
+				{/* <button
+					onClick={() => {
+						dispatch(saveItemInfo([]));
+					}}
+				>
+					╳
+				</button> */}
+				<p className="description_title">설명</p>
 				<ScreenshotComponents image={itemInfo.image} />
 				<div className="all_container">
 					<div className="title_container clearfixed">
@@ -63,7 +64,7 @@ const Desc_section = ({ itemInfo }) => {
 					</div>
 				</div>
 			</div>
-		</motion.div>
+		</motion.section>
 	);
 };
 

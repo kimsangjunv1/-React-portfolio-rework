@@ -172,30 +172,4 @@ nav {
 		);
 		z-index: -100;
 	}
-	&::before {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 200px;
-		background: linear-gradient(180deg, white, transparent);
-		-webkit-backdrop-filter: blur(10px);
-		backdrop-filter: blur(10px);
-		-webkit-mask: linear-gradient(
-			0deg,
-			rgba(0, 0, 0, 0) 12.5%,
-			red 65%,
-			red 37.5%,
-			rgb(255, 18, 18) 50%
-		);
-		mask: linear-gradient(
-			to bottom,
-			rgba(0, 0, 0, 0) 12.5%,
-			red 65%,
-			red 37.5%,
-			rgb(255, 18, 18) 50%
-		);
-		z-index: -100;
-	}
 }

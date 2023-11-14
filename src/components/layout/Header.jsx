@@ -52,16 +52,16 @@ const Header = ({ scrolled }) => {
 			<div className="header_inner">
 				{/* <HeaderMenu title={"Information"} /> */}
 				{/* <HeaderMenu title={"Technics"} /> */}
-				<HeaderMenu title={"Home"} />
-				<HeaderMenu title={"Information"} />
-				<HeaderMenu title={"Skill"} />
-				<a className="logo" href="#">
+				{/* <HeaderMenu title={"landing"} /> */}
+				<HeaderMenu title={"information"} />
+				<HeaderMenu title={"skill"} />
+				<a className="logo" href="#landing">
 					<img className="bg" src={LogoBackground} alt="로고_뒷배경" />
 					<img className="icon" src={LogoMain} alt="로고_메인" />
 				</a>
-				<HeaderMenu title={"Project"} />
-				<HeaderMenu title={"Study"} />
-				<HeaderMenu title={"Contact"} />
+				<HeaderMenu title={"worklist"} />
+				<HeaderMenu title={"contact"} />
+				{/* <HeaderMenu title={"Study"} /> */}
 				{/* <HeaderMenu title={"Whatever"} />
         <HeaderMenu title={"Shooting"} /> */}
 			</div>
