@@ -7,9 +7,7 @@ const ScrollComponents = ({ scrolled }) => {
 	});
 	return (
 		<div className="scroll_background">
-			<div className="scroll_progress">
-				<p>꼭 연락부탁드립니다!</p>
-			</div>
+			<div className="scroll_progress">{/* <p>꼭 연락부탁드립니다!</p> */}</div>
 		</div>
 	);
 };

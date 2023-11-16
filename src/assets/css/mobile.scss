@@ -99,6 +99,18 @@
 			}
 		}
 		// 섹션별 컨테이너
+		.landing {
+			.landing_inner {
+				.landing_contents {
+					min-width: 350px;
+					.row {
+						img {
+							width: 12vmin;
+						}
+					}
+				}
+			}
+		}
 		.information_container {
 			.information_desc {
 				flex-direction: column-reverse;
@@ -250,7 +262,21 @@
 									}
 								}
 								.stack_section {
-									.sub_title {
+									.stack_container {
+										span {
+											font-size: 14px;
+											border: 1px solid black;
+											padding: 3px 5px;
+											margin-right: 5px;
+											&:last-child {
+												margin-right: 0;
+											}
+										}
+									}
+								}
+								.description_section {
+									p {
+										font-size: 14px;
 									}
 								}
 							}
@@ -266,7 +292,7 @@
 			}
 			.menu_btn {
 				position: sticky;
-				bottom: 20px;
+				bottom: 40px;
 				left: 0;
 				top: 20px;
 				z-index: 1000;

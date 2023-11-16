@@ -36,19 +36,17 @@ nav {
 			overflow: hidden;
 			position: relative;
 			> a {
-				// position: absolute;
 				pointer-events: none;
 				visibility: hidden;
 				display: inline-block;
 				text-decoration: none;
-				// color: black;
 				transition: 0.25s;
 				border-radius: 100px;
-				min-width: 20px;
 				text-align: center;
-				// padding: 0 10px;
-				height: 25px;
 				margin: auto 0;
+				height: 40px;
+				min-width: 40px;
+				text-transform: uppercase;
 
 				&:hover {
 					background: rgba(255, 255, 255, 0.129);
@@ -76,7 +74,8 @@ nav {
 					color: black;
 					transition: 0.25s;
 					border-radius: 100px;
-					min-width: 20px;
+					min-width: 40px;
+					text-transform: uppercase;
 					text-align: center;
 					// padding: 0 10px;
 					height: 25px;
