@@ -24,7 +24,7 @@ const Header = ({ scrolled, mobile }) => {
 		const checkTop = () => {
 			if (offsetTop >= window.scrollY) {
 				// 안닿았을때
-				headerBox.current.style.position = "sticky";
+				// headerBox.current.style.position = "sticky";
 			} else {
 				// 닿았을때
 				let scrollTop =
@@ -37,7 +37,7 @@ const Header = ({ scrolled, mobile }) => {
 				if (scrollTop < lastScroll) {
 					//현재 스크롤 값이 이전 스크롤 값보다 작다면
 					headerBox.current.style.top = "0px";
-					headerBox.current.style.position = "fixed";
+					// headerBox.current.style.position = "fixed";
 				} else {
 					headerBox.current.style.top = "-85px";
 				}
