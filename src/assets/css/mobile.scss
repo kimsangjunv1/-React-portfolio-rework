@@ -12,6 +12,12 @@
 		--section-padding: 0 20px;
 	}
 
+	html,
+	body {
+		max-width: 100%;
+		overflow-x: hidden;
+	}
+
 	html {
 		cursor: default;
 	}
@@ -366,6 +372,11 @@
 
 	// 마우스
 	.mouse_cursor {
+		display: none;
+	}
+
+	// 스크롤 프로그레스바
+	.scroll_background {
 		display: none;
 	}
 }
