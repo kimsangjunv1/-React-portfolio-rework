@@ -16,6 +16,14 @@ const Mouse_section = () => {
 				hoho.current.style.left = `${e.pageX}px`;
 				hoho.current.style.top = `${e.pageY}px`;
 			});
+			window.addEventListener("mouseover", () => {
+				console.log("올림");
+				hoho.current.style.transform = `scale(1.2)`;
+			});
+			window.addEventListener("mouseleave", () => {
+				console.log("내림");
+				hoho.current.style.transform = `scale(1)`;
+			});
 		};
 		window.requestAnimationFrame(moveCursor);
 	}, []);

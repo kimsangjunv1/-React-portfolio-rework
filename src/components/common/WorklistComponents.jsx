@@ -94,6 +94,9 @@ const WorklistComponents = ({ information, mobile }) => {
 									<div
 										className="worklist_item"
 										key={key}
+										onLoad={() => {
+											dispatch(saveItemInfo(information[0]));
+										}}
 										onClick={() => {
 											dispatch(saveItemInfo(item));
 										}}
