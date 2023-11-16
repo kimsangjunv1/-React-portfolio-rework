@@ -5,6 +5,7 @@ import HeaderMenu from "../common/HeaderMenu";
 
 import LogoBackground from "./../../assets/img/logo_bg.jpg";
 import LogoMain from "./../../assets/img/logo.svg";
+import icon_menu from "./../../assets/img/icon_menu.svg";
 
 const Header = ({ scrolled, mobile }) => {
 	const headerBox = useRef(null);
@@ -18,7 +19,7 @@ const Header = ({ scrolled, mobile }) => {
 	const [menuItem, setMenuItem] = useState(null);
 
 	useEffect(() => {
-		document.querySelector(".scroll_progress").style.width = scrolled + "%";
+		// document.querySelector(".scroll_progress").style.width = scrolled + "%";
 
 		const checkTop = () => {
 			if (offsetTop >= window.scrollY) {
@@ -73,7 +74,7 @@ const Header = ({ scrolled, mobile }) => {
 							setMenuState(true);
 						}}
 					>
-						메뉴
+						<img src={icon_menu} alt="메뉴 아이콘" />
 					</button>
 					<div className={`nav_item_container ${menuState ? "show" : "hide"}`}>
 						<p className="title">메뉴</p>
@@ -92,9 +93,9 @@ const Header = ({ scrolled, mobile }) => {
 					</div>
 				</div>
 			)}
-			<div className="scroll_background">
+			{/* <div className="scroll_background">
 				<div className="scroll_progress"></div>
-			</div>
+			</div> */}
 		</nav>
 	);
 };

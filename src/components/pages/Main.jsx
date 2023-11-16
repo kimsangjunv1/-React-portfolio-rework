@@ -20,6 +20,7 @@ import TitleComponents from "../common/TitleComponents";
 import WorklistComponents from "../common/WorklistComponents";
 import SectionSpace from "../common/SpaceComponents";
 import StudyComponents from "../common/StudyComponents";
+import ScrollComponents from "./../common/ScrollComponents";
 
 import Navigate_section from "./../include/Navigate_section";
 import Desc_section from "./../include/Desc_section";
@@ -54,7 +55,6 @@ const Main = () => {
 
 		// 이미지 로딩
 		imagesLoaded(document.querySelector("body"), function () {
-			console.log("로딩완려");
 			setIsLoaded(true);
 		});
 
@@ -123,6 +123,7 @@ const Main = () => {
 				<section className="function_box" id="function">
 					<MouseSection />
 					<Scroll_up />
+					<ScrollComponents scrolled={scrolled} />
 				</section>
 			</main>
 			<Footer />
