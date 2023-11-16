@@ -11,14 +11,13 @@ const Mouse_section = () => {
 	const particle_002 = useRef();
 
 	useEffect(() => {
-		console.log("hoho.current : ", hoho.current);
-		const test = () => {
+		const moveCursor = () => {
 			window.addEventListener("mousemove", (e) => {
 				hoho.current.style.left = `${e.pageX}px`;
 				hoho.current.style.top = `${e.pageY}px`;
 			});
 		};
-		window.requestAnimationFrame(test);
+		window.requestAnimationFrame(moveCursor);
 	}, []);
 
 	return (

@@ -133,17 +133,15 @@ const SkillComponents = ({ information }) => {
 				})}
 			</div>
 
-			{title && (
-				<div className="skill_desc_container">
-					<span className="message_icon">
-						<img src={Message} alt="메세지 아이콘" />
-					</span>
-					<div className="information">
-						<h2 className="skill_name">{title}</h2>
-						<span className="skill_desc">{desc}</span>
-					</div>
+			<div className={`skill_desc_container ${title ? "show" : ""}`}>
+				<span className="message_icon">
+					<img src={Message} alt="메세지 아이콘" />
+				</span>
+				<div className="information">
+					<h2 className="skill_name">{title}</h2>
+					<span className="skill_desc">{desc}</span>
 				</div>
-			)}
+			</div>
 		</section>
 	);
 };

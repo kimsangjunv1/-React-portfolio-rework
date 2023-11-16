@@ -171,7 +171,6 @@ const WorklistComponents = ({ information, mobile }) => {
 						<button
 							className="close_menu_btn"
 							onClick={() => {
-								console.log("asdasd");
 								setVisible(false);
 							}}
 						>
