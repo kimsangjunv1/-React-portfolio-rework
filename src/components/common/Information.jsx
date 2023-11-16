@@ -73,20 +73,20 @@ const Information = ({ title, scrolled }) => {
 					<img src={Mypic003} alt="내 사진" />
 					<img src={Mypic004} alt="내 사진" />
 				</motion.div> */}
-				<motion.div
+				<div
 					className="photo_container"
-					whileInView={{
-						opacity: [0, 1],
-						// rotate: [0, 360],
-						// borderRadius: ["20%", "50%"],
-						transition: { delay: 0.1 },
-					}}
+					// whileInView={{
+					// 	opacity: [0, 1],
+					// 	// rotate: [0, 360],
+					// 	// borderRadius: ["20%", "50%"],
+					// 	transition: { delay: 0.1 },
+					// }}
 				>
 					{/* <img className="fur" src={FurChar} alt="" /> */}
 					{/* <img className="text_left" src={TextImage001} alt="" /> */}
 					<img className="myphoto" src={Profile} alt="내얼굴" />
 					{/* <img className="text_right" src={TextImage002} alt="" /> */}
-				</motion.div>
+				</div>
 
 				{/* <div className="my_info">
           <div className="info_item">

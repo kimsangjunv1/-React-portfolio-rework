@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import { motion } from "framer-motion";
-import { AnimatePresence } from "framer-motion";
 
 import Close from "./../../assets/img/close.svg";
 import Message from "./../../assets/img/message.svg";
@@ -67,7 +65,7 @@ const SkillComponents = ({ information }) => {
 	const skillInfo = information.filter((el, i) => i !== 3);
 
 	return (
-		<motion.section
+		<section
 			className="skill_container"
 			id="skill"
 			ref={scrollRef}
@@ -134,37 +132,19 @@ const SkillComponents = ({ information }) => {
 					);
 				})}
 			</div>
-			{/* <motion.div className="skill_desc_container">
-				<h2 className="skill_name">asdasd</h2>
-				<p className="skill_desc">asdasd</p>
-			</motion.div> */}
-			<AnimatePresence>
-				{title && (
-					<motion.div
-						className="skill_desc_container"
-						initial={{ y: 0, translateX: "-50%", translateY: "200%" }}
-						animate={{ y: 0, translateX: "-50%", translateY: "0%" }}
-						exit={{ y: 0, translateX: "-50%", translateY: "400%" }}
-						transition={{
-							duration: 0.25,
-							// delay: 0.5,
-							ease: [0, 0.25, 0.2, 1.01],
-						}}
-					>
-						<span className="message_icon">
-							<img src={Message} alt="메세지 아이콘" />
-						</span>
-						<div className="information">
-							<h2 className="skill_name">{title}</h2>
-							<span className="skill_desc">{desc}</span>
-						</div>
-						{/* <span className="close_icon">
-							<img src={Close} alt="닫기 아이콘" />
-						</span> */}
-					</motion.div>
-				)}
-			</AnimatePresence>
-		</motion.section>
+
+			{title && (
+				<div className="skill_desc_container">
+					<span className="message_icon">
+						<img src={Message} alt="메세지 아이콘" />
+					</span>
+					<div className="information">
+						<h2 className="skill_name">{title}</h2>
+						<span className="skill_desc">{desc}</span>
+					</div>
+				</div>
+			)}
+		</section>
 	);
 };
 

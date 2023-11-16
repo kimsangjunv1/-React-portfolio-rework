@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+
 import { useSelector } from "react-redux";
 
 import { useDispatch } from "react-redux";
 import { saveItemInfo } from "../utils/infoContainerStore";
-import { AnimatePresence } from "framer-motion";
-
-import { motion } from "framer-motion";
 
 import toy_icon_pick from "./../../assets/img/toy_icon_pick.svg";
 import toy_icon_playground from "./../../assets/img/toy_icon_playground.svg";
@@ -71,7 +67,7 @@ const WorklistComponents = ({ information, mobile }) => {
 	};
 
 	return (
-		<motion.section
+		<section
 			className="worklist_container"
 			id="worklist"
 			// viewport={{ amount: "all" }}
@@ -205,7 +201,7 @@ const WorklistComponents = ({ information, mobile }) => {
 					메뉴
 				</div>
 			)}
-		</motion.section>
+		</section>
 	);
 };
 

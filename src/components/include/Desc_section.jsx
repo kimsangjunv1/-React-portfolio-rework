@@ -10,7 +10,7 @@ const Desc_section = ({ itemInfo }) => {
 	// const itemInfo = useSelector((state) => state.counter.iteminfo);
 	const dispatch = useDispatch();
 	return (
-		<motion.section
+		<section
 			className="desc_container"
 
 			// initial={{ y: 10, opacity: 0 }}
@@ -62,7 +62,7 @@ const Desc_section = ({ itemInfo }) => {
 					</div>
 				</div>
 			</div>
-		</motion.section>
+		</section>
 	);
 };
 
