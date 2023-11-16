@@ -12,13 +12,11 @@ const Desc_section = ({ itemInfo }) => {
 	return (
 		<motion.section
 			className="desc_container"
-			// initial={{ opacity: 0 }}
-			// animate={{ opacity: 1 }}
-			// exit={{ opacity: 0 }}
-			initial={{ y: 10, opacity: 0 }}
-			animate={{ y: 0, opacity: 1 }}
-			exit={{ y: -10, opacity: 0 }}
-			transition={{ duration: 0.2 }}
+
+			// initial={{ y: 10, opacity: 0 }}
+			// animate={{ y: 0, opacity: 1 }}
+			// exit={{ y: -10, opacity: 0 }}
+			// transition={{ duration: 0.2 }}
 		>
 			<div className="desc_container_inner">
 				{/* <button
@@ -39,7 +37,7 @@ const Desc_section = ({ itemInfo }) => {
 						<div className="stack_section">
 							<p className="sub_title">사용스택</p>
 							<div className="stack_container">
-								{itemInfo.skill.map((item, key) => {
+								{itemInfo?.skill?.map((item, key) => {
 									return (
 										<span className="item" key={key}>
 											{item.name}

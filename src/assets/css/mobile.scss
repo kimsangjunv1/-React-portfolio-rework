@@ -1,0 +1,326 @@
+@media (max-width: 386px) {
+	//모바일
+}
+
+@media (max-width: 768px) {
+	// 테블릿
+}
+
+@media (max-width: 1200px) {
+	// PC
+	:root {
+		--section-padding: 0 20px;
+	}
+
+	main {
+		// 네비바
+		nav {
+			.header_inner {
+				max-width: none;
+				justify-content: space-between;
+				padding: var(--section-padding);
+				.logo {
+					width: auto;
+					height: auto;
+					img {
+						width: 50px;
+					}
+				}
+				.nav_item_container {
+					display: none;
+					position: fixed;
+					top: 0;
+					right: 0;
+					background: #000000d1;
+					width: 50%;
+					height: 100%;
+					display: flex;
+					flex-direction: column;
+					backdrop-filter: blur(50px);
+					color: white;
+					padding: 20px;
+					transition: 0.25s;
+					.close_btn {
+						position: absolute;
+						top: 0;
+						left: -30px;
+						width: 30px;
+						height: 100vh;
+						/* border-radius: 100px; */
+						/* padding: 20px; */
+						border: none;
+						background: #00c853;
+						backdrop-filter: blur(50px);
+						-webkit-backdrop-filter: blur(50px);
+						color: black;
+						box-sizing: border-box;
+					}
+					.title {
+						font-size: 22px;
+						font-weight: 900;
+						letter-spacing: -1.2px;
+					}
+					.header_text_container {
+						border-bottom: 1px solid rgba(255, 255, 255, 0.152);
+						> a {
+							pointer-events: auto;
+							visibility: unset;
+							color: white;
+							padding: 20px;
+						}
+						> div {
+							display: none;
+						}
+						&:last-child {
+							border-bottom: none;
+						}
+					}
+					&.hide {
+						transform: translateX(200%);
+					}
+					&.show {
+						transform: translateX(0%);
+					}
+				}
+			}
+		}
+		// 섹션별 컨테이너
+		.information_container {
+			.information_desc {
+				flex-direction: column-reverse;
+				justify-content: center;
+				gap: 20px;
+				.description_container {
+					.dajim {
+						&:first-child {
+							font-size: 20px;
+						}
+						&:last-child {
+							font-size: 14px;
+						}
+					}
+				}
+				.photo_container {
+					img {
+						width: 50vw;
+					}
+				}
+			}
+		}
+		.skill_container {
+			.skill_container_inner {
+				flex-direction: column;
+				padding: var(--section-padding);
+				.skill_section {
+					width: 100%;
+				}
+			}
+		}
+		.worklist_container {
+			.worklist_container_inner {
+				padding: var(--section-padding);
+				flex-direction: column;
+				.worklist_item_container {
+					width: 100%;
+					display: flex;
+					overflow: auto;
+					.worklist_item {
+						overflow: unset;
+						.info_container {
+							> img {
+								display: none;
+							}
+							.item_desc_container {
+								margin-top: 0;
+								padding-top: 0;
+								border-top: 0;
+								width: 100%;
+								.desc,
+								.used_skill_container {
+									display: none;
+								}
+								.title_container {
+									flex-direction: column;
+									width: 100%;
+									.date {
+										width: 100%;
+										position: static;
+									}
+								}
+							}
+						}
+					}
+				}
+				.mobile_worklist_item_container {
+					position: fixed;
+					z-index: 1000000;
+					width: 80%;
+					height: 80%;
+					background: rgb(255, 255, 255);
+					/* backdrop-filter: blur(50px); */
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					text-align: center;
+					box-sizing: border-box;
+					box-shadow: 0 0 100px 240px #000000db;
+
+					&.hide {
+						display: none;
+					}
+
+					.mobile_menu_title {
+						padding: 20px;
+						font-size: 20px;
+						font-weight: 900;
+						letter-spacing: -1.2px;
+					}
+
+					.item_container {
+						padding: 20px;
+						.worklist_item {
+							.title {
+								font-size: 14px;
+								// background: red;
+								padding: 10px;
+								margin-bottom: 10px;
+								color: rgba(0, 0, 0, 0.674);
+							}
+						}
+					}
+
+					.close_menu_btn {
+						position: absolute;
+						bottom: 0;
+						left: 0;
+						width: 100%;
+						height: 50px;
+						border: none;
+						background: #ff1d59;
+						color: black;
+						font-weight: 900;
+						cursor: pointer;
+					}
+
+					.worklist_item {
+					}
+
+					// &::after {
+					// 	content: "";
+					// 	position: fixed;
+					// 	top: 0;
+					// 	left: 0;
+					// 	width: 100%;
+					// 	height: 100%;
+					// 	z-index: 10000;
+					// 	background: #000000b8;
+					// }
+				}
+				.desc_container {
+					width: 100%;
+					height: auto;
+					.desc_container_inner {
+						.all_container {
+							.title_container {
+								span {
+									font-size: 16px;
+								}
+							}
+							.info_container {
+								padding: 0 20px 20px 20px;
+								.description_section,
+								.stack_section {
+									.sub_title {
+										font-size: 12px;
+										font-weight: 700;
+									}
+								}
+								.stack_section {
+									.sub_title {
+									}
+								}
+							}
+							.activity_container {
+								a {
+									font-size: 16px;
+									height: auto;
+								}
+							}
+						}
+					}
+				}
+			}
+			.menu_btn {
+				position: sticky;
+				bottom: 20px;
+				left: 0;
+				top: 20px;
+				z-index: 1000;
+				background: black;
+				color: white;
+				text-align: center;
+				padding: 10px;
+				margin: 20px;
+			}
+		}
+		.contact_container {
+			.contact_container_inner {
+				padding: var(--section-padding);
+				.image_text {
+					width: 100%;
+				}
+				.info_container {
+					flex-direction: column;
+					width: 100%;
+					.item {
+						text-align: center;
+					}
+				}
+				.line_container {
+					width: 100%;
+					hr {
+						margin: 20px 0;
+					}
+				}
+			}
+		}
+
+		// 전체 섹션
+		> section {
+			margin-bottom: 70px;
+			&:first-child {
+				margin-bottom: 0;
+			}
+			&:nth-last-child(2),
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.footer_container {
+		padding: 20px 0;
+		height: fit-content;
+	}
+	// 공통 섹션 별 타이틀
+	.section_title_container {
+		padding: var(--section-padding);
+		margin-bottom: 10px;
+		.section_title_container_inner {
+			.section_subTitle {
+				font-size: 20px;
+				margin-bottom: 0;
+			}
+		}
+	}
+	// 공통 섹션 별 설명 타이틀
+	.section_sub_title_container {
+		padding: var(--section-padding);
+		img {
+			width: 28px;
+			margin-right: 5px;
+		}
+		span {
+			font-size: 16px;
+		}
+	}
+}

@@ -28,6 +28,7 @@ nav {
 		align-items: center;
 		justify-content: center;
 		gap: 40px;
+		box-sizing: border-box;
 		.header_text_container {
 			display: -webkit-inline-box;
 			display: -ms-inline-flexbox;

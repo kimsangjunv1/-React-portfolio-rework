@@ -59,7 +59,7 @@ const Information = ({ title, scrolled }) => {
 						프론트에서부터 시작해 풀스택까지 달려나가고싶습니다.
 					</p>
 				</div>
-				<motion.div
+				{/* <motion.div
 					className="mypic_container"
 					whileInView={{
 						opacity: [0, 0.4],
@@ -72,7 +72,7 @@ const Information = ({ title, scrolled }) => {
 					<img src={Mypic002} alt="내 사진" />
 					<img src={Mypic003} alt="내 사진" />
 					<img src={Mypic004} alt="내 사진" />
-				</motion.div>
+				</motion.div> */}
 				<motion.div
 					className="photo_container"
 					whileInView={{

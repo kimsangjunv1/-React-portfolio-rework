@@ -10,48 +10,46 @@ const Contact = () => {
 	return (
 		<section className="contact_container" id="contact">
 			<div className="contact_container_inner">
-				<div className="image_container">
-					<img
-						className="image_text"
-						src={Contact_text}
-						alt="연락주세요 이미지 텍스트"
-					/>
-					<div className="line_container">
-						<p>개인정보</p>
-						<hr className="line" />
+				<img
+					className="image_text"
+					src={Contact_text}
+					alt="연락주세요 이미지 텍스트"
+				/>
+				<div className="line_container">
+					<p>개인정보</p>
+					<hr className="line" />
+				</div>
+				<div className="info_container">
+					<div className="item">
+						<div className="title">
+							<img src={icon_phone} alt="" />
+							<span>휴대전화</span>
+						</div>
+						<hr />
+						<p>010-6607-7265</p>
 					</div>
-					<div className="info_container">
-						<div className="item">
-							<div className="title">
-								<img src={icon_phone} alt="" />
-								<span>휴대전화</span>
-							</div>
-							<hr />
-							<p>010-6607-7265</p>
+					<div className="item">
+						<div className="title">
+							<img src={icon_email} alt="" />
+							<span>이메일</span>
 						</div>
-						<div className="item">
-							<div className="title">
-								<img src={icon_email} alt="" />
-								<span>이메일</span>
-							</div>
-							<hr />
-							<p>to_before@naver.com</p>
-						</div>
-						<div className="item">
-							<div className="title">
-								<img src={icon_link} alt="" />
-								<span>링크</span>
-							</div>
-							<hr />
-							<p>https://github.com/kimsangjunv1</p>
-						</div>
+						<hr />
+						<p>to_before@naver.com</p>
 					</div>
-					{/* <img
+					<div className="item">
+						<div className="title">
+							<img src={icon_link} alt="" />
+							<span>링크</span>
+						</div>
+						<hr />
+						<p>https://github.com/kimsangjunv1</p>
+					</div>
+				</div>
+				{/* <img
             className="image_bg"
             src={Contact_bg}
             alt="연락주세요 이미지 배경"
           /> */}
-				</div>
 			</div>
 		</section>
 	);

@@ -6,10 +6,12 @@ import HeaderMenu from "../common/HeaderMenu";
 import LogoBackground from "./../../assets/img/logo_bg.jpg";
 import LogoMain from "./../../assets/img/logo.svg";
 
-const Header = ({ scrolled }) => {
+const Header = ({ scrolled, mobile }) => {
 	const headerBox = useRef(null);
 
 	const [nowScroll, setNowScroll] = useState(true);
+
+	const [menuState, setMenuState] = useState(false);
 
 	const [lastScroll, setLastScroll] = useState(0);
 	const [offsetTop, setOffsetTop] = useState(headerBox.current?.offsetTop);
@@ -49,22 +51,47 @@ const Header = ({ scrolled }) => {
 
 	return (
 		<nav ref={headerBox}>
-			<div className="header_inner">
-				{/* <HeaderMenu title={"Information"} /> */}
-				{/* <HeaderMenu title={"Technics"} /> */}
-				{/* <HeaderMenu title={"landing"} /> */}
-				<HeaderMenu title={"information"} />
-				<HeaderMenu title={"skill"} />
-				<a className="logo" href="#landing">
-					<img className="bg" src={LogoBackground} alt="로고_뒷배경" />
-					<img className="icon" src={LogoMain} alt="로고_메인" />
-				</a>
-				<HeaderMenu title={"worklist"} />
-				<HeaderMenu title={"contact"} />
-				{/* <HeaderMenu title={"Study"} /> */}
-				{/* <HeaderMenu title={"Whatever"} />
-        <HeaderMenu title={"Shooting"} /> */}
-			</div>
+			{!mobile ? (
+				<div className="header_inner">
+					<HeaderMenu title={"information"} />
+					<HeaderMenu title={"skill"} />
+					<a className="logo" href="#landing">
+						<img className="bg" src={LogoBackground} alt="로고_뒷배경" />
+						<img className="icon" src={LogoMain} alt="로고_메인" />
+					</a>
+					<HeaderMenu title={"worklist"} />
+					<HeaderMenu title={"contact"} />
+				</div>
+			) : (
+				<div className="header_inner">
+					<a className="logo" href="#landing">
+						<img src={LogoMain} alt="로고_메인" />
+					</a>
+					<button
+						className="menu_btn"
+						onClick={() => {
+							setMenuState(true);
+						}}
+					>
+						메뉴
+					</button>
+					<div className={`nav_item_container ${menuState ? "show" : "hide"}`}>
+						<p className="title">메뉴</p>
+						<HeaderMenu title={"worklist"} />
+						<HeaderMenu title={"contact"} />
+						<HeaderMenu title={"information"} />
+						<HeaderMenu title={"skill"} />
+						<button
+							className="close_btn"
+							onClick={() => {
+								setMenuState(false);
+							}}
+						>
+							닫기
+						</button>
+					</div>
+				</div>
+			)}
 			<div className="scroll_background">
 				<div className="scroll_progress"></div>
 			</div>

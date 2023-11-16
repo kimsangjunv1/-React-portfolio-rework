@@ -9,6 +9,11 @@ import { AnimatePresence } from "framer-motion";
 
 import { motion } from "framer-motion";
 
+import toy_icon_pick from "./../../assets/img/toy_icon_pick.svg";
+import toy_icon_playground from "./../../assets/img/toy_icon_playground.svg";
+import toy_icon_gguda from "./../../assets/img/toy_icon_gguda.svg";
+import toy_icon_portfolio from "./../../assets/img/toy_icon_portfolio.svg";
+
 import Desc_section from "./../include/Desc_section";
 import Screenshot from "./../../assets/img/screenshot_01.jpg";
 
@@ -17,13 +22,53 @@ import SectionProjectTeam from "./../../assets/img/section_project_team.svg";
 import TitleComponents from "./TitleComponents";
 import SubTitleComponents from "./SubTitleComponents";
 
-const WorklistComponents = ({ information }) => {
+const WorklistComponents = ({ information, mobile }) => {
+	const [visible, setVisible] = useState(false);
 	const data = information;
-
-	// console.log(data);
 
 	const itemInfo = useSelector((state) => state.counter.iteminfo);
 	const dispatch = useDispatch();
+
+	const getIconImg = (name) => {
+		switch (name) {
+			case "PlayGround":
+				return toy_icon_playground;
+			case "Pick":
+				return toy_icon_pick;
+
+			case "라마의 여행":
+				return toy_icon_portfolio;
+
+			case "꾸다":
+				return toy_icon_gguda;
+
+			default:
+				break;
+		}
+	};
+	const elapsedTime = (date) => {
+		const start = new Date(date);
+		const end = new Date();
+
+		const diff = (end - start) / 1000;
+
+		const times = [
+			{ name: "년", milliSeconds: 60 * 60 * 24 * 365 },
+			{ name: "개월", milliSeconds: 60 * 60 * 24 * 30 },
+			{ name: "일", milliSeconds: 60 * 60 * 24 },
+			{ name: "시간", milliSeconds: 60 * 60 },
+			{ name: "분", milliSeconds: 60 },
+		];
+
+		for (const value of times) {
+			const betweenTime = Math.floor(diff / value.milliSeconds);
+
+			if (betweenTime > 0) {
+				return `${betweenTime}${value.name} 전`;
+			}
+		}
+		return "방금 전";
+	};
 
 	return (
 		<motion.section
@@ -44,19 +89,19 @@ const WorklistComponents = ({ information }) => {
 				type={"project"}
 			/>
 			<SubTitleComponents title={"총 4개의 작업물이 있습니다."} />
-			<div className="check">
-				<div className="worklist_container_inner">
-					{data ? (
-						data.map((item, key) => {
-							return (
-								<div
-									className="worklist_item"
-									key={key}
-									onClick={() => {
-										dispatch(saveItemInfo(item));
-									}}
-								>
-									<div className="worklist_screenshot_container">
+			<div className="worklist_container_inner">
+				{!mobile ? (
+					<div className={`worklist_item_container`}>
+						{data ? (
+							data.map((item, key) => {
+								return (
+									<div
+										className="worklist_item"
+										key={key}
+										onClick={() => {
+											dispatch(saveItemInfo(item));
+										}}
+									>
 										<img
 											className="worklist_screenshot"
 											src={item.image[0].url}
@@ -64,30 +109,24 @@ const WorklistComponents = ({ information }) => {
 										/>
 										<div
 											className="info_container"
-											style={{
-												background: `linear-gradient(180deg,transparent,black+110%)`,
-												// background: `linear-gradient(180deg,transparent,${item.color}+110%)`,
-											}}
-										>
-											{/* <img
-											src={
-												item.category === "팀 프로젝트"
-													? SectionProjectTeam
-													: SectionProjectSingle
+											style={
+												{
+													// background: `linear-gradient(180deg,transparent,black+110%)`,
+												}
 											}
-											alt="없음"
-										/> */}
-											<div className="description">
-												{/* <p className="category">
-												{item.category ? item.category : "설정 값 없음"}
-											</p> */}
-												{/* {item.color} */}
-												{/* <p className="date">{item.date}</p> */}
-											</div>
+										>
+											<img src={getIconImg(item.title)} alt="" />
 											<div className="item_desc_container">
-												<h2 className="title">
-													{item.title ? item.title : "설정 값 없음"}
-												</h2>
+												<div className="title_container">
+													<h2 className="title">
+														{item.title ? item.title : "설정 값 없음"}
+													</h2>
+													<div className="date">
+														<p>{elapsedTime(item.date)}</p>
+														<p>{item.date}</p>
+													</div>
+													{/* <p className="elapsedTime">{elapsedTime(item.date)}</p> */}
+												</div>
 												<p className="desc">{item.desc}</p>
 
 												<div className="used_skill_container">
@@ -99,19 +138,73 @@ const WorklistComponents = ({ information }) => {
 										</div>
 										{/* <p className="worklist_date">{item.date}</p> */}
 									</div>
-								</div>
-							);
-						})
-					) : (
-						<>데이터가 없습니다.</>
-					)}
-				</div>
-				<AnimatePresence>
+								);
+							})
+						) : (
+							<>데이터가 없습니다.</>
+						)}
+					</div>
+				) : (
+					<div
+						className={`mobile_worklist_item_container ${
+							visible ? "show" : "hide"
+						}`}
+					>
+						<p className="mobile_menu_title">메뉴</p>
+						<div className="item_container">
+							{data ? (
+								data.map((item, key) => {
+									return (
+										<div
+											className="worklist_item"
+											key={key}
+											onClick={() => {
+												dispatch(saveItemInfo(item));
+											}}
+										>
+											<h2 className="title">
+												{item.title ? item.title : "설정 값 없음"}
+											</h2>
+										</div>
+									);
+								})
+							) : (
+								<>데이터가 없습니다.</>
+							)}
+						</div>
+						<button
+							className="close_menu_btn"
+							onClick={() => {
+								console.log("asdasd");
+								setVisible(false);
+							}}
+						>
+							닫기
+						</button>
+					</div>
+				)}
+				{/* <AnimatePresence>
 					{Object.keys(itemInfo).length !== 0 && (
 						<Desc_section itemInfo={itemInfo} />
 					)}
-				</AnimatePresence>
+				</AnimatePresence> */}
+				{/* <Desc_section itemInfo={itemInfo} /> */}
+				{Object.keys(itemInfo).length !== 0 ? (
+					<Desc_section itemInfo={itemInfo} />
+				) : (
+					<div className="desc_container no_item"></div>
+				)}
 			</div>
+			{mobile && (
+				<div
+					className={`menu_btn ${visible ? "hide" : "show"}`}
+					onClick={() => {
+						setVisible(true);
+					}}
+				>
+					메뉴
+				</div>
+			)}
 		</motion.section>
 	);
 };

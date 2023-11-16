@@ -36,6 +36,7 @@ const Main = () => {
 	const [isLoaded, setIsLoaded] = useState(false);
 
 	const [scrolled, setScrolled] = useState(0);
+	const [mobile, setMobile] = useState(false);
 
 	useEffect(() => {
 		fetch(
@@ -66,6 +67,15 @@ const Main = () => {
 				document.documentElement.clientHeight;
 			setScrolled((winScroll / height) * 100);
 		};
+
+		window.matchMedia("screen and (max-width: 1024px)").matches
+			? setMobile(true)
+			: setMobile(false);
+		window.addEventListener("resize", () => {
+			window.matchMedia("screen and (max-width: 1024px)").matches
+				? setMobile(true)
+				: setMobile(false);
+		});
 	}, []);
 
 	const itemInfo = useSelector((state) => state.counter.iteminfo);
@@ -77,7 +87,7 @@ const Main = () => {
 				<AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
 				<Landing scrolled={scrolled} />
 				{/* <SectionSpace height={120} /> */}
-				<Header scrolled={scrolled} />
+				<Header scrolled={scrolled} mobile={mobile} />
 
 				<Information title={"테스트"} scrolled={scrolled} />
 				{/* <SectionSpace height={120} /> */}
@@ -86,7 +96,7 @@ const Main = () => {
 
 				{/* <SectionSpace height={120} /> */}
 
-				<WorklistComponents information={toyProjectsInfo} />
+				<WorklistComponents information={toyProjectsInfo} mobile={mobile} />
 				{/* <AnimatePresence>
 					{Object.keys(itemInfo).length !== 0 && (
 						<Desc_section itemInfo={itemInfo} />
