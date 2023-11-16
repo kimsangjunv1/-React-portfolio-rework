@@ -22,6 +22,17 @@ const WorklistComponents = ({ information, mobile }) => {
 	const [visible, setVisible] = useState(false);
 	const data = information;
 
+	// useEffect(() => {
+	// 	console.log("asd");
+	// 	console.log("information : ", information);
+	// 	console.log("mobile : ", mobile);
+	// 	// console.log("mobile : ", mobile);
+	// 	return () => {
+	// 		dispatch(saveItemInfo(information[0]));
+	// 		console.log("itemInfo : ", itemInfo.length);
+	// 	};
+	// }, [information]);
+
 	const itemInfo = useSelector((state) => state.counter.iteminfo);
 	const dispatch = useDispatch();
 
@@ -157,6 +168,9 @@ const WorklistComponents = ({ information, mobile }) => {
 										<div
 											className="worklist_item"
 											key={key}
+											// onLoadedData={() => {
+											// 	dispatch(saveItemInfo(information[0]));
+											// }}
 											onClick={() => {
 												dispatch(saveItemInfo(item));
 											}}
@@ -187,11 +201,12 @@ const WorklistComponents = ({ information, mobile }) => {
 					)}
 				</AnimatePresence> */}
 				{/* <Desc_section itemInfo={itemInfo} /> */}
-				{Object.keys(itemInfo).length !== 0 ? (
+				<Desc_section itemInfo={itemInfo} />
+				{/* {Object.keys(itemInfo).length !== 0 ? (
 					<Desc_section itemInfo={itemInfo} />
 				) : (
 					<div className="desc_container no_item"></div>
-				)}
+				)} */}
 			</div>
 			{mobile && (
 				<div

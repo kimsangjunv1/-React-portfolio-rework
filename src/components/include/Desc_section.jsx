@@ -7,7 +7,6 @@ import TitleComponents from "../common/TitleComponents";
 import { useDispatch } from "react-redux";
 
 const Desc_section = ({ itemInfo }) => {
-	// const itemInfo = useSelector((state) => state.counter.iteminfo);
 	const dispatch = useDispatch();
 	return (
 		<section
@@ -27,11 +26,11 @@ const Desc_section = ({ itemInfo }) => {
 					╳
 				</button> */}
 				<p className="description_title">설명</p>
-				<ScreenshotComponents image={itemInfo.image} />
+				<ScreenshotComponents image={itemInfo?.image} />
 				<div className="all_container">
 					<div className="title_container clearfixed">
-						<span>{itemInfo.title}</span>
-						<span>{itemInfo.date}</span>
+						<span>{itemInfo?.title}</span>
+						<span>{itemInfo?.date}</span>
 					</div>
 					<div className="info_container">
 						<div className="stack_section">
@@ -49,14 +48,14 @@ const Desc_section = ({ itemInfo }) => {
 						<hr />
 						<div className="description_section">
 							<p className="sub_title">설명</p>
-							<p>{itemInfo.desc}</p>
+							<p>{itemInfo?.desc}</p>
 						</div>
 					</div>
 					<div className="activity_container">
-						<a href={itemInfo.github} target="_blank" rel="noreferrer">
+						<a href={itemInfo?.github} target="_blank" rel="noreferrer">
 							깃허브
 						</a>
-						<a href={itemInfo.view} target="_blank" rel="noreferrer">
+						<a href={itemInfo?.view} target="_blank" rel="noreferrer">
 							보기
 						</a>
 					</div>
