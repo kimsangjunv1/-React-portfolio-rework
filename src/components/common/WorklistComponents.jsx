@@ -112,11 +112,11 @@ const WorklistComponents = ({ information, mobile }) => {
 											dispatch(saveItemInfo(item));
 										}}
 									>
-										<img
+										{/* <img
 											className="worklist_screenshot"
 											src={item.image[0].url}
 											alt="미리보기"
-										/>
+										/> */}
 										<div
 											className="info_container"
 											style={

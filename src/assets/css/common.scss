@@ -651,12 +651,12 @@ main {
 		box-sizing: border-box;
 		.worklist_item_container {
 			width: 40%;
-			// max-width: var(--web);
 			margin: 0 auto;
-			grid-template-columns: repeat(1, 1fr);
-			/* grid-template-rows: repeat(3, minmax(100px, auto)); */
-			display: grid;
+			display: flex;
+			flex-direction: column;
 			gap: 5px;
+			// grid-template-columns: repeat(1, 1fr);
+			/* grid-template-rows: repeat(3, minmax(100px, auto)); */
 			.worklist_item {
 				width: 100%;
 				padding: 20px;
@@ -666,6 +666,7 @@ main {
 				overflow: hidden;
 				position: relative;
 				transition: 0.25s;
+				height: fit-content;
 				cursor: pointer;
 				.worklist_screenshot {
 					position: absolute;
@@ -679,6 +680,7 @@ main {
 					// opacity: 0.1;
 				}
 				.info_container {
+					height: fit-content;
 					> img {
 						filter: invert(0);
 					}
@@ -767,7 +769,7 @@ main {
 		}
 		.desc_container {
 			width: 60%;
-			height: 100vh;
+			// height: 100vh;
 			background: #e2e5eb;
 			// position: sticky;
 			// top: 20px;
