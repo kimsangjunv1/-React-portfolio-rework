@@ -137,7 +137,9 @@ const WorklistComponents = ({ information, mobile }) => {
 													</div>
 													{/* <p className="elapsedTime">{elapsedTime(item.date)}</p> */}
 												</div>
-												<p className="desc">{item.desc}</p>
+												<p className="desc">
+													{item.desc.replace(/(<br>|<br\/>|<br \/>)/g, "\r\n")}
+												</p>
 
 												<div className="used_skill_container">
 													{item.skill.map((item, key) => {

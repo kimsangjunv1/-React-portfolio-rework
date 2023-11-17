@@ -15,10 +15,10 @@ const Contact = () => {
 					src={Contact_text}
 					alt="연락주세요 이미지 텍스트"
 				/>
-				<div className="line_container">
+				{/* <div className="line_container">
 					<p>개인정보</p>
 					<hr className="line" />
-				</div>
+				</div> */}
 				<div className="info_container">
 					<div className="item">
 						<div className="title">
