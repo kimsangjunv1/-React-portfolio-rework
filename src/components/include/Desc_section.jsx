@@ -50,7 +50,7 @@ const Desc_section = ({ itemInfo }) => {
 							<p className="sub_title">설명</p>
 							<p>
 								{itemInfo &&
-									itemInfo?.desc.replace(/(<br>|<br\/>|<br \/>)/g, "\r\n")}
+									itemInfo?.desc?.replace(/(<br>|<br\/>|<br \/>)/g, "\r\n")}
 							</p>
 						</div>
 					</div>
