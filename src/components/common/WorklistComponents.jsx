@@ -9,6 +9,7 @@ import toy_icon_pick from "./../../assets/img/toy_icon_pick.svg";
 import toy_icon_playground from "./../../assets/img/toy_icon_playground.svg";
 import toy_icon_gguda from "./../../assets/img/toy_icon_gguda.svg";
 import toy_icon_portfolio from "./../../assets/img/toy_icon_portfolio.svg";
+import toy_icon_portfolio2 from "./../../assets/img/toy_icon_portfolio2.svg";
 
 import Desc_section from "./../include/Desc_section";
 import Screenshot from "./../../assets/img/screenshot_01.jpg";
@@ -48,6 +49,8 @@ const WorklistComponents = ({ information, mobile }) => {
 
 			case "꾸다":
 				return toy_icon_gguda;
+			case "포트폴리오":
+				return toy_icon_portfolio2;
 
 			default:
 				break;
