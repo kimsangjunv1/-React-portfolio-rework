@@ -42,8 +42,14 @@
 		},
 		{
 			"list": [
-				{ "name": "PHP", "desc": "사용한 이유는..." },
-				{ "name": "MySQL", "desc": "사용한 이유는..." }
+				{
+					"name": "PHP",
+					"desc": "dothome을 통해 간단하게 회원들의 정보를 관리하고 게시물 작성 및 삭제 할 수 있어 사용하게 되었습니다."
+				},
+				{
+					"name": "MySQL",
+					"desc": "php로 작성한것을 dothome 호스팅을 통해 filezilla로 접속하여 관리 하기위해 사용하였습니다."
+				}
 			]
 		},
 		{
@@ -129,7 +135,7 @@
 			"date": "2023.08.11",
 			"desc": "다이어리 꾸미기 웹사이트로써 사용자가 본인이 꾸며보고 싶었던 다이어리를 웹으로 간단하게 꾸며 보고<br>사용자들끼리 내용도 공유할 수 있도록 구성한 사이트 입니다.",
 			"github": "https://github.com/kimsangjunv1/-PHP-GGUDA-Diary",
-			"view": "http://vvv0032.dothome.co.kr/Diary/PHP/main/main.php",
+			"view": "준비중",
 			"figma": "https://www.figma.com/file/KdrJpICIDBY9p4jC4JPKdR/%EA%BE%B8%EB%8B%A4?type=design&node-id=0%3A1&mode=design&t=nyyCWOsBoKNP0kgm-1",
 			"color": "#3A1D69"
 		},
