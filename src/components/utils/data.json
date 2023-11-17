@@ -30,7 +30,10 @@
 					"name": "Redux Toolkit",
 					"desc": "기록이 남아 에러가 발생한경우 찾기 수월하였으며, 상태관리를 한곳에 관리하는데 유용하게 사용하였습니다."
 				},
-				{ "name": "Styled-components", "desc": "사용한 이유는..." },
+				{
+					"name": "Styled-components",
+					"desc": "리액트에서 Props를 활용해 조건을 가지고 스타일링을 할 수 있기에 사용하게 되었습니다!"
+				},
 				{
 					"name": "Zustand",
 					"desc": "리덕스를 사용하기위해 provider 등등의 세팅 하는 과정들을 축소시켜 빠른 작업이 가능하였고 상태를 정의하고 사용하는 방법이 단순해 사용하게 되었습니다!"
@@ -46,7 +49,10 @@
 		{
 			"list": [
 				{ "name": "Redux Toolkit", "desc": "사용한 이유는..." },
-				{ "name": "Styled-components", "desc": "사용한 이유는..." }
+				{
+					"name": "Styled-components",
+					"desc": "리액트에서 Props를 활용해 조건을 가지고 스타일링을 할 수 있기에 사용하게 되었습니다!"
+				}
 			]
 		},
 		{
@@ -67,7 +73,10 @@
 					"name": "Slack",
 					"desc": "같이 작업하는 사람들과 손쉽게 코드를 공유 및 업무를 분배하기 용이한 대화수단이라 사용하게 되었스빈다."
 				},
-				{ "name": "Github", "desc": "사용한 이유는..." }
+				{
+					"name": "Github",
+					"desc": "브랜치를 각각 나누어 작업하며 메인 브랜치에 merge 하는 방식으로 작업하고 있습니다."
+				}
 			]
 		}
 	],
