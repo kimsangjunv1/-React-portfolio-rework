@@ -86,30 +86,16 @@ const Main = () => {
 			<main>
 				<AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
 				<Landing scrolled={scrolled} />
-				{/* <SectionSpace height={120} /> */}
 				<Header scrolled={scrolled} mobile={mobile} />
-
 				<Information title={"테스트"} scrolled={scrolled} />
-				{/* <SectionSpace height={120} /> */}
-
 				<SkillComponents information={skillInfo} />
-
-				{/* <SectionSpace height={120} /> */}
-
 				<WorklistComponents information={toyProjectsInfo} mobile={mobile} />
-				{/* <AnimatePresence>
-					{Object.keys(itemInfo).length !== 0 && (
-						<Desc_section itemInfo={itemInfo} />
-					)}
-				</AnimatePresence> */}
-				{/* </div> */}
-
 				{/* <Navigate_section
         toyProjectsInfo={toyProjectsInfo}
         webstandardsInfo={webstandardsInfo}
         skillInfo={skillInfo}
       /> */}
-				{/* <SectionSpace height={120} /> */}
+
 				{/* <TitleComponents
 					title={"공부"}
 					subTitle={"요러한 것들을<br />공부하고 있어요!"}
@@ -118,7 +104,6 @@ const Main = () => {
 				/>
 				<StudyComponents />
 				<SectionSpace height={120} /> */}
-
 				<Contact />
 				<section className="function_box" id="function">
 					<MouseSection />
