@@ -585,25 +585,11 @@ main {
 				width: 100%;
 				.item {
 					position: relative;
-					padding: 3px;
-					/* background: rgba(229, 232, 236, 0.2117647059); */
 					border: 1px solid rgb(181 186 192 / 21%);
 					overflow: hidden;
-					display: flex;
-					align-items: center;
-					gap: 20px;
 					transition: 0.25s;
-					cursor: pointer;
-
-					// &::after {
-					// 	position: absolute;
-					// 	content: "";
-					// 	top: 0;
-					// 	right: 0;
-					// 	height: 100%;
-					// 	width: 20px;
-					// 	background: linear-gradient(90deg, rgba(255, 255, 255, 0), white);
-					// }
+					// cursor: pointer;
+					padding: 20px;
 
 					&:hover {
 						background: #00c897;
@@ -614,17 +600,25 @@ main {
 					}
 
 					.skill_item {
-						width: 35px;
+						width: 40px;
 						height: 40px;
 						object-fit: contain;
 						overflow: inherit;
-						padding: 15px;
 						filter: grayscale(1);
+						display: inline-block;
 					}
 					.description {
+						display: inline-block;
+						width: 100%;
+						h2 {
+							font-size: 18px;
+							font-weight: 700;
+							letter-spacing: -1.2px;
+						}
 						p {
-							width: 100px;
-							white-space: nowrap;
+							width: 100%;
+							font-size: 14px;
+							// white-space: nowrap;
 
 							&:nth-child(1) {
 								/* font-weight: 700; */

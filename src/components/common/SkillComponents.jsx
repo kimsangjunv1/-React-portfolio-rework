@@ -105,14 +105,14 @@ const SkillComponents = ({ information }) => {
 									return (
 										<div
 											className="item"
-											onMouseOver={() => {
-												setTitle(item.name);
-												setDesc(item.desc);
-											}}
-											onMouseOut={() => {
-												setTitle(null);
-												setDesc(null);
-											}}
+											// onMouseOver={() => {
+											// 	setTitle(item.name);
+											// 	setDesc(item.desc);
+											// }}
+											// onMouseOut={() => {
+											// 	setTitle(null);
+											// 	setDesc(null);
+											// }}
 										>
 											<img
 												className="skill_item"
@@ -121,7 +121,7 @@ const SkillComponents = ({ information }) => {
 												alt={Object.values(item.name)}
 											/>
 											<div className="description">
-												<p>{item.name}</p>
+												<h2>{item.name}</h2>
 												<p>{item.desc}</p>
 											</div>
 										</div>
