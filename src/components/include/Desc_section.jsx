@@ -55,6 +55,9 @@ const Desc_section = ({ itemInfo }) => {
 						</div>
 					</div>
 					<div className="activity_container">
+						<a href={itemInfo?.figma} target="_blank" rel="noreferrer">
+							피그마
+						</a>
 						<a href={itemInfo?.github} target="_blank" rel="noreferrer">
 							깃허브
 						</a>
