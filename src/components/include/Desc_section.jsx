@@ -48,7 +48,10 @@ const Desc_section = ({ itemInfo }) => {
 						<hr />
 						<div className="description_section">
 							<p className="sub_title">설명</p>
-							<p>{itemInfo?.desc.replace(/(<br>|<br\/>|<br \/>)/g, "\r\n")}</p>
+							<p>
+								{itemInfo &&
+									itemInfo?.desc.replace(/(<br>|<br\/>|<br \/>)/g, "\r\n")}
+							</p>
 						</div>
 					</div>
 					<div className="activity_container">
