@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 
+import { motion } from "framer-motion";
+
 import { useSelector } from "react-redux";
 
 import { useDispatch } from "react-redux";
@@ -81,9 +83,13 @@ const WorklistComponents = ({ information, mobile }) => {
 	};
 
 	return (
-		<section
+		<motion.section
 			className="worklist_container"
 			id="worklist"
+			whileInView={{
+				opacity: [0, 1],
+				transition: { delay: 0.25 },
+			}}
 			// viewport={{ amount: "all" }}
 			// onViewportEnter={() => {
 			// 	document.querySelector("body").classList.add("gray");
@@ -135,7 +141,11 @@ const WorklistComponents = ({ information, mobile }) => {
 														{item.title ? item.title : "설정 값 없음"}
 													</h2>
 													<div className="date">
-														<p>{elapsedTime(item.date)}</p>
+														<p>
+															{item.title != "꾸다"
+																? elapsedTime(item.date)
+																: "제작중"}
+														</p>
 														<p>{item.date}</p>
 													</div>
 													{/* <p className="elapsedTime">{elapsedTime(item.date)}</p> */}
@@ -224,7 +234,7 @@ const WorklistComponents = ({ information, mobile }) => {
 					메뉴
 				</div>
 			)}
-		</section>
+		</motion.section>
 	);
 };
 

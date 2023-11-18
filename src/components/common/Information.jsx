@@ -33,7 +33,14 @@ const Information = ({ title, scrolled }) => {
 	});
 
 	return (
-		<section className="information_container" id="information">
+		<motion.section
+			className="information_container"
+			id="information"
+			whileInView={{
+				opacity: [0, 1],
+				transition: { delay: 0.25 },
+			}}
+		>
 			{/* <motion.div initial={{ scale: 0 }} animate={{ scale: 1, rotateZ: 360 }} /> */}
 			<div className="information_desc">
 				<div className="description_container">
@@ -108,7 +115,7 @@ const Information = ({ title, scrolled }) => {
         </div> */}
 			</div>
 			{/* <SectionSpace height={120} /> */}
-		</section>
+		</motion.section>
 	);
 };
 

@@ -1,5 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 
+import { motion } from "framer-motion";
+
 import Close from "./../../assets/img/close.svg";
 import Message from "./../../assets/img/message.svg";
 import TitleComponents from "./TitleComponents";
@@ -65,10 +67,14 @@ const SkillComponents = ({ information }) => {
 	const skillInfo = information.filter((el, i) => i !== 3);
 
 	return (
-		<section
+		<motion.section
 			className="skill_container"
 			id="skill"
 			ref={scrollRef}
+			whileInView={{
+				opacity: [0, 1],
+				transition: { delay: 0.25 },
+			}}
 			// viewport={{ amount: "all" }}
 			// onViewportEnter={() => {
 			//   document.querySelector("body").classList.add("dark");
@@ -142,7 +148,7 @@ const SkillComponents = ({ information }) => {
 					<span className="skill_desc">{desc}</span>
 				</div>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 
