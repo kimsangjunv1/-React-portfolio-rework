@@ -34,15 +34,15 @@ const Contact = () => {
 							<span>이메일</span>
 						</div>
 						<hr />
-						<p>to_before@naver.com</p>
+						<a href="mailto:to_before@naver.com">to_before@naver.com</a>
 					</div>
 					<div className="item">
 						<div className="title">
 							<img src={icon_link} alt="" />
-							<span>링크</span>
+							<span>깃허브</span>
 						</div>
 						<hr />
-						<p>https://github.com/kimsangjunv1</p>
+						<a href="https://github.com/kimsangjunv1">바로가기</a>
 					</div>
 				</div>
 				{/* <img

@@ -98,7 +98,7 @@ const WorklistComponents = ({ information, mobile }) => {
 				setInner={true}
 				type={"project"}
 			/>
-			<SubTitleComponents title={"총 4개의 작업물이 있습니다."} />
+			<SubTitleComponents title={"직접 디자인 하고 제작하였습니다!"} />
 			<div className="worklist_container_inner">
 				{!mobile ? (
 					<div className={`worklist_item_container`}>
