@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 
 const Desc_section = ({ itemInfo }) => {
 	const dispatch = useDispatch();
+	if (!itemInfo) return <br />;
 	return (
 		<section
 			className="desc_container"

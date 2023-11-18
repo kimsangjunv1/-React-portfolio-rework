@@ -93,14 +93,14 @@
 }
 .swiper-button-prev {
 	left: 0;
-	background: linear-gradient(90deg, black, transparent);
+	background: linear-gradient(90deg, rgb(0 0 0 / 50%), transparent);
 	&::after {
 		// content: "";
 	}
 }
 .swiper-button-next {
 	right: 0;
-	background: linear-gradient(270deg, black, transparent);
+	background: linear-gradient(270deg, rgb(0 0 0 / 50%), transparent);
 	&::after {
 		// content: "다음";
 	}
