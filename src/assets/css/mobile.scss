@@ -119,12 +119,16 @@
 			}
 		}
 		.information_container {
+			height: fit-content;
 			.information_desc {
+				height: fit-content;
 				flex-direction: column-reverse;
 				justify-content: center;
 				gap: 20px;
 				.description_container {
+					width: 100%;
 					.dajim {
+						text-align: center;
 						&:first-child {
 							font-size: 20px;
 						}
