@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 import imagesLoaded from "imagesloaded";
 
-import Header from "./../layout/Header";
+import Navigation from "../layout/Navigation";
 import Contents from "../layout/Contents";
 import Footer from "./../layout/Footer";
 import Landing from "../layout/Landing";
@@ -86,7 +86,7 @@ const Main = () => {
 			<main>
 				<AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
 				<Landing scrolled={scrolled} />
-				<Header scrolled={scrolled} mobile={mobile} />
+				<Navigation scrolled={scrolled} mobile={mobile} />
 				<Information title={"테스트"} scrolled={scrolled} />
 				<SkillComponents information={skillInfo} />
 				<WorklistComponents information={toyProjectsInfo} mobile={mobile} />

@@ -7,7 +7,7 @@ import LogoBackground from "./../../assets/img/logo_bg.jpg";
 import LogoMain from "./../../assets/img/logo.svg";
 import icon_menu from "./../../assets/img/icon_menu.svg";
 
-const Header = ({ scrolled, mobile }) => {
+const Navigation = ({ scrolled, mobile }) => {
 	const headerBox = useRef(null);
 
 	const [nowScroll, setNowScroll] = useState(true);
@@ -102,4 +102,4 @@ const Header = ({ scrolled, mobile }) => {
 	);
 };
 
-export default Header;
+export default Navigation;
