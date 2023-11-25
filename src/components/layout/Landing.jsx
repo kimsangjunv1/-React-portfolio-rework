@@ -40,7 +40,7 @@ const Landing = ({ scrolled }) => {
 			}deg) rotateY(${(e.clientX / 100) * 2}deg)`;
 			emojiImg.current.style.transform = `perspective(800px) rotateX(-${
 				e.clientY / 100
-			}deg) rotateY(${e.clientX / 100}deg)`;
+			}deg) rotateY(${e.clientX / 100}deg) translate(-50%,-50%)`;
 			textContainer.current.style.transform = `perspective(800px) rotateX(-${
 				e.clientY / 100
 			}deg) rotateY(${e.clientX / 100}deg)`;
