@@ -1,22 +1,15 @@
 nav {
 	width: 100%;
-	// background: rgba(255, 255, 255, 0.847);
 	position: relative;
 	font-family: Poppins;
-
-	// backdrop-filter: blur(50px);
-	// -webkit-backdrop-filter: blur(50px);
-
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-
 	position: sticky;
+	border: 1px solid #ffffff26;
 	top: 0;
 	left: 0;
 	z-index: 1000;
-
-	// top 0.1s
 	transition: 0.25s;
 	.header_inner {
 		// height: 100px;
@@ -44,9 +37,10 @@ nav {
 				border-radius: 100px;
 				text-align: center;
 				margin: auto 0;
-				height: 40px;
+				// height: 40px;
 				min-width: 40px;
 				text-transform: uppercase;
+				color: white;
 
 				&:hover {
 					background: rgba(255, 255, 255, 0.129);
@@ -71,7 +65,7 @@ nav {
 				> a {
 					display: inline-block;
 					text-decoration: none;
-					color: black;
+					color: white;
 					transition: 0.25s;
 					border-radius: 100px;
 					min-width: 40px;
@@ -84,7 +78,7 @@ nav {
 					margin-right: 20px;
 
 					&:last-child {
-						color: #00c897;
+						color: #287eff;
 						margin-right: 0;
 					}
 				}
@@ -132,13 +126,13 @@ nav {
 		width: 100%;
 		height: 100%;
 		position: absolute;
-		bottom: 0;
+		bottom: -3px;
 		left: 0;
 		z-index: -1;
 		display: flex;
 		align-items: end;
 		.scroll_progress {
-			background: #092812;
+			background: #287eff;
 			width: 0px;
 			height: 5%;
 			border-radius: 100px;
@@ -153,7 +147,7 @@ nav {
 		left: 0;
 		width: 100%;
 		height: 90px;
-		background: white;
+		background: rgba(0, 0, 0, 0);
 		-webkit-backdrop-filter: blur(10px);
 		backdrop-filter: blur(10px);
 		z-index: -100;

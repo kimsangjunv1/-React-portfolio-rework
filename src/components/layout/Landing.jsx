@@ -21,38 +21,67 @@ import Landing_circle from "./../../assets/img/landing_circle.svg";
 import Landing_emoji from "./../../assets/img/landing_emoji.svg";
 import Landing_sprout from "./../../assets/img/landing_sprout.svg";
 import Landing_particle from "./../../assets/img/landing_particle.svg";
+import Landing_brush from "./../../assets/img/landing_brush.svg";
 
 import landing_img_001 from "./../../assets/img/landing_img_01.jpg";
 import landing_img_002 from "./../../assets/img/landing_img_02.jpg";
 import landing_img_003 from "./../../assets/img/landing_img_03.jpg";
 
 const Landing = ({ scrolled }) => {
+	const brushImg = useRef(null);
+	const emojiImg = useRef(null);
+	const textContainer = useRef(null);
+	useEffect(() => {
+		window.addEventListener("mousemove", (e) => {
+			// console.log("e.client : ", e.clientX / 100, e.clientY / 100);
+			// brushImg.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`;
+			brushImg.current.style.transform = `perspective(600px) rotateX(-${
+				(e.clientY / 100) * 2
+			}deg) rotateY(${(e.clientX / 100) * 2}deg)`;
+			emojiImg.current.style.transform = `perspective(800px) rotateX(-${
+				e.clientY / 100
+			}deg) rotateY(${e.clientX / 100}deg)`;
+			textContainer.current.style.transform = `perspective(800px) rotateX(-${
+				e.clientY / 100
+			}deg) rotateY(${e.clientX / 100}deg)`;
+		});
+	}, []);
 	return (
 		<section className="landing" id="landing">
 			<div className="landing_inner">
-				<div className="landing_contents">
+				<div className="landing_contents" ref={textContainer}>
 					<div className="row">
+						<h2>const grow_up = &#40;&#41; =&gt; &#123;</h2>
+						<h2>return&#40;</h2>
+						<h2>&lt;p&gt;</h2>
+					</div>
+					<div className="row">
+						<h2>새로운 것에 대해</h2>
 						<h2>
-							<i>새싹</i>을
+							<i>학습하고 성장하는</i>
 						</h2>
-						<img src={Landing_sprout} alt="새씩" />
-						<img src={Landing_particle} alt="새씩" />
+						<h2>개발자가 되겠습니다.</h2>
 					</div>
 					<div className="row">
-						<h2>틔울 수 있는</h2>
-
-						{/* <img className="emoji" src={Landing_emoji} alt="하단 이미지" />
-						<img className="emoji" src={Landing_sprout} alt="하단 이미지" /> */}
+						<h2>&lt;/p&gt;</h2>
+						<h2>&#41;</h2>
+						<h2>&#41;</h2>
 					</div>
-					<div className="row">
-						<img className="emoji" src={Landing_emoji} alt="하단 이미지" />
-						<h2>
-							<i>씨앗</i>이
-						</h2>
-					</div>
-					<div className="row">
-						<h2>되겠습니다.</h2>
-					</div>
+				</div>
+				<div className="image_container">
+					<img
+						className="brush"
+						src={Landing_brush}
+						alt="붓그림"
+						ref={brushImg}
+					/>
+					<img
+						className="emoji"
+						src={Landing_emoji}
+						alt="웃는얼굴"
+						ref={emojiImg}
+					/>
+					<img className="emoji" src={Landing_particle} alt="웃는얼굴" />
 				</div>
 			</div>
 		</section>

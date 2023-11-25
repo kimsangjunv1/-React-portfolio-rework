@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { useEffect } from "react";
 
 import { motion } from "framer-motion";
@@ -21,6 +21,7 @@ import Mypic003 from "./../../assets/img/information_mypic_003.jpg";
 import Mypic004 from "./../../assets/img/information_mypic_004.jpg";
 
 const Information = ({ title, scrolled }) => {
+	const photoContainer = useRef(null);
 	useEffect(() => {
 		// document.querySelector(".myphoto").style.width = scrolled + "%";
 		// // document.querySelector(".fur").style.width = furScale * 10 + "px";
@@ -30,6 +31,11 @@ const Information = ({ title, scrolled }) => {
 		//   "scale(" + scrolled * 0.04 + ")";
 		// document.querySelector(".text_right").style.transform =
 		//   "scale(" + scrolled * 0.04 + ")";
+		window.addEventListener("mousemove", (e) => {
+			photoContainer.current.style.transform = `perspective(800px) rotateX(-${
+				e.clientY / 100
+			}deg) rotateY(${e.clientX / 100}deg)`;
+		});
 	});
 
 	return (
@@ -83,6 +89,7 @@ const Information = ({ title, scrolled }) => {
 				</motion.div> */}
 				<div
 					className="photo_container"
+					ref={photoContainer}
 					// whileInView={{
 					// 	opacity: [0, 1],
 					// 	// rotate: [0, 360],

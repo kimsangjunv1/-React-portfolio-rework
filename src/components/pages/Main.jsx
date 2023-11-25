@@ -90,6 +90,7 @@ const Main = () => {
 				<Information title={"테스트"} scrolled={scrolled} />
 				<SkillComponents information={skillInfo} />
 				<WorklistComponents information={toyProjectsInfo} mobile={mobile} />
+
 				{/* <Navigate_section
         toyProjectsInfo={toyProjectsInfo}
         webstandardsInfo={webstandardsInfo}
@@ -108,7 +109,6 @@ const Main = () => {
 				<section className="function_box" id="function">
 					<MouseSection />
 					<Scroll_up />
-					<ScrollComponents scrolled={scrolled} />
 				</section>
 			</main>
 			<Footer />

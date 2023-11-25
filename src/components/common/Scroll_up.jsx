@@ -1,5 +1,6 @@
 import IconArrowUp from "./../../assets/img/icon_arrow_up.svg";
 import IconArrowDown from "./../../assets/img/icon_arrow_down.svg";
+import Contact_me from "./../../assets/img/contact_me.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
@@ -48,6 +49,9 @@ const Scroll_up = () => {
 						}}
 					>
 						<img src={IconArrowDown} alt="아래로" />
+					</div>
+					<div>
+						<img className="contact_btn" src={Contact_me} alt="" />
 					</div>
 				</motion.div>
 			)}

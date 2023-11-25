@@ -24,11 +24,18 @@
 		.info_container {
 			display: flex;
 			justify-content: center;
+			align-items: center;
+			flex-direction: column;
 			gap: 5px;
+			width: 100%;
+			margin: 0 auto;
 			.item {
-				background: #f8fafc;
+				// background: #f8fafc;
+				border: 1px solid rgba(255, 255, 255, 0.2);
 				padding: 20px;
-				// border-radius: 20px;
+				width: 25%;
+				text-align: center;
+
 				.title {
 					display: flex;
 					align-items: center;
@@ -36,10 +43,21 @@
 					gap: 5px;
 					img {
 						width: 19px;
+						filter: invert(1);
 					}
 				}
 				hr {
 					margin: 5px 0;
+				}
+				a {
+					color: #ffffff;
+					text-decoration: none;
+					padding: 3px 6px;
+					transition: 0.25s;
+					&:hover {
+						color: #287eff;
+						background: #287eff23;
+					}
 				}
 			}
 		}

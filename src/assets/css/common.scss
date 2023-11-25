@@ -77,13 +77,15 @@ main {
 
 // 알람
 .alert {
-	background: #282d43;
+	background: #287eff;
 	position: fixed;
-	bottom: 50px;
-	left: 50%;
+	bottom: 0px;
+	left: 0%;
+	z-index: 10000;
 	transform: translate(0, -50%);
-	color: white;
-	border-radius: 100px;
+	color: black;
+	font-weight: 900;
+	// border-radius: 100px;
 	padding: 10px 20px;
 	box-shadow: 0 10px 20px -10px #282d43;
 	display: flex;
@@ -91,6 +93,12 @@ main {
 	justify-content: space-between;
 	gap: 20px;
 	transition: 0.25s;
+	.emoji {
+		position: absolute;
+		top: -18px;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
 	&.show {
 		opacity: 1;
 	}
@@ -179,7 +187,7 @@ main {
 		// font-family: "IMHyemin";
 		font-size: 36px;
 		line-height: 1.2em;
-		color: #000;
+		// color: #000;
 		font-weight: 100;
 		position: relative;
 		display: inline-block;
@@ -198,7 +206,7 @@ main {
 	span {
 		font-size: 24px;
 		font-weight: 900;
-		color: black;
+		// color: black;
 	}
 }
 
@@ -262,7 +270,7 @@ main {
 
 		.photo_container {
 			position: relative;
-			width: 100%;
+			// width: 100%;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -299,7 +307,7 @@ main {
 		.description_container {
 			box-sizing: border-box;
 			.dajim {
-				color: #000;
+				// color: #000;
 				text-align: left;
 				&:first-child {
 					font-weight: 900;
@@ -375,7 +383,7 @@ main {
 		}
 
 		.message_icon {
-			background: #00c89745;
+			background: #287eff45;
 			border-radius: 100px;
 			padding: 5px;
 			img {
@@ -571,7 +579,7 @@ main {
 				color: rgb(0 0 0 / 70%);
 				font-weight: 900;
 				font-size: 14px;
-				background: #00c897;
+				background: #287eff;
 				/* color: white; */
 				padding: 10px;
 				text-transform: uppercase;
@@ -592,7 +600,7 @@ main {
 					padding: 20px;
 
 					&:hover {
-						background: #00c897;
+						background: #287eff;
 
 						.skill_item {
 							filter: grayscale(0);
@@ -654,8 +662,8 @@ main {
 			.worklist_item {
 				width: 100%;
 				padding: 20px;
-				background: #f8f9fb;
-				/* border: 1px solid #e1e0e5; */
+				/* background: #f8f9fb; */
+				border: 1px solid #ffffff14;
 				box-sizing: border-box;
 				overflow: hidden;
 				position: relative;
@@ -676,7 +684,7 @@ main {
 				.info_container {
 					height: fit-content;
 					> img {
-						filter: invert(0);
+						filter: invert(1);
 					}
 					.item_desc_container {
 						border-top: 1px solid rgba(0, 0, 0, 0.179);
@@ -694,7 +702,7 @@ main {
 							.date {
 								// height: 50px;
 								padding: 2px 5px;
-								background: #1e2120;
+								background: #287eff;
 								font-size: 14px;
 								color: white;
 								font-weight: 800;
@@ -731,14 +739,17 @@ main {
 							font-weight: 600;
 							gap: 10px;
 							p {
-								border: 1px solid rgb(0, 0, 0);
+								/* border: 1px solid rgb(255 255 255); */
+								background: #a8ff2829;
+								color: #ceff28;
+								font-weight: 800;
 								padding: 2px 5px;
 							}
 						}
 					}
 				}
 				&:hover {
-					background: #3dcfa8;
+					background: #287eff;
 					// color: white;
 					.info_container {
 						> img {
@@ -764,7 +775,7 @@ main {
 		.desc_container {
 			width: 60%;
 			// height: 100vh;
-			background: #e2e5eb;
+			background: #ffffff09;
 			// position: sticky;
 			// top: 20px;
 			z-index: 10;
@@ -782,14 +793,14 @@ main {
 
 			.desc_container_inner {
 				margin: 0 auto;
-				background: white;
+				// background: white;
 				/* height: 100%; */
 				position: sticky;
 				top: 20px;
 
 				.description_title {
 					padding: 10px;
-					background: #00c897;
+					background: #287eff;
 					/* margin-top: 20px; */
 					font-weight: 800;
 				}
@@ -827,8 +838,7 @@ main {
 				}
 
 				.all_container {
-					/* border-radius: 0 0 20px 20px; */
-					background: #191a21;
+					background: #191a21bf;
 					.title_container {
 						padding: 20px;
 
@@ -846,7 +856,7 @@ main {
 					.info_container {
 						padding: 0 20px;
 					}
-					background: var(--light-gray);
+					// background: var(--light-gray);
 					.desc_container {
 						padding: 20px;
 						.sub_title {
@@ -880,7 +890,7 @@ main {
 						a {
 							height: 60px;
 							width: 50%;
-							color: black;
+							color: white;
 							font-size: 24px;
 							font-weight: 900;
 							text-align: center;
@@ -893,7 +903,7 @@ main {
 								border-right: 1px solid rgba(99, 109, 158, 0.1333333333);
 							}
 							&:hover {
-								background: var(--main-color);
+								background: #287eff;
 								color: white;
 							}
 						}
@@ -1048,17 +1058,18 @@ main {
 	}
 }
 
+// 기존
 .mouse_cursor {
 	position: absolute;
 	left: 0;
 	top: 0;
-	// width: 10px;
-	// height: 10px;
 	z-index: 999999999;
 	border-radius: 50%;
-	// background: black;
 	user-select: none;
 	pointer-events: none;
+	// width: 10px;
+	// height: 10px;
+	// background: black;
 	// transition: transform 0.3s, opacity 0.2s;
 }
 .cursor_particle_001 {
@@ -1090,6 +1101,70 @@ main {
 	transform: translate(80px, 60px);
 }
 
+// 새로운
+.cursor {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 2.5rem;
+	height: 2.5rem;
+	z-index: 2;
+	pointer-events: none;
+}
+.cursor div {
+	position: absolute;
+	display: grid;
+	place-items: center;
+}
+.cursor div div {
+	border: 1px solid #fff;
+	border-radius: 50%;
+	animation: pulse 2.5s linear infinite;
+	box-shadow: 0 0 50px 5px #d7abff6e;
+}
+.cursor div:nth-child(1),
+.cursor div:nth-child(2),
+.cursor div:nth-child(3) {
+	width: 100%;
+	height: 100%;
+}
+.cursor div:nth-child(1) {
+	transition: transform 0.2s ease-out;
+}
+.cursor div:nth-child(2) {
+	transition: transform 0.1s ease-out;
+}
+.cursor div:nth-child(3) {
+	transition: transform 0.5s ease-out;
+}
+.cursor div:nth-child(2) div {
+	background: #fff;
+	border-radius: 50%;
+	width: 4px;
+	height: 4px;
+}
+.cursor div:nth-child(3) div {
+	z-index: -10000000;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 75em;
+	height: 75em;
+	margin: 0 0 0.1px;
+	object-fit: contain;
+	border-radius: 75em;
+	filter: blur(10em);
+	background-image: radial-gradient(
+		circle at 50% 50%,
+		#287eff,
+		rgba(0, 214, 122, 0)
+	);
+	will-change: left, top, transform;
+	transition: transform 0.5s;
+	opacity: 0.4;
+}
+
 .loading_container {
 	position: fixed;
 	background: #000000;
@@ -1099,7 +1174,7 @@ main {
 	width: 100%;
 	z-index: 10000;
 	.loading_container_inner {
-		background: #002811;
+		background: #287eff;
 		height: 100%;
 		width: 100%;
 		// transform: translateX(100%);
@@ -1239,11 +1314,11 @@ main {
 	width: 6px;
 }
 ::-webkit-scrollbar-thumb {
-	background-color: rgb(9 40 17);
+	background-color: #287eff;
 	border-radius: 10px;
 }
 ::-webkit-scrollbar-track {
-	background-color: white;
+	background-color: black;
 	// border-radius: 10px;
 	// box-shadow: inset 0px 0px 5px white;
 }

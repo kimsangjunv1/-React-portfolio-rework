@@ -19,14 +19,16 @@ const Navigation = ({ scrolled, mobile }) => {
 	const [menuItem, setMenuItem] = useState(null);
 
 	useEffect(() => {
-		// document.querySelector(".scroll_progress").style.width = scrolled + "%";
+		document.querySelector(".scroll_progress").style.width = scrolled + "%";
 
 		const checkTop = () => {
 			if (offsetTop >= window.scrollY) {
+				// if (offsetTop >= window.scrollY) {
 				// 안닿았을때
 				// headerBox.current.style.position = "sticky";
 			} else {
 				// 닿았을때
+
 				let scrollTop =
 					window.pageYOffset ||
 					window.scrollY ||
@@ -95,9 +97,9 @@ const Navigation = ({ scrolled, mobile }) => {
 					</div>
 				</div>
 			)}
-			{/* <div className="scroll_background">
+			<div className="scroll_background">
 				<div className="scroll_progress"></div>
-			</div> */}
+			</div>
 		</nav>
 	);
 };

@@ -66,6 +66,17 @@ const SkillComponents = ({ information }) => {
 	};
 	const skillInfo = information.filter((el, i) => i !== 3);
 
+	const item = document.querySelectorAll(".item");
+	useEffect(() => {
+		item.forEach((element, index) => {
+			element.addEventListener("mouseover", (event) => {
+				console.log("element : ", element);
+
+				// element.style.transform = `translateX(${event.clientX}px) translateY(${event.clientY}px)`;
+			});
+		});
+	}, []);
+
 	return (
 		<motion.section
 			className="skill_container"
@@ -111,6 +122,7 @@ const SkillComponents = ({ information }) => {
 									return (
 										<div
 											className="item"
+
 											// onMouseOver={() => {
 											// 	setTitle(item.name);
 											// 	setDesc(item.desc);
