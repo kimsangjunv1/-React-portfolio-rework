@@ -92,7 +92,7 @@
 			"category": "개인 프로젝트",
 			"skill": [{ "name": "React" }, { "name": "SCSS" }],
 			"image": "이미지",
-			"date": "2023.11.10",
+			"date": "2023.11.26",
 			"desc": "학원을 끝마치고서 다시 깔끔하게 만들어본 포트폴리오 입니다<br>기존에 만들었던 포트폴리오의 경우 효과가 중심이 되는 부분이 강해 이번 포트폴리오는 제가 한것들을 깔끔하게 정리해보았습니다<br>또한 각 섹션별 설명들을 수정 및 관리하기 용이하게 하기위해<br>하나의 json으로 섹션별로 배열을 생성해 내용들을 관리하였습니다.",
 			"github": "https://github.com/kimsangjunv1/-React-portfolio-rework",
 			"view": "https://portfolio-sprout.netlify.app/",
