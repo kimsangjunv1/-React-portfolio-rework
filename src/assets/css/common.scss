@@ -74,6 +74,17 @@ main {
 		opacity: 1;
 	}
 }
+.sendbtn_container {
+	position: fixed;
+	z-index: 1000;
+	bottom: 0;
+	right: 50px;
+	transform: translate(0, -50%);
+	opacity: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
 
 // 알람
 .alert {
@@ -1110,6 +1121,7 @@ main {
 	height: 2.5rem;
 	z-index: 2;
 	pointer-events: none;
+	z-index: 1000000;
 }
 .cursor div {
 	position: absolute;
@@ -1163,6 +1175,35 @@ main {
 	will-change: left, top, transform;
 	transition: transform 0.5s;
 	opacity: 0.4;
+}
+
+.cursor {
+	&.obj {
+		z-index: -10000;
+	}
+	.back_obj {
+		> div {
+			z-index: -10000000;
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 75em;
+			height: 75em;
+			margin: 0 0 0.1px;
+			object-fit: contain;
+			border-radius: 75em;
+			filter: blur(10em);
+			background-image: radial-gradient(
+				circle at 50% 50%,
+				#287eff,
+				rgba(0, 214, 122, 0)
+			);
+			will-change: left, top, transform;
+			transition: transform 0.5s;
+			opacity: 0.4;
+		}
+	}
 }
 
 .loading_container {

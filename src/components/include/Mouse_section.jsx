@@ -29,7 +29,7 @@ const Mouse_section = () => {
 		window.addEventListener("mousemove", (e) => {
 			subCursor.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`;
 			mainCursor.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`;
-			objCursor.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`;
+			objCursor.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem)) `;
 			keepScrollDown.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(0%)`;
 		});
 		window.addEventListener("mousedown", (e) => {
@@ -81,7 +81,9 @@ const Mouse_section = () => {
 				<div className="ring" ref={mainCursor}>
 					<div></div>
 				</div>
-				<div className="ring" ref={objCursor}>
+			</div>
+			<div className="cursor obj">
+				<div className="back_obj" ref={objCursor}>
 					<div></div>
 				</div>
 			</div>

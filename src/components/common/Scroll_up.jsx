@@ -28,32 +28,40 @@ const Scroll_up = () => {
 	return (
 		<AnimatePresence>
 			{state && (
-				<motion.div
-					className="nav_container show"
-					initial={{ opacity: 0, translateX: "200%", translateY: "-50%" }}
-					animate={{ opacity: 1, translateX: "0%", translateY: "-50%" }}
-					exit={{ opacity: 0, translateX: "200%", translateY: "-50%" }}
-					transition={{ duration: 0.2, ease: [0, 0.25, 0.2, 1.01] }}
-				>
-					<div
-						className="up_btn"
-						onClick={() => {
-							scrollWindow();
-						}}
+				<>
+					<motion.div
+						className="nav_container show"
+						initial={{ opacity: 0, translateX: "200%", translateY: "-50%" }}
+						animate={{ opacity: 1, translateX: "0%", translateY: "-50%" }}
+						exit={{ opacity: 0, translateX: "200%", translateY: "-50%" }}
+						transition={{ duration: 0.2, ease: [0, 0.25, 0.2, 1.01] }}
 					>
-						<img src={IconArrowUp} alt="위로" />
-					</div>
-					<div
-						onClick={() => {
-							scrollContact();
-						}}
+						<div
+							className="up_btn"
+							onClick={() => {
+								scrollWindow();
+							}}
+						>
+							<img src={IconArrowUp} alt="위로" />
+						</div>
+						<div
+							onClick={() => {
+								scrollContact();
+							}}
+						>
+							<img src={IconArrowDown} alt="아래로" />
+						</div>
+					</motion.div>
+					<motion.div
+						className="sendbtn_container"
+						initial={{ opacity: 0, translateX: "200%", translateY: "-50%" }}
+						animate={{ opacity: 1, translateX: "0%", translateY: "-50%" }}
+						exit={{ opacity: 0, translateX: "200%", translateY: "-50%" }}
+						transition={{ duration: 0.2, ease: [0, 0.25, 0.2, 1.01] }}
 					>
-						<img src={IconArrowDown} alt="아래로" />
-					</div>
-					<div>
 						<img className="contact_btn" src={Contact_me} alt="" />
-					</div>
-				</motion.div>
+					</motion.div>
+				</>
 			)}
 		</AnimatePresence>
 	);
