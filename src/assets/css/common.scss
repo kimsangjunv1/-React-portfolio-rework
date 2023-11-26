@@ -134,7 +134,7 @@ main {
 
 .section_title_container {
 	font-weight: bold;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	.skill,
 	.study,
 	.project {
@@ -210,14 +210,29 @@ main {
 	margin: 0 auto;
 	display: flex;
 	align-items: center;
-	margin-bottom: 10px;
+	margin-bottom: 40px;
 	img {
 		margin-right: 10px;
 	}
 	span {
-		font-size: 24px;
-		font-weight: 900;
-		// color: black;
+		position: relative;
+		font-size: 18px;
+		font-weight: 700;
+		background: #007aff;
+		// border-radius: 5px;
+		padding: 3px 9px;
+		color: white;
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translate(-50%, -50%);
+			background: black;
+			width: 10px;
+			height: 10px;
+			border-radius: 100px;
+		}
 	}
 }
 
@@ -319,6 +334,7 @@ main {
 			box-sizing: border-box;
 			.dajim {
 				// color: #000;
+				font-weight: 700;
 				text-align: left;
 				&:first-child {
 					font-weight: 900;
@@ -587,7 +603,7 @@ main {
 				margin-bottom: 0;
 			}
 			.skill_category {
-				color: rgb(0 0 0 / 70%);
+				color: white;
 				font-weight: 900;
 				font-size: 14px;
 				background: #287eff;
@@ -631,13 +647,14 @@ main {
 						width: 100%;
 						h2 {
 							font-size: 18px;
-							font-weight: 700;
+							font-weight: 900;
 							letter-spacing: -1.2px;
 						}
 						p {
 							width: 100%;
 							font-size: 14px;
-							// white-space: nowrap;
+							font-weight: 700;
+							color: #78818b;
 
 							&:nth-child(1) {
 								/* font-weight: 700; */
@@ -751,10 +768,11 @@ main {
 							gap: 10px;
 							p {
 								/* border: 1px solid rgb(255 255 255); */
-								background: #a8ff2829;
-								color: #ceff28;
+								background: rgb(40 126 255 / 21%);
+								color: #86bdf8;
 								font-weight: 800;
 								padding: 2px 5px;
+								/* border-radius: 5px; */
 							}
 						}
 					}

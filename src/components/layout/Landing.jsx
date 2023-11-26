@@ -51,9 +51,13 @@ const Landing = ({ scrolled }) => {
 			<div className="landing_inner">
 				<div className="landing_contents" ref={textContainer}>
 					<div className="row">
-						<h2>const grow_up = &#40;&#41; =&gt; &#123;</h2>
+						<h2>
+							const <i>grow_up</i> = &#40;&#41; =&gt; &#123;
+						</h2>
 						<h2>return&#40;</h2>
-						<h2>&lt;p&gt;</h2>
+						<h2>
+							<i>&lt;p&gt;</i>
+						</h2>
 					</div>
 					<div className="row">
 						<h2>새로운 것에 대해</h2>
@@ -63,7 +67,9 @@ const Landing = ({ scrolled }) => {
 						<h2>개발자가 되겠습니다.</h2>
 					</div>
 					<div className="row">
-						<h2>&lt;/p&gt;</h2>
+						<h2>
+							<i>&lt;/p&gt;</i>
+						</h2>
 						<h2>&#41;</h2>
 						<h2>&#41;</h2>
 					</div>

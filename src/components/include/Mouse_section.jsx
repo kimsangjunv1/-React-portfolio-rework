@@ -16,16 +16,6 @@ const Mouse_section = () => {
 	const particle_002 = useRef();
 
 	useEffect(() => {
-		const moveCursor = () => {
-			// window.addEventListener("mousemove", (e) => {
-			// 	hoho.current.style.left = `${e.pageX}px`;
-			// 	hoho.current.style.top = `${e.pageY}px`;
-			// });
-			// window.addEventListener("mousemove", (e) => {
-			// 	subCursor.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`;
-			// 	mainCursor.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`;
-			// });
-		};
 		window.addEventListener("mousemove", (e) => {
 			subCursor.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`;
 			mainCursor.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem))`;
@@ -33,9 +23,6 @@ const Mouse_section = () => {
 			keepScrollDown.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(0%)`;
 		});
 		window.addEventListener("mousedown", (e) => {
-			subCursor.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem)) scale(2)`;
-		});
-		window.addEventListener("mouseover", (e) => {
 			subCursor.current.style.transform = `translateX(calc(${e.clientX}px - 1.25rem)) translateY(calc(${e.clientY}px - 1.25rem)) scale(2)`;
 		});
 		window.addEventListener("mouseup", (e) => {
