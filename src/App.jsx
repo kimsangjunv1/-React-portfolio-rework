@@ -4,15 +4,15 @@ import Main from "./components/pages/Main";
 import lenis from "./components/utils/lenis";
 
 function App() {
-	useEffect(() => {
-		lenis();
-	}, []);
+  useEffect(() => {
+    lenis();
+  }, []);
 
-	return (
-		<>
-			<Main />
-		</>
-	);
+  return (
+    <>
+      <Main />
+    </>
+  );
 }
 
 export default App;
