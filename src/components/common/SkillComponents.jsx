@@ -72,7 +72,6 @@ const SkillComponents = ({ information }) => {
 
   useEffect(() => {
     skillInfo[2]?.list?.push({ name: "", desc: "" });
-    console.log("skillInfo : ", skillInfo);
   }, [information]);
 
   return (
@@ -118,23 +117,24 @@ const SkillComponents = ({ information }) => {
               <div className="skill_icon_container">
                 {item.list.map((item, key) => {
                   return (
-                    <>
+                    <div
+                      className={`item ${
+                        item.name == "" ? "emoji_container" : ""
+                      }`}
+                      key={key}
+                      // onMouseOver={() => {
+                      // 	setTitle(item.name);
+                      // 	setDesc(item.desc);
+                      // }}
+                      // onMouseOut={() => {
+                      // 	setTitle(null);
+                      // 	setDesc(null);
+                      // }}
+                    >
                       {item.name !== "" ? (
-                        <div
-                          className="item"
-
-                          // onMouseOver={() => {
-                          // 	setTitle(item.name);
-                          // 	setDesc(item.desc);
-                          // }}
-                          // onMouseOut={() => {
-                          // 	setTitle(null);
-                          // 	setDesc(null);
-                          // }}
-                        >
+                        <>
                           <img
                             className="skill_item"
-                            key={key}
                             src={getSkillImage(item.name)}
                             alt={Object.values(item.name)}
                           />
@@ -142,9 +142,9 @@ const SkillComponents = ({ information }) => {
                             <h2>{item.name}</h2>
                             <p>{item.desc}</p>
                           </div>
-                        </div>
+                        </>
                       ) : (
-                        <div className="item emoji_container">
+                        <>
                           <img
                             className="emoji"
                             src={SectionStudyEmoji001}
@@ -155,9 +155,9 @@ const SkillComponents = ({ information }) => {
                             src={SectionStudyEmoji002}
                             alt="두번째"
                           />
-                        </div>
+                        </>
                       )}
-                    </>
+                    </div>
                   );
                 })}
               </div>
