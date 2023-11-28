@@ -296,11 +296,16 @@ main {
 
     .photo_container {
       position: relative;
-      // width: 100%;
+      width: 430px;
+      height: 600px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 40px;
+      border-radius: 10px;
+      border: 1px solid #ffffff3b;
+      background: linear-gradient(180deg, #9d9fa1bf 3%, #1f1f1f 90%);
+      box-shadow: inset 10px 10px 40px -35px #fff;
       .text_left {
         z-index: -1;
         left: 30%;
@@ -323,10 +328,21 @@ main {
         transform: translate(-50%, 0);
       }
       .myphoto {
-        // border-radius: 1000px;
-        // width: 500px;
-        // height: 236px;
-        // object-fit: cover;
+        position: absolute;
+        bottom: -100px;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 90px;
+        height: 7px;
+        background: black;
+        border-radius: 100px;
       }
     }
 

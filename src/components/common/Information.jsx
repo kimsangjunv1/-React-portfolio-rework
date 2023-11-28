@@ -36,7 +36,7 @@ const Information = ({ title, scrolled, pageType }) => {
     window.addEventListener("mousemove", (e) => {
       photoContainer.current.style.transform = `perspective(800px) rotateX(-${
         e.clientY / 100
-      }deg) rotateY(${e.clientX / 100}deg)`;
+      }deg) rotateY(${e.clientX / 100}deg) rotate(16deg)`;
     });
   });
 
@@ -73,7 +73,8 @@ const Information = ({ title, scrolled, pageType }) => {
             <br />
             지금에 안주하지않고 끝없이 발전하려고 합니다.
             <br />
-            프론트/퍼블리셔에서부터 시작해 풀스택까지 달려나가고싶습니다.
+            {pageType === "publisher" ? "퍼블리셔" : "프론트엔드"}에서부터
+            시작해 풀스택까지 달려나가고싶습니다.
             <br />
             <br />
             <li>문제에서 기회를 포착하고, 해결을 통한 성취감을 좋아합니다.</li>
@@ -107,9 +108,8 @@ const Information = ({ title, scrolled, pageType }) => {
           // 	transition: { delay: 0.1 },
           // }}
         >
-          {/* <img className="fur" src={FurChar} alt="" /> */}
-          <img className="myphoto" src={Profile} alt="내얼굴" />
-          {/* <img className="text_right" src={TextImage002} alt="" /> */}
+          <img className="myphoto" src={Mypic001} alt="내얼굴" />
+          {/* <img className="myphoto" src={Profile} alt="내얼굴" /> */}
         </div>
 
         {/* <div className="my_info">
