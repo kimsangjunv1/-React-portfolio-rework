@@ -102,7 +102,7 @@ const WorklistComponents = ({ information, mobile }) => {
     >
       <TitleComponents
         title={"Toy Project"}
-        subTitle={`다음과 같은<br />작업물들이 있어요!`}
+        subTitle={`TOY PROJECT`}
         setInner={true}
         type={"project"}
       />

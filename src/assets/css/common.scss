@@ -31,6 +31,10 @@ main {
   }
   > section {
     // min-height: 100vh;
+    margin-bottom: 70px;
+    &:last-child {
+      margin-bottom: 0px;
+    }
   }
   .function_box {
     height: 0px;
@@ -133,8 +137,6 @@ main {
 }
 
 .section_title_container {
-  font-weight: bold;
-  margin-bottom: 10px;
   .skill,
   .study,
   .project {
@@ -177,31 +179,12 @@ main {
       text-transform: uppercase;
     }
     .section_subTitle {
-      font-size: 42px;
-      width: 100%;
-      text-align: left;
-      white-space: pre-wrap;
-      // margin-bottom: 20px;
-      // color: white;
-      // text-shadow: -3px 0 #000, 0px 3px #919191, 3px 0 #000000, 0 -3px #2f2f2f;
       font-weight: 900;
+      font-size: 72px;
+      // margin-bottom: 20px;
+      line-height: 1.2;
+      text-transform: uppercase;
     }
-  }
-
-  .section_title {
-    font-size: 14px;
-    color: var(--main-color-focus);
-    text-transform: uppercase;
-  }
-
-  .section_subTitle {
-    // font-family: "IMHyemin";
-    font-size: 36px;
-    line-height: 1.2em;
-    // color: #000;
-    font-weight: 100;
-    position: relative;
-    display: inline-block;
   }
 }
 .section_sub_title_container {
@@ -340,28 +323,27 @@ main {
       .dajim {
         font-weight: 700;
         text-align: left;
+        line-height: 180%;
         &:first-child {
-          font-weight: 900;
-          font-size: 42px;
+          font-weight: 300;
+          font-size: 72px;
           margin-bottom: 20px;
           line-height: 1.2;
+          i {
+            color: white;
+            font-weight: 900;
+          }
         }
         &:nth-child(2) {
-          color: rgba(255, 255, 255, 0.6);
-        }
-        i {
-          font-size: 42px;
-          width: 100%;
-          text-align: center;
-          white-space: pre-wrap;
-          margin-bottom: 20px;
-          color: black;
-          /* text-shadow: -3px 0 #000, 0px 3px #919191, 3px 0 #000000, 0 -3px #2f2f2f; */
-          font-weight: 900;
-        }
-        ul {
-          padding-left: 20px;
-          color: #287eff;
+          // color: rgba(255, 255, 255, 0.6);
+          i {
+            color: #ff2893;
+            font-weight: 900;
+          }
+          ul {
+            padding-left: 20px;
+            color: #287eff;
+          }
         }
       }
     }

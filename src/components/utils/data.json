@@ -139,7 +139,7 @@
           "url": "https://github.com/kimsangjunv1/-React-portfolio-rework/blob/main/src/assets/img/toy_playground_004.jpg?raw=true"
         }
       ],
-      "date": "2023.10.14",
+      "date": "2023.11.14",
       "desc": "기존 유튜브를 재디자인 한 'PlayGround' 입니다,<br>단순히 이쁘게 재 디자인을 해보기 위하여 한것이 아닌 기존에 유튜브가 계속 디자인이 변화하면서 사용자가 받아들이기 힘들었던 디자인을 걷어내고 드랍박스라는 기능을 통해 원하는 영상들을 편하게 넣어두었다가 꺼내 볼 수 있도록 기능을 추가해 만든 웹사이트 입니다, 추후 모바일 반응형도 제작할 예정입니다.",
       "github": "https://github.com/kimsangjunv1/-React-Playground",
       "view": "https://playground-r.netlify.app/",

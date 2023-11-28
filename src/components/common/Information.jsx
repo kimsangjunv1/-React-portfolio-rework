@@ -60,28 +60,28 @@ const Information = ({ title, scrolled, pageType }) => {
       {/* <img className="Mypic005" src={Mypic005} alt="" /> */}
       <div className="information_desc">
         <div className="description_container">
-          <p className="dajim">
-            즐기면 더 잘한다는 마음으로
-            <br />
-            개발 일을 하고 있어요!
-          </p>
+          <h2 className="dajim">
+            BE <i>DRAWABLE</i>
+          </h2>
           <p className="dajim">
             디자인을 하고싶었으나 어디서부터 어떻게 풀어갈지 고민에 빠져있다
             <br />
             유튜브에서 김종민이라는 유튜버가 웹페이지로 상상하던것을
             그려가는것을 본 뒤
             <br />
-            제가 원하는 디자인의 웹페이지를 만들고 싶다는 신념 하나만으로
-            여기까지 왔으며
+            <i>제가 원하는 디자인의 웹페이지를 만들고 싶다는 집념</i>으로
             <br />
-            우연히 접하게 된 개발공부에 시간 가는줄 모르는 매력을 느끼고
-            개발자의 길을 걷게되었습니다.
+            우연히 접하게 된 개발공부에 시간 가는줄 모르는 매력을 느껴 개발자의
+            길을 걷게되었습니다.
             <br />
             <br />
             지금에 안주하지않고 끝없이 발전하려고 합니다.
             <br />
-            {pageType === "publisher" ? "퍼블리셔" : "프론트엔드"}에서부터
-            시작해 풀스택까지 달려나가고싶습니다.
+            <i>
+              {pageType === "publisher" ? "퍼블리셔" : "프론트엔드"}에서부터
+              시작해 풀스택
+            </i>
+            까지 달려나가고싶습니다.
             <br />
             <br />
             <li>문제에서 기회를 포착하고, 해결을 통한 성취감을 좋아합니다.</li>

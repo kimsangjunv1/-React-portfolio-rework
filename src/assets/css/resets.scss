@@ -1,43 +1,44 @@
 :root {
-	// font-family: NanumSquareNeo Variable Subset, Inter, system-ui, Avenir,
-	// 	Helvetica, Arial, sans-serif;
-	font-family: "NanumSquareNeo", "NanumSquare", "나눔스퀘어", "나눔고딕",
-		NanumGothic, "맑은고딕", MalgunGothic, "돋움", Dotum, Helvetica, sans-serif;
-	line-height: 1.5;
-	font-weight: 400;
+  // font-family: NanumSquareNeo Variable Subset, Inter, system-ui, Avenir,
+  // 	Helvetica, Arial, sans-serif;
+  font-family: "Poppins", "NanumSquareNeo", "NanumSquare", "나눔스퀘어",
+    "나눔고딕", NanumGothic, "맑은고딕", MalgunGothic, "돋움", Dotum, Helvetica,
+    sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
 
-	// color-scheme: light dark;
-	color: var(--main-color);
-	// background-color: #242424;
+  // color-scheme: light dark;
+  color: var(--main-color);
+  // background-color: #242424;
 
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
 
 * {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-	background: black;
-	color: white;
-	overflow-x: hidden;
-	transition: 0.25s;
+  background: black;
+  color: white;
+  overflow-x: hidden;
+  transition: 0.25s;
 }
 
 .clearfixed {
-	&::after {
-		content: "";
-		display: block;
-		clear: both;
-	}
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
 
 hr {
-	margin: 20px 0;
-	border: 0.1px solid #636d9e22;
+  margin: 20px 0;
+  border: 0.1px solid #636d9e22;
 }

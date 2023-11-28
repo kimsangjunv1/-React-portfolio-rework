@@ -95,7 +95,7 @@ const SkillComponents = ({ information }) => {
     >
       <TitleComponents
         title={"web standards"}
-        subTitle={`다음과 같은<br />기술들을 다뤘어요!`}
+        subTitle={`Stack`}
         setInner={true}
         type={"skill"}
       />
