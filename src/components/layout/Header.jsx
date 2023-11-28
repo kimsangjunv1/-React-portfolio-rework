@@ -7,7 +7,7 @@ import LogoBackground from "./../../assets/img/logo_bg.jpg";
 import LogoMain from "./../../assets/img/logo.svg";
 import icon_menu from "./../../assets/img/icon_menu.svg";
 
-const Navigation = ({ scrolled, mobile }) => {
+const Header = ({ scrolled, mobile }) => {
   const headerBox = useRef(null);
 
   const [nowScroll, setNowScroll] = useState(true);
@@ -55,7 +55,7 @@ const Navigation = ({ scrolled, mobile }) => {
   }, []);
 
   return (
-    <nav ref={headerBox}>
+    <header ref={headerBox}>
       {!mobile ? (
         <div className="header_inner">
           <a className="logo" href="#landing">
@@ -102,8 +102,8 @@ const Navigation = ({ scrolled, mobile }) => {
       <div className="scroll_background">
         <div className="scroll_progress"></div>
       </div>
-    </nav>
+    </header>
   );
 };
 
-export default Navigation;
+export default Header;

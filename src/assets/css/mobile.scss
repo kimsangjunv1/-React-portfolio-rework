@@ -23,7 +23,7 @@
   }
   main {
     // 네비바
-    nav {
+    header {
       // position: fixed;
       background: black;
       padding: 10px 0;
@@ -47,7 +47,7 @@
             filter: invert(1);
           }
         }
-        .nav_item_container {
+        .header_item_container {
           display: none;
           position: fixed;
           top: 0;

@@ -1,12 +1,9 @@
-import { useState, useEffect, Fragment, useRef } from "react";
-import { useSelector } from "react-redux";
+import { useState, useEffect, Fragment } from "react";
 import { AnimatePresence } from "framer-motion";
-import { motion } from "framer-motion";
 
 import imagesLoaded from "imagesloaded";
 
-import Navigation from "../layout/Navigation";
-import Contents from "../layout/Contents";
+import Header from "../layout/Header";
 import Footer from "./../layout/Footer";
 import Loading from "../layout/Loading";
 import Contact from "../layout/Contact";
@@ -16,20 +13,13 @@ import MouseSection from "../include/Mouse_section";
 
 import LandingComponents from "../common/LandingComponents";
 import SkillComponents from "../common/SkillComponents";
-import TitleComponents from "../common/TitleComponents";
 import WorklistComponents from "../common/WorklistComponents";
-import SectionSpace from "../common/SpaceComponents";
 import StudyComponents from "../common/StudyComponents";
-import ScrollComponents from "./../common/ScrollComponents";
-
-import Navigate_section from "./../include/Navigate_section";
-import Desc_section from "./../include/Desc_section";
 
 import ScrollNavComponents from "../common/ScrollNavComponents";
 
 const Main = () => {
   const [toyProjectsInfo, setToyProjectsInfo] = useState([]);
-  const [webstandardsInfo, setWebstandardsInfo] = useState([]);
   const [skillInfo, setSkillInfo] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [scrolled, setScrolled] = useState(0);
@@ -47,7 +37,6 @@ const Main = () => {
     )
       .then((res) => res.json())
       .then((res) => {
-        setWebstandardsInfo(res.webstandards);
         setSkillInfo(res.usedskill);
         setToyProjectsInfo(res.toyproject);
       });
@@ -80,27 +69,17 @@ const Main = () => {
 
   return (
     <Fragment>
-      {/* <Header scrolled={scrolled} /> */}
-      <Navigation scrolled={scrolled} mobile={mobile} />
+      <Header scrolled={scrolled} mobile={mobile} />
       <main>
         <AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
-        {/* 시작 */}
         <LandingComponents scrolled={scrolled} pageType={pageType} />
-        {/* 정보 */}
         <InformationComponents
           title={"테스트"}
           scrolled={scrolled}
           pageType={pageType}
         />
-        {/* 사용 스택 */}
         <SkillComponents information={skillInfo} />
-        {/* 작업물 */}
         <WorklistComponents information={toyProjectsInfo} mobile={mobile} />
-        {/* <Navigate_section
-        toyProjectsInfo={toyProjectsInfo}
-        webstandardsInfo={webstandardsInfo}
-        skillInfo={skillInfo}
-      /> */}
         {/* <StudyComponents /> */}
         <Contact />
         <section className="function_box" id="function">
