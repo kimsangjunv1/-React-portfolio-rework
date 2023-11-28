@@ -37,6 +37,9 @@ const Main = () => {
   const [scrolled, setScrolled] = useState(0);
   const [mobile, setMobile] = useState(false);
 
+  // console.log("?? : ", location.pathname.replace("/", ""));
+  const pageType = location.pathname.replace("/", "");
+
   useEffect(() => {
     // github에 저장된 포트폴리오 내용 담긴 json 가져오기
     fetch(
@@ -85,9 +88,9 @@ const Main = () => {
       <main>
         <AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
         {/* 시작 */}
-        <Landing scrolled={scrolled} />
+        <Landing scrolled={scrolled} pageType={pageType} />
         {/* 정보 */}
-        <Information title={"테스트"} scrolled={scrolled} />
+        <Information title={"테스트"} scrolled={scrolled} pageType={pageType} />
         {/* 사용 스택 */}
         <SkillComponents information={skillInfo} />
         {/* 작업물 */}

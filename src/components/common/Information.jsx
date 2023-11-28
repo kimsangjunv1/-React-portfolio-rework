@@ -21,8 +21,9 @@ import Mypic003 from "./../../assets/img/information_mypic_003.jpg";
 import Mypic004 from "./../../assets/img/information_mypic_004.jpg";
 import Mypic005 from "./../../assets/img/information_mypic_005.jpg";
 
-const Information = ({ title, scrolled }) => {
+const Information = ({ title, scrolled, pageType }) => {
   const photoContainer = useRef(null);
+
   useEffect(() => {
     // document.querySelector(".myphoto").style.width = scrolled + "%";
     // // document.querySelector(".fur").style.width = furScale * 10 + "px";
