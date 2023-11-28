@@ -19,10 +19,15 @@ import Mypic001 from "./../../assets/img/information_mypic_001.jpg";
 import Mypic002 from "./../../assets/img/information_mypic_002.jpg";
 import Mypic003 from "./../../assets/img/information_mypic_003.jpg";
 import Mypic004 from "./../../assets/img/information_mypic_004.jpg";
-import Mypic005 from "./../../assets/img/information_mypic_005.jpg";
+
+import IconGlass from "./../../assets/img/information_icon_001.svg";
+import IconBrush from "./../../assets/img/information_icon_002.svg";
+import IconPointer from "./../../assets/img/information_icon_003.svg";
+import IconCode from "./../../assets/img/information_icon_004.svg";
 
 const Information = ({ title, scrolled, pageType }) => {
   const photoContainer = useRef(null);
+  const boxRef = useRef(null);
 
   useEffect(() => {
     // document.querySelector(".myphoto").style.width = scrolled + "%";
@@ -34,7 +39,7 @@ const Information = ({ title, scrolled, pageType }) => {
     // document.querySelector(".text_right").style.transform =
     //   "scale(" + scrolled * 0.04 + ")";
     window.addEventListener("mousemove", (e) => {
-      photoContainer.current.style.transform = `perspective(800px) rotateX(-${
+      photoContainer.current.style.transform = `perspective(600px) rotateX(-${
         e.clientY / 100
       }deg) rotateY(${e.clientX / 100}deg) rotate(16deg)`;
     });
@@ -46,7 +51,9 @@ const Information = ({ title, scrolled, pageType }) => {
       id="information"
       whileInView={{
         opacity: [0, 1],
-        transition: { delay: 0.25 },
+        translateX: [-200, 0],
+        // translateY: [0, 0],
+        transition: { delay: 0.3, transition: 0.5 },
       }}
     >
       {/* <motion.div initial={{ scale: 0 }} animate={{ scale: 1, rotateZ: 360 }} /> */}
@@ -84,20 +91,53 @@ const Information = ({ title, scrolled, pageType }) => {
             </li>
           </p>
         </div>
-        {/* <motion.div
-					className="mypic_container"
-					whileInView={{
-						opacity: [0, 0.4],
-						// rotate: [0, 360],
-						// borderRadius: ["20%", "50%"],
-						transition: { delay: 0.1 },
-					}}
-				>
-					<img src={Mypic001} alt="내 사진" />
-					<img src={Mypic002} alt="내 사진" />
-					<img src={Mypic003} alt="내 사진" />
-					<img src={Mypic004} alt="내 사진" />
-				</motion.div> */}
+        <motion.div
+          className="mypic_container"
+          whileInView={{
+            opacity: [0, 1],
+            rotate: [0, 360],
+            // borderRadius: ["20%", "50%"],
+            transition: { delay: 0.6 },
+          }}
+          ref={boxRef}
+        >
+          <motion.img
+            src={IconGlass}
+            alt="내 사진"
+            drag
+            dragConstraints={boxRef}
+            dragSnapToOrigin
+            dragElastic={0.5}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+          />
+          <motion.img
+            src={IconBrush}
+            alt="내 사진"
+            drag
+            dragConstraints={boxRef}
+            dragSnapToOrigin
+            dragElastic={0.5}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+          />
+          <motion.img
+            src={IconPointer}
+            alt="내 사진"
+            drag
+            dragConstraints={boxRef}
+            dragSnapToOrigin
+            dragElastic={0.5}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+          />
+          <motion.img
+            src={IconCode}
+            alt="내 사진"
+            drag
+            dragConstraints={boxRef}
+            dragSnapToOrigin
+            dragElastic={0.5}
+            dragTransition={{ bounceStiffness: 600, bounceDamping: 10 }}
+          />
+        </motion.div>
         <div
           className="photo_container"
           ref={photoContainer}
@@ -111,27 +151,7 @@ const Information = ({ title, scrolled, pageType }) => {
           <img className="myphoto" src={Mypic001} alt="내얼굴" />
           {/* <img className="myphoto" src={Profile} alt="내얼굴" /> */}
         </div>
-
-        {/* <div className="my_info">
-          <div className="info_item">
-            <img src={DateIcon} alt="아이콘" />
-            <p>1997-08-09</p>
-          </div>
-          <div className="info_item">
-            <img src={LocationIcon} alt="아이콘" />
-            <p>서울특별시</p>
-          </div>
-          <div className="info_item">
-            <img src={PhoneIcon} alt="아이콘" />
-            <p>010-6607-7265</p>
-          </div>
-          <div className="info_item">
-            <img src={EmailIcon} alt="아이콘" />
-            <p>to_before@naver.com</p>
-          </div>
-        </div> */}
       </div>
-      {/* <SectionSpace height={120} /> */}
     </motion.section>
   );
 };

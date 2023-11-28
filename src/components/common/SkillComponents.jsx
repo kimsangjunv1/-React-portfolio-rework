@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef, Fragment } from "react";
 
 import { motion } from "framer-motion";
 
@@ -81,7 +81,9 @@ const SkillComponents = ({ information }) => {
       ref={scrollRef}
       whileInView={{
         opacity: [0, 1],
-        transition: { delay: 0.25 },
+        translateX: [200, 0],
+        // translateY: [0, 0],
+        transition: { delay: 0.3, transition: 0.5 },
       }}
       // viewport={{ amount: "all" }}
       // onViewportEnter={() => {

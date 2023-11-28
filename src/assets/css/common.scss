@@ -252,44 +252,32 @@ main {
 
     .mypic_container {
       position: absolute;
-      width: 100%;
+      right: 0;
+      width: 50%;
       height: 100%;
       max-width: 1300px;
-      z-index: -1;
-      display: none;
+      z-index: 1;
       img {
         // opacity: 0.2;
         position: absolute;
-        object-fit: cover;
-        border-radius: 1000px;
+        // object-fit: cover;
+        // border-radius: 1000px;
         &:nth-child(1) {
-          // 사람1
-          top: 50%;
-          right: -100px;
-          width: 200px;
-          height: 200px;
+          top: 20%;
+          left: 70px;
         }
         &:nth-child(2) {
-          // 고양이
-          top: 60%;
-          right: 0px;
-          width: 250px;
-          height: 300px;
-          z-index: 1;
+          top: 27%;
+          right: -43px;
         }
         &:nth-child(3) {
-          // 타블렛
-          bottom: 120px;
-          left: 220px;
-          width: 220px;
-          height: 220px;
+          bottom: 40%;
+          left: 140px;
         }
         &:nth-child(4) {
           // 사람2
-          left: 120px;
-          right: 50px;
-          width: 300px;
-          height: 300px;
+          bottom: 20%;
+          right: 70px;
         }
       }
     }
@@ -303,9 +291,10 @@ main {
       justify-content: center;
       gap: 40px;
       border-radius: 10px;
-      border: 1px solid #ffffff3b;
-      background: linear-gradient(180deg, #9d9fa1bf 3%, #1f1f1f 90%);
+      border: 1px solid rgba(255, 255, 255, 0.231372549);
+      background: linear-gradient(180deg, rgb(0 127 255) 3%, #1f1f1f 80%);
       box-shadow: inset 10px 10px 40px -35px #fff;
+      transition: transform 0.7s ease-out;
       .text_left {
         z-index: -1;
         left: 30%;

@@ -62,11 +62,11 @@ const Landing = ({ scrolled, pageType }) => {
           <div className="row">
             <h2>새로운 것에 대해</h2>
             <h2>
-              <i>학습하고 성장하는</i>
+              <i>저만의 색으로 채워나가는</i>
             </h2>
             <h2>
-              {pageType === "publisher" ? "퍼블리셔" : "프론트엔드"}가
-              되겠습니다.
+              웹{pageType === "publisher" ? "퍼블리셔" : "프론트엔드"} 김상준
+              입니다.
             </h2>
           </div>
           <div className="row">
