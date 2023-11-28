@@ -14,7 +14,7 @@ import Information from "../common/Information";
 
 import MouseSection from "../include/Mouse_section";
 
-import LandingComponents from "../layout/LandingComponents";
+import LandingComponents from "../common/LandingComponents";
 import SkillComponents from "../common/SkillComponents";
 import TitleComponents from "../common/TitleComponents";
 import WorklistComponents from "../common/WorklistComponents";
