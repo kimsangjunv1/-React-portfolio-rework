@@ -41,7 +41,7 @@ const Information = ({ title, scrolled, pageType }) => {
     window.addEventListener("mousemove", (e) => {
       photoContainer.current.style.transform = `perspective(600px) rotateX(-${
         e.clientY / 100
-      }deg) rotateY(${e.clientX / 100}deg) rotate(16deg)`;
+      }deg) rotateY(-${e.clientX / 100}deg) rotate(16deg)`;
     });
   });
 
