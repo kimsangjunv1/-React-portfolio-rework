@@ -8,13 +8,13 @@ import imagesLoaded from "imagesloaded";
 import Navigation from "../layout/Navigation";
 import Contents from "../layout/Contents";
 import Footer from "./../layout/Footer";
-import Landing from "../layout/Landing";
 import Loading from "../layout/Loading";
 import Contact from "../layout/Contact";
 import Information from "../common/Information";
 
 import MouseSection from "../include/Mouse_section";
 
+import LandingComponents from "../layout/LandingComponents";
 import SkillComponents from "../common/SkillComponents";
 import TitleComponents from "../common/TitleComponents";
 import WorklistComponents from "../common/WorklistComponents";
@@ -85,7 +85,7 @@ const Main = () => {
       <main>
         <AnimatePresence>{isLoaded ? "" : <Loading />}</AnimatePresence>
         {/* 시작 */}
-        <Landing scrolled={scrolled} pageType={pageType} />
+        <LandingComponents scrolled={scrolled} pageType={pageType} />
         {/* 정보 */}
         <Information title={"테스트"} scrolled={scrolled} pageType={pageType} />
         {/* 사용 스택 */}

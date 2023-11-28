@@ -27,7 +27,7 @@ import landing_img_001 from "./../../assets/img/landing_img_01.jpg";
 import landing_img_002 from "./../../assets/img/landing_img_02.jpg";
 import landing_img_003 from "./../../assets/img/landing_img_03.jpg";
 
-const Landing = ({ scrolled, pageType }) => {
+const LandingComponents = ({ scrolled, pageType }) => {
   const brushImg = useRef(null);
   const emojiImg = useRef(null);
   const textContainer = useRef(null);
@@ -97,4 +97,4 @@ const Landing = ({ scrolled, pageType }) => {
   );
 };
 
-export default Landing;
+export default LandingComponents;
