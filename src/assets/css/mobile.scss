@@ -152,7 +152,7 @@
           .dajim {
             text-align: center;
             &:first-child {
-              font-size: 20px;
+              font-size: 7vmin;
             }
             &:last-child {
               font-size: 14px;
@@ -163,6 +163,9 @@
           img {
             width: 50vw;
           }
+        }
+        .mypic_container {
+          display: none;
         }
       }
     }
@@ -393,8 +396,9 @@
     margin-bottom: 10px;
     .section_title_container_inner {
       .section_subTitle {
-        font-size: 20px;
+        font-size: 7vmin;
         margin-bottom: 0;
+        text-align: center;
       }
     }
   }
