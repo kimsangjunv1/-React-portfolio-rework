@@ -27,8 +27,6 @@ import Desc_section from "./../include/Desc_section";
 
 import Scroll_up from "../common/Scroll_up";
 
-import Test from "../common/Test";
-
 const Main = () => {
   const [toyProjectsInfo, setToyProjectsInfo] = useState([]);
   const [webstandardsInfo, setWebstandardsInfo] = useState([]);

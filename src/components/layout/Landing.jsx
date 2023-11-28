@@ -47,7 +47,7 @@ const Landing = ({ scrolled, pageType }) => {
     });
   }, []);
   return (
-    <section className="landing" id="landing">
+    <section className="landing_container" id="landing">
       <div className="landing_inner">
         <div className="landing_contents" ref={textContainer}>
           <div className="row">
