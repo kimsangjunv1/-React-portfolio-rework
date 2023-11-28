@@ -10,7 +10,7 @@ import Contents from "../layout/Contents";
 import Footer from "./../layout/Footer";
 import Loading from "../layout/Loading";
 import Contact from "../layout/Contact";
-import Information from "../common/Information";
+import InformationComponents from "../common/InformationComponents";
 
 import MouseSection from "../include/Mouse_section";
 
@@ -25,7 +25,7 @@ import ScrollComponents from "./../common/ScrollComponents";
 import Navigate_section from "./../include/Navigate_section";
 import Desc_section from "./../include/Desc_section";
 
-import Scroll_up from "../common/Scroll_up";
+import ScrollNavComponents from "../common/ScrollNavComponents";
 
 const Main = () => {
   const [toyProjectsInfo, setToyProjectsInfo] = useState([]);
@@ -87,7 +87,11 @@ const Main = () => {
         {/* 시작 */}
         <LandingComponents scrolled={scrolled} pageType={pageType} />
         {/* 정보 */}
-        <Information title={"테스트"} scrolled={scrolled} pageType={pageType} />
+        <InformationComponents
+          title={"테스트"}
+          scrolled={scrolled}
+          pageType={pageType}
+        />
         {/* 사용 스택 */}
         <SkillComponents information={skillInfo} />
         {/* 작업물 */}
@@ -101,7 +105,7 @@ const Main = () => {
         <Contact />
         <section className="function_box" id="function">
           <MouseSection />
-          <Scroll_up />
+          <ScrollNavComponents />
         </section>
       </main>
       <Footer />

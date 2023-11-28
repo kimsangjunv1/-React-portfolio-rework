@@ -4,7 +4,7 @@ import Contact_me from "./../../assets/img/contact_me.svg";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
 
-const Scroll_up = () => {
+const ScrollNavComponents = () => {
   const [state, setState] = useState(false);
   const scrollBtnDisplay = function () {
     window.scrollY > window.innerHeight ? setState(true) : setState(false);
@@ -67,4 +67,4 @@ const Scroll_up = () => {
   );
 };
 
-export default Scroll_up;
+export default ScrollNavComponents;

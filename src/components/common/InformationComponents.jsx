@@ -25,7 +25,7 @@ import IconBrush from "./../../assets/img/information_icon_002.svg";
 import IconPointer from "./../../assets/img/information_icon_003.svg";
 import IconCode from "./../../assets/img/information_icon_004.svg";
 
-const Information = ({ title, scrolled, pageType }) => {
+const InformationComponents = ({ title, scrolled, pageType }) => {
   const photoContainer = useRef(null);
   const boxRef = useRef(null);
 
@@ -156,4 +156,4 @@ const Information = ({ title, scrolled, pageType }) => {
   );
 };
 
-export default Information;
+export default InformationComponents;
